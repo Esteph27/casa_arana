@@ -26,8 +26,9 @@
 
     {% block corejs %}
         <!-- font awesome -->
-        <script src="https://kit.fontawesome.com/027d90d397.js" crossorigin="anonymous"></script>
-         <!-- boostrap js -->
+        <script src="https://kit.fontawesome.com/7583353a22.js" crossorigin="anonymous"></script>
+
+        <!-- boostrap js -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     {% endblock %}
 
@@ -37,7 +38,44 @@
     <title>Casa Arana {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top"></header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">Casa Arana</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'home' %}">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All products</a>
+                <a class="dropdown-item" href="#">Mirrors</a>
+                <a class="dropdown-item" href="#">Textiles</a>
+                <a class="dropdown-item" href="#">Ceramics</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Create Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div> 
+        <a href="#"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+      </div>
+    </nav>
 
     {% if message %}
     <div class="messafe-container"></div>

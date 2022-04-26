@@ -8,9 +8,58 @@
 
 h1 {
     font-family: Quattrocento, serif;
+    text-transform: unset;
+    font-weight: 300;
+    font-size: 50px;
 }
 
 body {
-    color: white;
+    background-color: white;
+
+}
+
+/* ------------------------------------------ nav bar */
+
+.bg-light {
+    border: none;
+}
+
+.navbar {
+    font-family: Quattrocento, serif;
+    font-weight: 200;
+}
+
+.dropdown-menu {
+    border: none;
+}
+
+.navbar .navbar-brand {
+    font-size: 45px;
+}
+
+/* ------------------------------------------ media queries */
+
+/*  small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .navbar .navbar-brand {
+        display: none;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
 
