@@ -36,6 +36,40 @@ body {
     font-size: 45px;
 }
 
+
+/* ------------------------------------------ footer */
+
+footer {
+    position: relative;
+    clear: both;
+    height: auto;
+    width: 100%;
+    background-color: #FCF9F9;
+}
+
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    color: black;
+}
+
+.social-media-icons i {
+    margin: 35% 2% 5%;
+    font-size: 25px;
+}
+
+#small-print {
+    font-family: Quattrocento, serif;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+/* ------------------------------------------ buttons */
+
 .btn-primary {
     background-color: #FFDDD9;
 }
@@ -70,6 +104,7 @@ body {
         display: none;
     }
 
+    /* home page */
     #header-block {
         height: 100vw;
     }
@@ -82,6 +117,8 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
+    /* home page */
     #header-block h1 {
         padding-top: 10%;
     }
@@ -89,11 +126,21 @@ body {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+    /* home page */
     #header-block h1 {
         padding-top: 10%;
     }
-    
 
+    /* footer */
+    .social-media-icons i {
+        margin: 20% 0.5% 2%;
+    }
+    
+    #small-print {
+        padding-bottom: 5%;
+    }
+    
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
