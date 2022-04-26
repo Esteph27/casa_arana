@@ -10,12 +10,11 @@ h1 {
     font-family: Quattrocento, serif;
     text-transform: unset;
     font-weight: 300;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 body {
     background-color: white;
-
 }
 
 /* ------------------------------------------ nav bar */
@@ -37,6 +36,31 @@ body {
     font-size: 45px;
 }
 
+.btn-primary {
+    background-color: #FFDDD9;
+}
+
+.btn {
+    font-size: 20px;
+    text-transform: unset;
+    color: black;
+    font-family: Quattrocento, serif;
+}
+
+/* ------------------------------------------ index page  */
+
+#header-block {
+    background-color: #FCF9F9;
+    height: 50vw;
+    width: 100vw;
+}
+
+#header-block h1 {
+    text-align: center;
+    padding-top: 25%;
+}
+
+
 /* ------------------------------------------ media queries */
 
 /*  small devices (phones, 600px and down) */
@@ -45,16 +69,30 @@ body {
     .navbar .navbar-brand {
         display: none;
     }
+
+    #header-block {
+        height: 100vw;
+    }
+    
+    #header-block h1 {
+        font-size: 30px;
+    }
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
+    #header-block h1 {
+        padding-top: 10%;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    #header-block h1 {
+        padding-top: 10%;
+    }
+    
 
 }
 
