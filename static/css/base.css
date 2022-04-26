@@ -70,16 +70,18 @@ footer {
 
 /* ------------------------------------------ buttons */
 
-.btn-primary {
-    background-color: #FFDDD9;
-}
-
 .btn {
+    background-color: #FFDDD9;
     font-size: 20px;
+    font-weight: 300;
     text-transform: unset;
     color: black;
     font-family: Quattrocento, serif;
 }
+
+.btn a:hover {
+    color:white;
+} 
 
 /* ------------------------------------------ index page  */
 
