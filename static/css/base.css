@@ -1,16 +1,25 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,400&family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,400&family=Libre+Bodoni&display=swap');
+
 
 * {
 	margin: 0;
 	padding: 0;
 }
 
-h1 {
-    font-family: Quattrocento, serif;
+h1, h2 {
+    font-family: 'Libre Bondi', serif;
     text-transform: unset;
     font-weight: 300;
-    font-size: 40px;
+    color: #6D6155
+}
+
+p {
+    font-family:'Libre Bondi', serif;
+}
+
+a {
+    font-family: 'Libre Bondi', serif;
 }
 
 body {
@@ -24,18 +33,44 @@ body {
 }
 
 .navbar {
-    font-family: Quattrocento, serif;
+    font-family: 'Libre Bondi', serif;
     font-weight: 200;
+    color: #A4917E;
+}
+
+.navbar-light .navbar-brand {
+    letter-spacing: 8px;
+    color: #A4917E;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: #6D6155;
+}
+
+.navbar .navbar-brand {
+    font-size: 60px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #C8C1B9;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #6D6155;
 }
 
 .dropdown-menu {
     border: none;
+    font-family: 'Libre Bondi', serif;
 }
 
-.navbar .navbar-brand {
-    font-size: 45px;
+#shopping-cart-icon {
+    color: #A4917E;
 }
 
+#shopping-cart-icon:hover {
+    color: #6D6155
+}
 
 /* ------------------------------------------ footer */
 
@@ -44,7 +79,7 @@ footer {
     clear: both;
     height: auto;
     width: 100%;
-    background-color: #FCF9F9;
+    background-color: #EFE9E2;
 }
 
 
@@ -60,10 +95,16 @@ footer {
 .social-media-icons i {
     margin: 35% 2% 5%;
     font-size: 25px;
+    color: #6D6155;
+}
+
+.social-media-icons i:hover{
+    color: #A4917E;
 }
 
 #small-print {
-    font-family: Quattrocento, serif;
+    font-family: 'Libre Bondi', serif;
+    color: #6D6155;
     text-align: center;
     padding-bottom: 10%;
 }
@@ -71,12 +112,12 @@ footer {
 /* ------------------------------------------ buttons */
 
 .btn {
-    background-color: #FFDDD9;
+    background-color: #F3ECE4;
     font-size: 20px;
     font-weight: 300;
     text-transform: unset;
     color: black;
-    font-family: Quattrocento, serif;
+    font-family: 'Libre Bondi', serif;
 }
 
 .btn a:hover {
@@ -89,7 +130,7 @@ footer {
     height: 40vw;
     width: 100vw;
     font-size: 20px;
-    background-color:#FCF9F9;
+    background-color:#EFE9E2;
 }
 
 .loginout-header-container h1 {
@@ -100,16 +141,38 @@ footer {
 /* ------------------------------------------ index page  */
 
 #header-block {
-    background-color: #FCF9F9;
+    background-color: #EFE9E2;
     height: 50vw;
     width: 100vw;
 }
 
 #header-block h1 {
+    font-size: 40px;
     text-align: center;
     padding-top: 25%;
 }
 
+.text-container p {
+    margin: 10% 5% 10%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.text-container .custom-link {
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.text-container .custom-link a {
+    font-size: 30px;
+    text-align: center;
+}
+
+.text-container .custom-link hr { 
+    border: 1px solid;
+    text-align: center;
+}
 
 /* ------------------------------------------ media queries */
 
