@@ -5,28 +5,55 @@
 
 
 <div id="header-block" class="container-fluid">
-    <div>logo</div>
-    <h1>Welcome home... </h1>
+    <div id="logo-tile"></div>
+    <h1>Welcome Home...</h1>
 </div>
 
 <div class="container-fluid text-container">
     <p>Bringing beautiful hand-made artisanal homewear and decor from the Artisans of Peru right to your home.</p>
-    <div class="custom-link">
-        <a>Shop the range</a>
-        <hr>
+    <div class="custom-link row no-gutters">
+        <div class="col-sm">
+            <a class="text-decoration-none" href="#">Shop the range</a>
+        </div>
+        <div class="custom-link row no-gutters">
+            <div class="col-sm"><hr></div>
+        </div>
     </div>
 </div>
 
 <!-- display product images-->
-<div class="container-fluid">
+<div class="container image-container">
     <div class="row">
-        <div class="col">images</div>
+        <div id="category-img-1" class="col-sm">
+            <a class="text-decoration-none" href="#"><h1>Ceramics</h1></a>
+        </div>
+        <div id="category-img-2" class="col-sm">
+            <a class="text-decoration-none" href="#"><h1>Mirrors</h1></a>
+        </div>
+        <div id="category-img-3" class="col-sm">
+            <a class="text-decoration-none" href="#"><h1>Textiles</h1></a>
+        </div>
     </div>
 </div>
 
+<div id="background-col-container" class="container-fluid text-container">
+    <h1>True to authenticity. 
+        Fair to the maker.
+    </h1>
+    <p>Find out more about how we work and our mission to bring the beauty of Peru into your homes in a fair and honest way.</p>
+    <div class="custom-link">
+        <a class="text-decoration-none" href="#">About CA</a>
+        <hr>
+    </div>
+    <div id="ehtos-image" class="col-sm"></div>
+</div>
 
-<div class="d-grid gap-2">
-    <button class="btn btn-lg" type="button"><a class="text-decoration-none" href="{% url 'account_signup' %}">Sign up</a></button>
+<div class="container-fluid">
+    <div class="text-container">
+        <h1>Be Inspired</h1>
+        <hr>
+        <p>Sign up to our newletter for the latest updates and home inspiration</p>
+    </div>
 </div>
 
 {% endblock %}

@@ -124,6 +124,147 @@ footer {
     color:white;
 } 
 
+
+/* ------------------------------------------ index page  */
+
+#header-block {
+    background-color: #EFE9E2;
+    text-align: center;
+    width: 100vw;
+    height: 550px;
+    margin-bottom: 5rem;
+}
+
+#header-block h1 {
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+    color: #6D6155;
+}
+
+#header-block #logo-tile {
+    background-color: white;
+    height: 75%;
+    width: 80%;
+    background-image: url("/media/ca_logo.png");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    display: inline-block;
+    margin: 0 auto
+}
+
+.text-container {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.text-container h1 {
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+
+.text-container p {
+    margin: 10% 5% 10%;
+    padding-bottom: 2rem;
+    font-size: 20px;
+}
+
+.text-container .custom-link a {
+    font-size: 30px;
+    color: #6D6155;
+}
+
+.text-container .custom-link a:hover {
+    color: #A4917E;
+}
+
+.text-container .custom-link hr { 
+    border: 1.5px solid;
+    color: #6D6155;
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 5rem;
+}
+
+.image-container h1 {
+    color: white;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.image-container h1:hover {
+    color: #6D6155;
+}
+
+.image-container #category-img-1 {
+    background-color: white;
+    background-image: url("/media/pink_cups.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    height: 600px;
+    width: 100%;
+}
+
+.image-container #category-img-2 {
+    background-color: #C8C1B9;
+    background-image: url("/media/sun_mirror_gold.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    height: 600px;
+    width: 100%;
+}
+
+.image-container #category-img-3 {
+    background-color: #EFE9E2;
+    background-image: url("/media/chakana_rug.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    height: 600px;
+    width: 100%;
+}
+
+#background-col-container {
+    background-color: #F3ECE4;
+    padding-bottom: 4rem;
+}
+
+#background-col-container #ehtos-image {
+    background-color: #C8C1B9;
+    background-image: url('/media/ethos-image.jpg');
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    height: 600px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#background-col-container h1 {
+    font-size: 35px;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
+#background-col-container .custom-link a {
+    font-size: 25px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
 /* ------------------------------------------ login */
 
 .loginout-header-container {
@@ -138,80 +279,37 @@ footer {
     font-size: 30px;
 }
 
-/* ------------------------------------------ index page  */
-
-#header-block {
-    background-color: #EFE9E2;
-    height: 50vw;
-    width: 100vw;
-}
-
-#header-block h1 {
-    font-size: 40px;
-    text-align: center;
-    padding-top: 25%;
-}
-
-.text-container p {
-    margin: 10% 5% 10%;
-    font-size: 20px;
-    text-align: center;
-}
-
-.text-container .custom-link {
-    text-align: center;
-    width: auto;
-    height: auto;
-}
-
-.text-container .custom-link a {
-    font-size: 30px;
-    text-align: center;
-}
-
-.text-container .custom-link hr { 
-    border: 1px solid;
-    text-align: center;
-}
 
 /* ------------------------------------------ media queries */
 
 /*  small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
+
+    /*------------------ nav bar */
     .navbar .navbar-brand {
         display: none;
     }
 
-    /* home page */
-    #header-block {
-        height: 100vw;
-    }
-    
-    #header-block h1 {
-        font-size: 30px;
-    }
+    /*------------------ home page */
+
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-    /* home page */
-    #header-block h1 {
-        padding-top: 10%;
-    }
+    /*------------------ home page */
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    /* home page */
-    #header-block h1 {
-        padding-top: 10%;
-    }
+    /*------------------ home page */
 
-    /* footer */
+
+    /*------------------ footer */
     .social-media-icons i {
         margin: 20% 0.5% 2%;
     }
@@ -224,6 +322,8 @@ footer {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+    /*------------------ home page */
 
 }
 
