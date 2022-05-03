@@ -6,3 +6,8 @@ def index(request):
 
     return render(request, 'home/index.html')
 
+
+def about(request):
+    """ Returns about page """
+
+    return render(request, 'home/about.html')

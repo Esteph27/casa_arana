@@ -271,6 +271,61 @@ footer hr {
     font-size: 25px;
 }
 
+/* ------------------------------------------ About */
+
+#about-us-img-1 {
+    background-color: #C8C1B9;
+    background-image: url("/media/swing_chair.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    height: 650px;
+    width: 100%
+
+}
+
+#background-col-container .extra-padding {
+    padding-top: 20rem;
+}
+
+#about-us-img-2 {
+    background-color: #C8C1B9;
+    background-image: url("/media/dye.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    height: 650px;
+    width: 100%
+}
+
+#about-us-img-3 {
+    background-color: #C8C1B9;
+    background-image: url("/media/people_walking.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    height: 650px;
+    width: 100%
+}
+
+.bk-to-store-link {
+    text-align: center;
+}
+
+.bk-to-store-link p {
+    font-size: 20px;
+}
+
+.bk-to-store-link hr {
+    border: 1px solid;
+    color: #6D6155;
+    width: 30%;
+    margin: 0 auto;
+}
+
 /* ------------------------------------------ login */
 
 .loginout-header-container {
