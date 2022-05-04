@@ -133,6 +133,10 @@ footer hr {
     color:white;
 } 
 
+.btn-lng a:hover {
+    color:white;
+}
+
 
 /* ------------------------------------------ index page  */
 
@@ -196,7 +200,6 @@ footer hr {
 .text-container .custom-link a:hover {
     color: #A4917E;
 }
-
 
 .image-container h1 {
     color: white;
@@ -282,12 +285,16 @@ footer hr {
 	overflow: hidden;
     height: 650px;
     width: 100%
-
 }
 
-#background-col-container .extra-padding {
+.extra-padding-top {
     padding-top: 20rem;
 }
+
+#background-col-container .extra-padding-top {
+    padding-top: 20rem;
+}
+
 
 #about-us-img-2 {
     background-color: #C8C1B9;
@@ -307,12 +314,52 @@ footer hr {
 	background-size: cover;
 	background-position: 40%;
 	overflow: hidden;
-    height: 650px;
-    width: 100%
+    height: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.links-container {
+    text-align: center;
+}
+
+.links-container hr {
+    border: 1px solid;
+    color: #6D6155;
+    width: 10%;
+    margin: 0 auto;
+}
+
+.links-container p {
+    padding-top: 2rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 20px
+}
+
+.links-container a {
+    color: #6D6155;
+}
+
+.sign-up-container {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.sign-up-container hr {
+    border: 1px solid;
+    color: #6D6155;
+    width: 80%;
+    margin: 0 auto;  
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .bk-to-store-link {
     text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .bk-to-store-link p {
@@ -322,7 +369,7 @@ footer hr {
 .bk-to-store-link hr {
     border: 1px solid;
     color: #6D6155;
-    width: 30%;
+    width: 20%;
     margin: 0 auto;
 }
 
