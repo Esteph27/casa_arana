@@ -3,8 +3,8 @@ from .models import Product
 
 # Create your views here.
 def all_products(request):
-    """ 
-    Returns all products page, includes search queries and filtering 
+    """
+    Returns all products page, includes search queries and filtering
     """
 
     products = Product.objects.all()
