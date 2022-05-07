@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+            <div class="image-container mt-5">
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                <div class="col">
+                    <p>{{ product.name }}</p>
+                    <p>${{ product.price }}</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row qty-selector-container">
+        <div class="col">
+            <div>
+               <p>qty</p>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <p>add to basket</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="prouct-info-container">
+                <h1>Description</h1>
+                <p>{{ product.description }}</p>
+            </div>
+            <div class="prouct-info-container">
+                <h1>Composition and Dimensions</h1>
+                <p>{{ product.dimensions_and_composition }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="extra-padding-top"></div>
+
+{% endblock %}
