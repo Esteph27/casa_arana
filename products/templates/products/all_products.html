@@ -11,12 +11,20 @@
     </div>
     <div class="row">
         <div class="col mt-4 search-bar-container">
-            <form class="d-flex col-sm-12 col-md-6">
-                <input class="form-control" type="text" placeholder="Search here...">
+            <form class="form d-flex col-sm-12 col-md-6" method="GET" action="{% url 'products' %}">
+                <input class="form-control" type="text" name="q" placeholder="Search here...">
+                <div class="input-group-append">
+                    <button class="form-control btn" type="submit">
+                        <span>
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
+                </div>
             </form>
         </div>
     </div>
 </div>
+
 
 <div class="container-fluid">
     <div class="row">
