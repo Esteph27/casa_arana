@@ -385,6 +385,10 @@ footer hr {
     margin: 0 auto;
 }
 
+.bk-to-store-link a {
+    color: #6D6155;
+}
+
 /* ------------------------------------------ login */
 
 .loginout-header-container {
