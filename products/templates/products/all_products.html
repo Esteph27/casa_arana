@@ -3,6 +3,8 @@
 
 {% block content %}
 
+<!-- header -->
+
 <div class="container-fluid" id="product-header">
     <div class="row">
         <div class="col">
@@ -10,21 +12,28 @@
         </div>
     </div>
     <div class="row">
-        <div class="col mt-4 search-bar-container">
-            <form class="form d-flex col-sm-12 col-md-6" method="GET" action="{% url 'products' %}">
-                <input class="form-control" type="text" name="q" placeholder="Search here...">
-            </form>
+        <div class="col">
+            <h3>All Products</h3>
         </div>
     </div>
 </div>
 
-<!--price filtering -->
-<div class="container filter-by-price-container">
+<!-- search bar -->
+<div class="container-fluid ">
     <div class="row">
-        <div class="col">
+        <div class="col search-bar-container mt-4">
+            <form class="form col-sm-12 col-md-6" method="GET" action="{% url 'products' %}">
+                <input class="form-control" type="text" name="q" placeholder="Search here...">
+            </form>
+            <hr>
+        </div>
+    </div>
+    <!-- price filtering dropdown -->
+    <div class="row">
+        <div class="col filter-by-price-container mt-2">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Filter</a>
-                <span><i class="fa-solid fa-angle-down"></i></span>
+                <hr>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - lowest to Highest</a>
                   <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
@@ -34,6 +43,7 @@
     </div>
 </div>
 
+<!-- products -->
 <div class="container-fluid">
     <div class="row">
         {% for product in products %}
@@ -60,6 +70,7 @@
 
 <div class="extra-padding-top"></div>
 
+<!-- back to top button -->
 <div class="back-to-top-container">
     <button onclick="topFunction()" id="back-to-top-arrow" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
 </div>

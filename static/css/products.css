@@ -25,27 +25,66 @@
 
 /* ------------------------------------------ all products */
 
+/* header container */
 #product-header {
     background-color: #EFE9E2;
-    height: 350px;
-    text-align: center;
-    margin-bottom: 5rem;
+    height: 230px;
+    text-align: left;
 }
 
+#product-header h1 {
+    font-size: 60px;
+    color: #A4917E;
+    letter-spacing: 4px;
+    margin-top: 5rem;
+}
+
+#product-header h3 {
+    font-size: 20px;
+    color: #A4917E;
+}
+
+/* search bar container */
+.search-bar-container {
+    text-align: left;
+    padding: 0;
+}
+
+.search-bar-container form {
+   text-align: left;
+}
+
+.form-control {
+    background-color: transparent;
+    border: none;
+    font-family: 'Libre Bondi', serif;
+    padding: 5px 5px 5px 12px;
+    font-size: 18px;
+    margin-left: 2px;
+}
+
+.search-bar-container hr {
+    width: 10%;
+    border: 1px solid #6D6155;
+    margin-left: 1rem;
+}
+
+/* drop down */
 .filter-by-price-container {
-    text-align: center;
+    text-align: left;
     font-size: 25px;
+    padding: 0;
 }
 
 .filter-by-price-container a {
+    font-size: 18px;
     color: #6D6155;
 }
 
-
-.form-control {
-    background-color: #EFE9E2;
-    border: solid 1px #DCDADA;
-    font-family: 'Libre Bondi', serif;
+.filter-by-price-container hr {
+    width: 10%;
+    border: 1px solid #6D6155;
+    margin-left: 1rem;
 }
 
 .dropdown-toggle::after {
@@ -65,20 +104,7 @@ li.nav-item.dropdown {
     list-style-type: none;
 }
 
-
-#product-header h1 {
-    font-size: 60px;
-    margin-top: 8rem;
-}
-
-.search-bar-container {
-    text-align: center;
-}
-
-.search-bar-container form {
-   margin: 0 auto;
-}
-
+/* image display */
 .card-body {
     color: #6D6155;
 }
