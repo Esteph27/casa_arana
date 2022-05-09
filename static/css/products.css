@@ -7,7 +7,7 @@
 	padding: 0;
 }
 
-/* ------------------------------------------ bacK to top */
+/* ------------------------------------------ bacK to top button */
 
 #myBtn {
     display: none; /* Hidden by default */
@@ -28,6 +28,7 @@
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
   
 
 /* ------------------------------------------ all products */
@@ -39,23 +40,39 @@
     margin-bottom: 5rem;
 }
 
+.filter-by-price-container {
+    text-align: center;
+    font-size: 25px;
+}
+
+.filter-by-price-container a {
+    color: #6D6155;
+}
+
+
 .form-control {
     background-color: #EFE9E2;
     border: solid 1px #DCDADA;
     font-family: 'Libre Bondi', serif;
 }
 
-.input-group-append .form-control {
-    border: none;
+.dropdown-toggle::after {
+    display: none;
 }
 
-.form-control i {
-    color: #6D6155;
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px;
+    text-align: start;
+    text-align-last: start;
 }
 
-.form-control i:hover {
-    color: #A4917E;
+li.nav-item.dropdown {
+    list-style-type: none;
 }
+
 
 #product-header h1 {
     font-size: 60px;

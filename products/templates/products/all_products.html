@@ -13,18 +13,10 @@
         <div class="col mt-4 search-bar-container">
             <form class="form d-flex col-sm-12 col-md-6" method="GET" action="{% url 'products' %}">
                 <input class="form-control" type="text" name="q" placeholder="Search here...">
-                <div class="input-group-append">
-                    <button class="form-control btn" type="submit">
-                        <span>
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                </div>
             </form>
         </div>
     </div>
 </div>
-
 
 <!--price filtering -->
 <div class="container filter-by-price-container">
@@ -32,6 +24,7 @@
         <div class="col">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Filter</a>
+                <span><i class="fa-solid fa-angle-down"></i></span>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - lowest to Highest</a>
                   <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
@@ -40,7 +33,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="container-fluid">
     <div class="row">
@@ -77,6 +69,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
+
     <script type="text/javascript">
 		//Get the button:
         mybutton = document.getElementById("myBtn");
