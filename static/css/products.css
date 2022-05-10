@@ -23,6 +23,10 @@
     background-color: transparent;
 }
 
+#back-to-top-arrow:hover i {
+    color: #C8C1B9;
+}
+
 /* ------------------------------------------ all products */
 
 /* header container */
