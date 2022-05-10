@@ -76,8 +76,12 @@
     padding: 0;
 }
 
-.filter-by-price-container a {
+.filter-by-price-container li a {
     font-size: 18px;
+    color: grey;
+}
+
+.filter-by-price-container li a:hover {
     color: #6D6155;
 }
 
@@ -90,6 +94,7 @@
 .dropdown-toggle::after {
     display: none;
 }
+
 
 ::marker {
     unicode-bidi: isolate;
