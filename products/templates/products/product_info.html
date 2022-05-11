@@ -3,7 +3,7 @@
 
 {% block content %}
 
-
+<!-- product image -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-8 offset-md-2">
@@ -21,22 +21,20 @@
     </div>
 </div>
 
+<!-- qty selector -->
 <div class="container">
     <div class="row qty-selector-container">
         <div class="col">
-            <div>
-               <p>qty</p>
-            </div>
-        </div>
-        <div class="col">
-            <div>
-                <p>add to basket</p>
-            </div>
+            <form action="/action_page.php">
+                <label for="quantity"></label>
+                <input type="number" id="quantity" name="quantity" min="0" max="100">
+                <button>Add to basket</button>
+            </form>
         </div>
     </div>
 </div>
 
-
+<!-- product info -->
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -52,9 +50,16 @@
     </div>
 </div>
 
-
-
+<!-- back to previous page -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-l-12 col-xl-12 go-bk-btn">
+            <button onclick="history.back()" type="button" class="btn">Back</button>
+        </div>
+    </div>
+</div>
 
 <div class="extra-padding-top"></div>
+
 
 {% endblock %}

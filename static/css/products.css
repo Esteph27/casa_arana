@@ -7,7 +7,7 @@
 	padding: 0;
 }
 
-/* ------------------------------------------ bacK to top button */
+/* ------------------------------------------ back to top button */
 
 #back-to-top-arrow {
     display: none; /* Hidden by default */
@@ -25,7 +25,16 @@
 
 #back-to-top-arrow:hover i {
     color: #C8C1B9;
+    
 }
+
+/* ------------------------------------------ back to previous page btn */
+
+.go-bk-btn {
+    text-align: center;
+    margin-top: 8rem;
+}
+
 
 /* ------------------------------------------ all products */
 

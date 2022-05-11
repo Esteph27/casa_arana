@@ -137,17 +137,18 @@ footer hr {
     font-size: 20px;
     font-weight: 300;
     text-transform: unset;
-    color: black;
+    color: #6D6155;
     font-family: 'Libre Bondi', serif;
 }
 
-.btn a:hover {
-    color:white;
-} 
+.btn:hover {
+    color: #A4917E;
+}
 
 .btn-lng a:hover {
     color:white;
 }
+
 
 
 /* ------------------------------------------ index page  */
