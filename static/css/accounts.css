@@ -1,0 +1,49 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,400&family=Libre+Bodoni&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Libre Bondi', serif;
+    text-transform: unset;
+    font-weight: 300;
+    color: #6D6155
+}
+
+/* ------------------------------------------ log in */
+
+.loginout-header-container {
+    text-align: center;
+    height: auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.loginout-header-container h1 {
+    font-size: 50px;
+}
+
+.loginout-header-container hr {
+    color: #6D6155;
+    border: 1px solid;
+}
+
+.login-container {
+    text-align: left;
+}
+
+.login-container button {
+    border: none;
+    background-color: #EFE9E2;
+    font-family: 'Libre Bondi', serif;
+    padding: 5px 20px;
+}
+
+.connect-to-signup {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
