@@ -156,6 +156,20 @@ li.nav-item.dropdown {
     color: #6D6155;
 }
 
+.category-tag {
+    text-align: center;
+    color: #A4917E;
+}
+
+.category-tag .col {
+    padding: 0;
+}
+
+.category-tag p a {
+    font-size: 15px;
+    color: #A4917E;
+}
+
 .image-container hr {
     border: 1px solid #6D6155;
     width: 20%;

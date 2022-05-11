@@ -19,6 +19,16 @@
             </div>
         </div>
     </div>
+    <div class="category-tag mt-4">
+        <div class="row">
+            <div class="col-12">
+                <p><a class="text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.name }}</a></p>
+            </div>
+            <div class="col-12">
+                <i class="fa-solid fa-circle"></i>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- qty selector -->

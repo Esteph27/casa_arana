@@ -12,6 +12,8 @@
     </div>
     <div class="row">
         <div class="col">
+            <!--add fucntionality so that when the user clicks on a category, the category name will appear, 
+            if no categpry is selected then All Products will show-->
             <h3>All Products</h3>
         </div>
     </div>
@@ -57,6 +59,16 @@
                         <div class="row">
                             <div class="col">
                                 <p>${{ product.price }}</p>
+                            </div>
+                            <div class="category-tag mt-0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><a class="text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.name }}</a></p>
+                                    </div>
+                                    <div class="col-12">
+                                        <i class="fa-solid fa-circle"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
