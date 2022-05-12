@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- header -->
+<h1>shopping bag</h1>
+
+<!-- render table if there are bags in items, otherwise send the user back to all products page -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            {% if bag_item %}
+                <div class="tabel-responsive rounded"></div>
+            {% else %}
+                <p>Your bag is exmpty</p>
+                <span>Continue Shopping</span>
+                <a href="{% url 'all_products' %}"></a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block postloadjs %}
+{% endblock %}
