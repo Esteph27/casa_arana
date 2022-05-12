@@ -6,12 +6,24 @@
 <!-- header -->
 <h1>shopping bag</h1>
 
-<!-- render table if there are bags in items, otherwise send the user back to all products page -->
+<!-- render shopping bag items -->
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            {% if bag_item %}
-                <div class="tabel-responsive rounded"></div>
+            {% if bag_items %}
+                <div class="tabel-responsive rounded">
+                    {{ bag_items }}
+                </div>
+                <!--grand total-->
+                <div class="text-center">
+                    <p class="my-0">
+                        {% if grand_total %}
+                            ${{ grand_total|floatformat:2 }}
+                        {% else %}
+                            $0.00
+                        {% endif %}
+                    </p>
+                </div>
             {% else %}
                 <p>Your bag is empty</p>
                 <span>Continue Shopping</span>
@@ -20,6 +32,8 @@
         </div>
     </div>
 </div>
+
+
 
 {% endblock %}
 
