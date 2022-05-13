@@ -40,17 +40,19 @@ def adjust_bag_qty(request, item_id):
 
 
 def remove_from_bag(request, item_id):
-    """Remove item from shopping bag"""
+    """Remove the item from the shopping bag"""
 
     try:
         bag = request.session.get('bag', {})
 
-        if quantity > 0:
-            bag[item_id] = quantity
+      
+        if not bag[item_id]:
+            bag.pop(item_id)
         else:
             bag.pop(item_id)
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
+
     except Exception as e:
         return HttpResponse(status=500)
