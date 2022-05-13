@@ -14,7 +14,11 @@
         <div class="col">
             <!--add fucntionality so that when the user clicks on a category, the category name will appear, 
             if no categpry is selected then All Products will show-->
-            <h3>All Products</h3>
+            {% if category in query %}
+                <h1>{{category.name}}</h1>
+            {% else %}
+                <h3>All Products</h3>
+            {% endif %}
         </div>
     </div>
 </div>
