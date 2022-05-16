@@ -47,21 +47,21 @@
 
     {% include 'includes/navbar.html' %}
 
-    {% if message %}
+    {% if messages %}
       <div class="message-container">
         {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %} <!-- error -->
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %} <!-- warning -->
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %} <!-- success -->
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %} <!-- default, info -->
-                        {% include 'includes/toasts/toast_info.html' %} 
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
+          {% with message.level as level %}
+            {% if level == 40 %} <!-- error -->
+                {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %} <!-- warning -->
+                {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %} <!-- success -->
+                {% include 'includes/toasts/toast_success.html' %}
+            {% else %} <!-- default, info -->
+                {% include 'includes/toasts/toast_info.html' %} 
+            {% endif %}
+          {% endwith %}
+        {% endfor %}
       </div>
     {% endif %}
 
@@ -74,6 +74,15 @@
     {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+       $(document).ready(function () {
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+          let newToast = new bootstrap.Toast(toastEl)
+          newToast.show();
+        })
+      })
+    </script>
     {% endblock %}
 
 
