@@ -26,11 +26,6 @@ body {
     background-color: white;
 }
 
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
-
 /* ------------------------------------------ nav bar */
 
 .bg-light {

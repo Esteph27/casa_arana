@@ -1,0 +1,71 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,400&family=Libre+Bodoni&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h5 {
+    font-family: 'Libre Bondi', serif;
+    text-transform: unset;
+    font-weight: 300;
+    color: #6D6155;
+}
+
+
+/* links */
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.remove-item :hover {
+    text-decoration: underline;
+}
+
+.update-link :hover {
+    text-decoration: underline;
+}
+
+/* header */
+
+.bag-header-container {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.bag-header-container h1 {
+    font-size: 45px;
+    color: #A4917E;
+}
+
+/* form */
+
+.tabel-responsive {
+    margin-bottom: 5rem;
+}
+
+.table {
+    font-family: 'Libre Bondi', serif;
+}
+
+.table .form-control {
+    border: none;
+    padding: none;
+    text-align: center;
+}
+
+
+.input-group-prepend-bag .btn {
+    padding: 0;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.input-group-append-bag .btn {
+    padding: 0;
+    background-color: transparent;
+    font-size: 15px;
+}
