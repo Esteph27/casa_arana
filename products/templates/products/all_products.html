@@ -24,6 +24,7 @@
     </div>
     <div class="row">
         <div class="col mt-2">
+            <!--add functionality so that when the user clicks on a category the category name will appear -->
             <p>All Products | {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</p> 
         </div>
         <div class="col-12 sort-by-price-container mt-2">
@@ -39,16 +40,14 @@
 </div>
 
 <!-- back to all products link -->
-<div class="container">
-    <div class="row">
-        <div class="col mt-4">
-            <p>
-                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                    <span class="small"><a href="{% url 'products' %}">Products Home</a></span>
-                {% endif %}
-            </p>
-        </div>
-    </div>
+<div class="back-to-all-product-link ml-2">
+    <span>
+        <p>
+            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <a href="{% url 'products' %}"><i class="fa-solid fa-angle-left mr-1"></i>Back to all products</a>
+            {% endif %}
+        </p>
+    </span>
 </div>
 
 <!-- products -->
@@ -60,32 +59,18 @@
                 <a href="{% url 'product_info' product.id %}">
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
-                <div class="card-body text-center">
+                <a class="text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
+                    <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
+                </a>
+                <div class="card-body pl-0">
                     <p>{{ product.name }}</p>
-                    <div class="card-footer bg-white border-0">
-                        <div class="row">
-                            <div class="col">
-                                <p>${{ product.price }}</p>
-                            </div>
-                            <div class="category-tag mt-0">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <p><a class="text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.name }}</a></p>
-                                    </div>
-                                    <div class="col-12">
-                                        <i class="fa-solid fa-circle"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="text-smaller">${{ product.price }}</p>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
-
 
 <div class="extra-padding-top"></div>
 

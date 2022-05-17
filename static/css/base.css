@@ -612,6 +612,10 @@ footer hr {
         font-size: 40px;
     }
 
+    .navbar {
+        padding-left: 0;
+    }
+
     /*------------------ index page */
     #header-block {
         height: 700px;
@@ -706,6 +710,10 @@ footer hr {
     /*------------------ nav bar */
     .navbar .navbar-brand {
         font-size: 55px;
+    }
+
+    .navbar {
+        padding-left: 0;
     }
 
      /*------------------ index page */
