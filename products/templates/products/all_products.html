@@ -23,17 +23,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-3 col-xl-3 mt-2">
-            <p>All Products</p>
+        <div class="col mt-2">
+            <p>All Products | {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</p> 
         </div>
-        <div class="col-3 col-xl-3 mt-2">
-            <p>
-                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-            </p>
-        </div>
-        <div class="col-3 col-xl-3 sort-by-price-container mt-2">
+        <div class="col-12 sort-by-price-container mt-2">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By <i class="fa-solid fa-angle-down"></i></a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - Lowest to Highest</a>
                     <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
@@ -43,7 +38,7 @@
     </div>
 </div>
 
-<!-- back to products link -->
+<!-- back to all products link -->
 <div class="container">
     <div class="row">
         <div class="col mt-4">
