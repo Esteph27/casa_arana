@@ -3,7 +3,19 @@
 
 {% block content %}
 
-<!-- header -->
+
+<!-- search bar-->
+<div class="container search-bar-container mt-4 mb-4 float-xl-left">
+    <div class="row">
+        <div class="col col-xl-6">
+            <form class="form" method="GET" action="{% url 'products' %}">
+                <input class="form-control" type="text" name="q" placeholder="Search here...">
+            </form>
+        </div>  
+    </div>
+</div>
+
+<!-- header with sorting -->
 <div class="container-fluid" id="product-header">
     <div class="row">
         <div class="col">
@@ -11,34 +23,17 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <!--add fucntionality so that when the user clicks on a category, the category name will appear, 
-            if no categpry is selected then All Products will show-->
-            {% if category in query %}
-                <h1>{{category.name}}</h1>
-            {% else %}
-                <h3>All Products</h3>
-            {% endif %}
+        <div class="col-3 col-xl-3 mt-2">
+            <p>All Products</p>
         </div>
-    </div>
-</div>
-
-<!-- search bar and price filtering -->
-<div class="container-fluid ">
-    <div class="row">
-        <div class="col search-bar-container mt-4">
-            <form class="form col-sm-12 col-md-6" method="GET" action="{% url 'products' %}">
-                <input class="form-control" type="text" name="q" placeholder="Search here...">
-            </form>
-            <hr>
-        </div>  
-    </div>
-    <!-- price filtering dropdown -->
-    <div class="row">
-        <div class="col filter-by-price-container mt-2">
+        <div class="col-3 col-xl-3 mt-2">
+            <p>
+                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+        </div>
+        <div class="col-3 col-xl-3 sort-by-price-container mt-2">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Filter</a>
-                <hr>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - Lowest to Highest</a>
                     <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
@@ -46,14 +41,16 @@
             </li>
         </div>
     </div>
-     <!-- back to all products link if search term as been selected -->
+</div>
+
+<!-- back to products link -->
+<div class="container">
     <div class="row">
-        <div class="col order-md-first">
-            <p class="text-muted mt-3">
+        <div class="col mt-4">
+            <p>
                 {% if search_term or current_categories or current_sorting != 'None_None' %}
-                    <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                    <span class="small"><a href="{% url 'products' %}">Products Home</a></span>
                 {% endif %}
-                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
             </p>
         </div>
     </div>
