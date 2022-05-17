@@ -7,6 +7,9 @@
 	padding: 0;
 }
 
+a {
+    color: #6D6155
+}
 
 /* ------------------------------------------ back to previous page btn */
 
@@ -138,7 +141,7 @@ li.nav-item.dropdown {
     margin-bottom: 1rem;
 }
 
-.image-container p {
+.image-product-info p {
     font-size: 25px;
     color: #6D6155;
 }
@@ -146,7 +149,6 @@ li.nav-item.dropdown {
 .qty-selector-container {
     text-align: left;
     margin-top: 3rem;
-    margin-bottom: 5rem;
 }
 
 .qty-selector-container .form-control {
@@ -163,12 +165,13 @@ li.nav-item.dropdown {
 
 
 .prouct-info-container {
-    margin-bottom: 5rem;
+    margin-bottom: 12rem;
     text-align: left;
 }
 
 .prouct-info-container h1 {
     font-size: 30px;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -178,25 +181,37 @@ li.nav-item.dropdown {
 
 /* ------------------------------------------ media queries */
 
+
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+    /*------------------------- all products */
 
     .card img {
         height: 900px;
         object-fit: cover;
     }
 
+    #product-header {
+        margin-top: 6rem;
+    }
+
+    /*------------------------- product info */
+ 
     .image-container img {
-        height: 800px;
+        height: 60vw;
+        width: 80vw;
         object-fit: cover;
     }
 
     .image-container {
        margin-top: 8rem;
+       text-align: center;
     }
 
-    #product-header {
-        margin-top: 6rem;
+    .image-product-info {
+        margin-left: 10rem;
     }
 
     

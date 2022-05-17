@@ -6,19 +6,21 @@
 <!-- product image -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-8 offset-md-2">
+        <div class="col-12">
             <a href="{% url 'products' %}" onclick="history.back()" class="text-decoration-none"><i class="fa-solid fa-angle-left mr-1"></i>Back</a>
             <div class="image-container mt-5">
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
-                <a class="text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
-                    <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
-                </a>
-                <div class="col pl-0 mt-3">
-                    <p>{{ product.name }}</p>
-                    <p>${{ product.price }}</p>
-                </div>
+            </div>
+        </div>
+        <div class="col image-product-info">
+            <a class="text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
+                <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
+            </a>
+            <div class="col pl-0 mt-3">
+                <p>{{ product.name }}</p>
+                <p>${{ product.price }}</p>
             </div>
         </div>
     </div>
@@ -26,10 +28,10 @@
 
 <!-- qty selector and add to basket -->
 <div class="container">
-    <div class="row qty-selector-container pl-0">
+    <div class="row pl-0">
         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
             {% csrf_token %}
-            <div class="col-12 pl-0">
+            <div class="col-xl-6 pl-0 qty-selector-container">
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -58,24 +60,26 @@
 </div>
 
 <!-- product info -->
-<div class="container mb-5">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <div class="prouct-info-container">
+<div class="container prouct-info-container">
+    <div class="row pl-0">
+        <div class="col-md-12">
+            <div>
                 <h1>Color</h1>
                 <p>{{ product.color }}</p>
             </div>
-            <div class="prouct-info-container">
+            <div>
                 <h1>Description</h1>
                 <p>{{ product.description }}</p>
             </div>
-            <div class="prouct-info-container">
+            <div>
                 <h1>Composition and Dimensions</h1>
                 <p>{{ product.dimensions_and_composition }}</p>
             </div>
         </div>
     </div>
 </div>
+
+
 
 
 
