@@ -235,8 +235,6 @@ footer hr {
 }
 
 .text-container hr {
-    border: 1px solid;
-    color: #6D6155;
     width: 50%;
     margin: 0 auto;
 }
@@ -385,8 +383,6 @@ footer hr {
 }
 
 .links-container hr {
-    border: 1px solid;
-    color: #6D6155;
     width: 20%;
     margin: 0 auto;
 }
@@ -409,8 +405,6 @@ footer hr {
 }
 
 .sign-up-container hr {
-    border: 1px solid;
-    color: #6D6155;
     width: 80%;
     margin: 0 auto;  
     margin-top: 2rem;
@@ -428,8 +422,6 @@ footer hr {
 }
 
 .bk-to-store-link hr {
-    border: 1px solid;
-    color: #6D6155;
     width: 20%;
     margin: 0 auto;
 }

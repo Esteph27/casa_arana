@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<div class="container-fluid loginout-header-container">
+<div class="container-fluid allauth-header">
   <div class="row">
     <div class="col-12">
       <h1>Welcome Back</h1>
@@ -35,7 +35,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 {% else %}
 
-<div class="container-fluid login-container">
+<div class="container-fluid container-left">
   <div class="row">
     <div class="col-12">
         <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -44,10 +44,10 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
           {% endif %}
-          <div class="col-12 mb-3">
+          <div class="col-12 mb-3 pl-0">
             <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
           </div>
-          <div class="col-12">
+          <div class="col-12 pl-0">
             <a class="button secondaryAction text-decoration-none" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
           </div>
         </form>  

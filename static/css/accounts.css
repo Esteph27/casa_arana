@@ -14,29 +14,27 @@ h1, h2, h3 {
     color: #6D6155
 }
 
-/* ------------------------------------------ log in */
-
-.loginout-header-container {
-    text-align: center;
+.allauth-header {
+    text-align: left;
     height: auto;
     margin-top: 20%;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
-.loginout-header-container h1 {
+.allauth-header h1 {
     font-size: 50px;
+    color: #A4917E;
 }
 
-.loginout-header-container hr {
-    color: #6D6155;
-    border: 1px solid;
-}
-
-.login-container {
+.container-left {
     text-align: left;
 }
 
-.login-container button {
+.container-left p {
+    font-size: 18px;
+}
+
+.container-left button {
     border: none;
     background-color: #EFE9E2;
     font-family: 'Libre Bondi', serif;
@@ -46,4 +44,51 @@ h1, h2, h3 {
 .connect-to-signup {
     margin-top: 2rem;
     margin-bottom: 5rem;
+}
+
+
+.extra-margin-bottom {
+    margin-bottom: 5rem;
+}
+
+
+/* ------------------------------------------ media queries */
+
+/*  small devices (phones, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+    .allauth-header {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+}
+
+/* Medium devices (large phones and tablets, 768px to 992px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .allauth-header {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .allauth-header {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .allauth-header {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
 }
