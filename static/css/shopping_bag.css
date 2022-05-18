@@ -14,11 +14,11 @@ h1, h2, h3, h5 {
     color: #6D6155;
 }
 
-
 /* links */
 .update-link,
 .remove-item {
     cursor: pointer;
+    font-size: 14px;
 }
 
 .remove-item :hover {
@@ -30,7 +30,6 @@ h1, h2, h3, h5 {
 }
 
 /* header */
-
 .bag-header-container {
     margin-top: 2rem;
     margin-bottom: 4rem;
@@ -42,7 +41,6 @@ h1, h2, h3, h5 {
 }
 
 /* form */
-
 .tabel-responsive {
     margin-bottom: 5rem;
 }
@@ -51,21 +49,97 @@ h1, h2, h3, h5 {
     font-family: 'Libre Bondi', serif;
 }
 
+.table th {
+    color: #6D6155;
+}
+
+.table td h5 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 .table .form-control {
     border: none;
     padding: none;
     text-align: center;
 }
 
-
 .input-group-prepend-bag .btn {
     padding: 0;
     background-color: transparent;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .input-group-append-bag .btn {
     padding: 0;
     background-color: transparent;
-    font-size: 15px;
+    font-size: 12px;
+}
+
+/* shopping bag empty  */
+#bag-empty-container {
+    height: auto;
+    margin-bottom: 12rem;
+}
+
+#bag-empty-container h2 {
+    color: #A4917E;
+    text-align: left;
+}
+
+/* ------------------------------------------ media queries */
+
+/*  small devices (phones, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+    .table .input-group {
+        padding: 2px;
+        width: 50%;
+    }
+
+}
+
+/*  medium to large devices (ipads and latops, 768px to 1200px) */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    
+    .table .input-group {
+        padding: 2px;
+        width: 50%;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .table th {
+        font-size: 22px;
+    }
+
+    .table td p {
+        font-size: 20px;
+    }
+
+    .table td h5 {
+        font-size: 22px;
+    }
+
+    .table .input-group {
+        padding: 2px;
+        width: 50%;
+    }
+
+    .update-link,
+    .remove-item {
+    font-size: 16px;
+    }
+
+    .input-group-prepend-bag .btn {
+        font-size: 14px;
+    }
+    
+    .input-group-append-bag .btn {
+        font-size: 14px;
+    }
+
 }

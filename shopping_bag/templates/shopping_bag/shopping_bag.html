@@ -38,14 +38,15 @@
                             <tr>
                                 <td class="w-25 mb-5">
                                     <img class="img-fluid" src="{{ item.product.image.url }}">
-                                    <p class="my-0">{{ item.product.name }}</p>
-                                    <a class="remove-item mt-2 small" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                    <p>{{ item.product.name }}</p>
+                                    <a class="remove-item mt-2" id="remove_{{ item.item_id }}">Remove</a>
+                                    <hr>
                                 </td>
                                 <td>
-                                    <p class="my-0">${{ item.product.price }}</p>
+                                    <p class="my-0 mt-5">${{ item.product.price }}</p>
                                 </td>
                                 <td>
-                                    <form class="form update-form" method="POST" action="{% url 'adjust_bag_qty' item.item_id %}">
+                                    <form class="form update-form mt-5" method="POST" action="{% url 'adjust_bag_qty' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -55,7 +56,7 @@
                                                         <span><i class="fas fa-minus fa-sm"></i></span>
                                                     </button>
                                                 </div>
-                                                <input class="form-control form-control-sm qty_input w-25" type="number"
+                                                <input class="form-control form-control-sm qty_input" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                                     data-item_id="{{ item.item_id }}"
                                                     id="id_qty_{{ item.item_id }}">
@@ -68,18 +69,19 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link"><small>Update</small></a>
+                                    <a class="update-link">Update</a>
+                                    <hr class="w-50">
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="my-0 mt-5">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
                                 <hr>
-                                <h5 class="mb-3">Bag Total: ${{ total|floatformat:2 }}</h5>
-                                <h5 class="mb-3">Delivery: ${{ delivery|floatformat:2 }}</h5>
+                                <h5>Bag Total: ${{ total|floatformat:2 }}</h5>
+                                <h5>Delivery: ${{ delivery|floatformat:2 }}</h5>
                                 <hr>
                                 <h3 class="mt-5 mb-5">Grand Total: ${{ grand_total|floatformat:2 }}</h3>
                                 {% if free_delivery_delta > 0 %}
@@ -97,8 +99,11 @@
                     </table>
                 </div>
             {% else %}
-                <p>Your bag is empty</p>
-                <a href="{% url 'products' %}"><span>Continue Shopping</span></a>
+                <div id="bag-empty-container">
+                    <h2>You have no items in your shopping basket.</h2>
+                    <hr class="mt-4 mb-4">
+                    <a href="{% url 'products' %}" class="btn">Continue Shopping</a>
+                </div>
             {% endif %}
         </div>
     </div>
