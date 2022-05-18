@@ -323,6 +323,24 @@ footer hr {
 
 /* ------------------------------------------ About */
 
+#logo-background h1 {
+    color: #FEF9F4;
+    font-size: 50px;
+    padding-top: 24rem;
+    padding-right: 5rem;
+}
+
+#logo-background {
+    background-color: #C8C1B9;
+    background-image: url("/media/ca_logo.png");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	overflow: hidden;
+    height: 650px;
+    width: 100vw;
+}
+
 #about-us-img-1 {
     background-color: #C8C1B9;
     background-image: url("/media/swing_chair.jpg");
@@ -441,6 +459,11 @@ footer hr {
         display: none;
     }
 
+    /*------------------ about page */
+    #logo-background h1 {
+        padding-right: 5rem;
+    }
+
 }
 
 /*  small devices (phones, 600px to 768px) */
@@ -486,6 +509,10 @@ footer hr {
     }
 
     /*------------------ about page */
+
+    #logo-background h1 {
+        padding-right: 15rem;
+    }
 
     .bk-to-store-link {
         margin-top: 8rem;
@@ -553,6 +580,15 @@ footer hr {
     }
 
     /*------------------ about page */
+
+    #logo-background h1 {
+        padding-top: 28rem;
+        padding-right: 16rem;
+    }
+
+    #logo-background {
+        width: 90vw;
+    }
 
     .links-container hr {
         width: 15%;
@@ -653,6 +689,15 @@ footer hr {
     }
 
     /*------------------ about page */
+
+    #logo-background h1 {
+        padding-top: 30rem;
+        padding-right: 18rem;
+    }
+
+    #logo-background {
+        width: 90vw;
+    }
 
      .links-container hr {
         width: 10%;
@@ -774,6 +819,18 @@ footer hr {
 
 
     /*------------------ about page */
+
+    #logo-background {
+        background-size: cover;
+        background-position: 20% 80%;
+        height: 700px;
+        width: 60vw;
+    }
+
+    #logo-background h1 {
+        font-size: 58px;
+        padding-top: 29rem;
+    }
 
     #half-width-container {
         width: 60%;
