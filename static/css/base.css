@@ -98,7 +98,6 @@ footer p {
 footer hr {
     width: 45%;
     margin: 0 auto;
-    border: 1px solid;
 }
 
 .social-media-icons {
@@ -107,7 +106,6 @@ footer hr {
     justify-content: center;
     flex-direction: row;
     text-align: center;
-    color: black;
     padding-top: 25%;
 }
 
@@ -149,7 +147,7 @@ footer hr {
     color:white;
 }
 
-/* ------------------------------------------ back to top button */
+/* ------------------------------------------ back to top scroll */
 
 #back-to-top-arrow {
     display: none; /* Hidden by default */
@@ -182,6 +180,7 @@ footer hr {
 .edit-toast {
     overflow: visible;
     background-color: #EFE9E2;
+    font-family:'Libre Bondi', serif;
 }
 
 .toast-capper {
