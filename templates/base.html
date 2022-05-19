@@ -76,15 +76,16 @@
     {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
-       $(document).ready(function () {
-        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-        var toastList = toastElList.map(function (toastEl) {
-          let newToast = new bootstrap.Toast(toastEl)
-          newToast.show();
+      <script type="text/javascript">
+        // toast fucntionality 
+        $(document).ready(function () {
+          var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+          var toastList = toastElList.map(function (toastEl) {
+            let newToast = new bootstrap.Toast(toastEl)
+            newToast.show();
+          })
         })
-      })
-    </script>
+      </script>
     {% endblock %}
 
 
