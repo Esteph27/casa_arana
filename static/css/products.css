@@ -1,11 +1,4 @@
-/* google font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,400&family=Libre+Bodoni&display=swap');
 
-
-* {
-	margin: 0;
-	padding: 0;
-}
 
 a {
     color: #6D6155
@@ -214,5 +207,4 @@ li.nav-item.dropdown {
         margin-left: 10rem;
     }
 
-    
 }
