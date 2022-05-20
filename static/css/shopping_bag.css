@@ -15,6 +15,7 @@ h1, h2, h3, h5 {
 
 .remove-item :hover {
     text-decoration: underline;
+    color: #B65555;
 }
 
 .update-link :hover {

@@ -22,7 +22,7 @@ var style = {
     },
     invalid: {
         color: '#B65555',
-        iconColor: '#dB65555'
+        iconColor: '#B65555'
     }
 };
 var card = elements.create('card', {style: style});
