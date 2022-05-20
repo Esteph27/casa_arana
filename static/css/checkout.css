@@ -29,6 +29,7 @@
   transition: box-shadow 150ms ease;
 }
 
+
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
@@ -43,6 +44,6 @@
 }
 
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+    
+    border: 1px solid #A4917E;
 }

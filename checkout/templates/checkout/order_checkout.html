@@ -25,7 +25,7 @@
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded px-3 mb-3">
                     <legend class="fieldset-label px-2 w-auto"><h5>Delivery</h5></legend>
                     {{ order_form.contact_number | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
@@ -57,7 +57,7 @@
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
 
-                <div class="submit-button text-right mt-5 mb-5">                    
+                <div class="submit-button text-left ml-3 mt-5 mb-5">                    
                     <a href="{% url 'view_shopping_bag' %}" class="btn">
                      <i class="fas fa-chevron-left"></i>
                      <span>Adjust Bag</span>
