@@ -1,7 +1,6 @@
 /*
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
-
     CSS from here: 
     https://stripe.com/docs/stripe-js
 */
@@ -13,7 +12,7 @@ var elements = stripe.elements();
 var style = {
     base: {
         color: '#000',
-        fontFamily: '"Libre Bondi", serif',
+        fontFamily: '"Libre Bondi", sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {
@@ -28,12 +27,14 @@ var style = {
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
-
-// Handle realtime validation errors messages diaplyed in the card element id 
+// Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
-    let errorDiv = document.getElementById('card-errors');
+    var errorDiv = document.getElementById('card-errors');
     if (event.error) {
-        let html = `
+        var html = `
+            <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+            </span>
             <span><p>${event.error.message}</p></span>
         `;
         $(errorDiv).html(html);
@@ -57,7 +58,10 @@ form.addEventListener('submit', function(ev) {
         if (result.error) {
             var errorDiv = document.getElementById('card-errors');
             var html = `
-                <span><p>${result.error.message}</p></span>`;
+                <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+                </span>
+                <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
             card.update({ 'disabled': false});
             $('#submit-button').attr('disabled', false);
