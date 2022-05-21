@@ -12,7 +12,7 @@ var elements = stripe.elements();
 var style = {
     base: {
         color: '#000',
-        fontFamily: '"Libre Bondi", sans-serif',
+        fontFamily: '"Libre Bondi", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {
@@ -26,6 +26,7 @@ var style = {
 };
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
+
 
 // Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
@@ -42,6 +43,7 @@ card.addEventListener('change', function (event) {
         errorDiv.textContent = '';
     }
 });
+
 
 // Handle form submit
 var form = document.getElementById('payment-form');
