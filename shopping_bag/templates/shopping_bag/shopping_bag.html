@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'shopping_bag/css/shopping_bag.css' %}">
+{% endblock %}
+
 {% load bag_tools %}
 
 {% block content %}
@@ -10,7 +16,7 @@
         <div class="col-12">
             <h1>Your Bag</h1>
         </div>
-        <div class="col-12 back-to-all-product-link">
+        <div class="col-12 back-to-all-product-link mt-3">
             <a href="{% url 'products' %}"><i class="fa-solid fa-angle-left mr-1"></i>Back to all products</a>
         </div>
     </div>

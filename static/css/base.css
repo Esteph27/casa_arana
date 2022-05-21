@@ -1,10 +1,13 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,400&family=Libre+Bodoni&display=swap');
 
-
 * {
 	margin: 0;
 	padding: 0;
+}
+
+body {
+    background-color: white;
 }
 
 h1, h2, h3 {
@@ -22,9 +25,6 @@ a {
     font-family: 'Libre Bondi', serif;
 }
 
-body {
-    background-color: white;
-}
 
 /* ------------------------------------------ nav bar */
 
@@ -128,7 +128,7 @@ footer hr {
     padding-bottom: 25%;
 }
 
-/* ------------------------------------------ buttons */
+/* ------------------------------------------ buttons and links */
 
 .btn {
     background-color: #F3ECE4;
@@ -146,6 +146,16 @@ footer hr {
 .btn-lng a:hover {
     color:white;
 }
+
+.back-to-all-product-link a {
+    color:#6D6155;
+    text-decoration: none;
+}
+
+.back-to-all-product-link a:hover {
+    color: #A4917E;
+}
+
 
 /* ------------------------------------------ back to top scroll */
 
@@ -167,6 +177,7 @@ footer hr {
     color: #C8C1B9;
     
 }
+
 
 /* ------------------------------------------ toasts */
 
