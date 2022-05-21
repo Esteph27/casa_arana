@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
 
+{% block content %}
 
 <!-- search bar-->
 <div class="container search-bar-container mt-4 mb-4 float-xl-left">

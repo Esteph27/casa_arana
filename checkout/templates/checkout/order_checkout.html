@@ -2,6 +2,11 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <!-- header -->
