@@ -74,3 +74,32 @@ fieldset label p {
 
 /* ------------------------------------------ checkout success */
 
+
+#background-col-container {
+    background-color: #F3ECE4;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+#checkout-success-img-1 {
+    background-color: #C8C1B9;
+    background-image: url('/media/berber-bazaar-l040UDKHN-o-unsplash.jpg');
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40%;
+	overflow: hidden;
+    height: 550px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+#checkout-success-img-1 a h1 {
+    color: purple;
+    font-size: 60px;
+}
+
+#checkout-success-img-1 a h1:hover {
+    color: hotpink;
+}
+
