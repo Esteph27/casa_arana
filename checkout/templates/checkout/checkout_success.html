@@ -8,25 +8,24 @@
 
 {% block content %}
 
-
-<div class="container-fluid bag-header-container pr-0">
-    <div class="row">
-        <div class="col-sm-12 col-md-6">
+<div class="container-fluid checkout-success-container">
+    <div class="row m-0">
+        <div class="col-12 text-center mb-4">
             <h2>Thank You</h2>
             <p class="mt-4">Your summary is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
-            <p>If you have any quesitons or noticed an error with your order you can contact us here</p>
-            <p>we hope to see you again soon x</p>
+            <p>We hope to see you again soon.</p>
+            <p>CA x</p>
         </div>
         <!-- order summary -->
-        <div class="col-xs-12 col-sm-12 col-md-7 pl-0 mt-4 col-md-pull-5">
-            <div class="container-fluid order-summary-container">
+        <div class="col-xs-12 col-sm-12 col-md-6 order-summary-container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 mb-4">
+                    <div class="col-12 mb-4 text-center">
                         <h2>Order summary</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Order ID</p>
                     </div>
                     <div class="col-6">
@@ -34,7 +33,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Order Date</p>
                     </div>
                     <div class="col-6">
@@ -42,14 +41,14 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col pl-0">
                         <hr>
                         <p>Details</p>
                     </div>
                 </div>
                 {% for item in order.lineitems.all %}
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p class="small">
                             {{ item.product.name }}
                         </p>
@@ -61,13 +60,13 @@
                 {% endfor %}
                 <!-- delviery address -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col pl-0">
                         <hr>
                         <p>Delivery address:</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Full Name</p>
                     </div>
                     <div class="col-6">
@@ -75,7 +74,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Line Address 1</p>
                     </div>
                     <div class="col-6">
@@ -84,7 +83,7 @@
                 </div>
                 {% if order.street_address2 %}
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Line Address 2</p>
                     </div>
                     <div class="col-6">
@@ -94,7 +93,7 @@
                 {% endif %}
                 {% if order.county %}
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>County</p>
                     </div>
                     <div class="col-6">
@@ -103,7 +102,7 @@
                 </div>
                 {% endif %}
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Town or City</p>
                     </div>
                     <div class="col-6">
@@ -111,7 +110,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Postal Code</p>
                     </div>
                     <div class="col-6">
@@ -119,7 +118,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Country</p>
                     </div>
                     <div class="col-6">
@@ -127,7 +126,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Contact Number</p>
                     </div>
                     <div class="col-6">
@@ -136,13 +135,13 @@
                 </div>
                 <!-- billing -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col pl-0">
                         <hr>
                         <p>Billing Info:<p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Sub Total</p>
                     </div>
                     <div class="col-6">
@@ -150,7 +149,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Delivery</p>
                     </div>
                     <div class="col-6">
@@ -159,7 +158,7 @@
                 </div>
                 <!-- order total-->
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 pl-0">
                         <p>Order Total</p>
                     </div>
                     <div class="col-6">
@@ -168,20 +167,15 @@
                 </div>
             </div>
         </div>
-        <!-- image 1 -->
-        <div class="col-xs-12 col-sm-12 col-md-5 col-md-push-7 image-container">
-            <div id="checkout-success-img-1">
-                <a class="text-decoration-none" href="{% url 'products' %}?category=Textiles"><h1>Shop Rugs</h1></a>
-            </div>
+    </div>
+    <div class="row m-0">
+        <div class="col">
+            <a class="text-decoration-none" href="{% url 'products' %}"><h1>Shop More</h1></a>
         </div>
     </div>
 </div>
 
 
-
-<div class="col">
-    <a class="text-decoration-none" href="{% url 'products' %}?"><h2 class="mt-4 mb-4">Shop More</h2></a>
-</div>
 
 
 
