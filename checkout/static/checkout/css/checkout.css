@@ -112,11 +112,10 @@ fieldset label p {
 .checkout-success-container h1 {
     font-size: 45px;
     color: #A4917E;
-    text-align: center;
 }
 
 .order-summary-container {
-    background-color: #FAF6F2;
+    background-color: #F2EDE8;
     margin: 0 auto;
     text-align: left;
 }
@@ -125,10 +124,53 @@ fieldset label p {
     text-align: left;
 }
 
+.container-center {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+.bk-to-store-link {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    margin: 0 auto;
+}
+
+.bk-to-store-link h1 {
+    color: #A4917E;
+    font-size: 30px;
+}
+
+.bk-to-store-link a h1:hover {
+    color: #6D6155;
+}
+
+
+
 /* ------------------------------------------ media queries */
+
+/* Medium devices (large phones and tablets, 768px to 992px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .bk-to-store-link {
+        width: 50%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .bk-to-store-link {
+        width: 60%;
+    }
+
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px)  {
 
-
+    .bk-to-store-link {
+        width: 60%;
+    }
 }
