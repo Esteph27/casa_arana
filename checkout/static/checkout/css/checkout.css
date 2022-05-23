@@ -74,10 +74,11 @@ fieldset label p {
 
 /* ------------------------------------------ checkout success */
 
+.order-summary-container {
+    background-color: #FAF6F2;
+}
 
-#background-col-container {
-    background-color: #F3ECE4;
-    padding-bottom: 4rem;
+.image-container {
     text-align: center;
 }
 
@@ -91,7 +92,6 @@ fieldset label p {
     height: 550px;
     width: 90%;
     margin: 0 auto;
-    margin-top: 4rem;
 }
 
 #checkout-success-img-1 a h1 {
