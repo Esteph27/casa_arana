@@ -16,22 +16,23 @@
   </div>
 </div>
 
-<div class="container-fluid container-left extra-margin-bottom">
+<div class="container-fluid container-center extra-margin-bottom">
   <div class="row">
     <div class="col-12">
       <p>{% trans 'Are you sure you want to sign out?' %}</p>
     </div>
-    <div class="col-12 mb-5">
-      <form method="post" action="{% url 'account_logout' %}">
+    <div class="col-sm-12 col-md-6 push-to-center">
+      <form method="post" action="{% url 'account_logout' %}" id="logout-form">
         {% csrf_token %}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
         {% endif %}
-        <button type="submit" class="btn">{% trans 'Sign Out' %}</button>
+        <button type="submit" class="btn mt-4 mb-3">{% trans 'Sign Out' %}</button>
       </form>
     </div>
   </div>
 </div>
 
+<div class="extra-margin-bottom"></div>
 
 {% endblock %}

@@ -4,48 +4,101 @@
 	padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h5 {
     font-family: 'Libre Bondi', serif;
     text-transform: unset;
     font-weight: 300;
     color: #6D6155
 }
 
+/* header container */
 .allauth-header {
-    text-align: left;
+    text-align: center;
     height: auto;
     margin-top: 20%;
     margin-bottom: 10%;
 }
 
-.allauth-header h1 {
-    font-size: 50px;
-    color: #A4917E;
+hr {
+    margin: 0 auto;
 }
 
-.container-left {
+.allauth-header h2 {
+    font-size: 30px;
+}
+
+/* main container */
+
+.container-center {
+    text-align: center;
+}
+
+.container-center form {
+    font-family: 'Libre Bondi', serif;
+    color: #6D6155;
     text-align: left;
 }
 
-.container-left p {
-    font-size: 18px;
+.container-center .form-group {
+    font-family: 'Libre Bondi', serif;
+    color: #6D6155;
+    text-align: left;
 }
 
-.container-left button {
+.container-center button {
     border: none;
     background-color: #EFE9E2;
     font-family: 'Libre Bondi', serif;
-    padding: 5px 20px;
+    padding: 5px 40px;
+    color: #6D6155;
 }
 
+.container-center p {
+    font-size: 16px;
+    color: #6D6155;
+}
+
+.container-center a {
+    color: #6D6155;
+}
+
+.form-check-input:checked {
+    background-color: #A4917E;
+    border-color: transparent;
+}
+
+/* push to center container */
+.container-center .push-to-center {
+    margin: 0 auto;
+}
+
+/* extra margin or padding */
+.extra-margin-bottom {
+    margin-bottom: 8rem;
+}
+
+/* connect to signup continer in sign up page */
 .connect-to-signup {
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
 
+/* confirm button in email_confirm.html */
+.container-center .confirm {
+    text-align: center;
+}
 
-.extra-margin-bottom {
-    margin-bottom: 5rem;
+/* form id text align to center buttons */
+.container-center #logout-form {
+    text-align: center;
+}
+
+.container-center #signup_form {
+    text-align: center;
+}
+
+.container-center #login {
+    text-align: center;
 }
 
 
@@ -68,6 +121,10 @@ h1, h2, h3 {
         margin-top: 5%;
         margin-bottom: 5%;
     }
+
+    .allauth-header hr {
+        width: 60%;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px to 1200px) */
@@ -76,6 +133,10 @@ h1, h2, h3 {
     .allauth-header {
         margin-top: 5%;
         margin-bottom: 5%;
+    }
+
+    .allauth-header hr {
+        width: 20%;
     }
 
 }
@@ -87,5 +148,10 @@ h1, h2, h3 {
         margin-top: 5%;
         margin-bottom: 5%;
     }
+
+    .allauth-header hr {
+        width: 20%;
+    }
+
     
 }
