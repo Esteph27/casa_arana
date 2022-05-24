@@ -21,6 +21,7 @@ h1, h2, h3, h5 {
 /* payment form */
 #payment-form .form-check-label a {
     text-decoration: none;
+    color: #A4917E;
 }
 
 #payment-form .form-check-label a:hover {
@@ -75,6 +76,23 @@ fieldset label p {
 #card-errors {
  font-family: 'Libre Bondi', serif;
 } 
+
+/* country drop down*/
+select,
+select option {
+    color: #6D6155;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+
+select#id_country.custom-stripe-input.lazyselect.form-control {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
 
 /* process payment overlay */
@@ -137,13 +155,18 @@ fieldset label p {
     margin: 0 auto;
 }
 
-.bk-to-store-link h1 {
-    color: #A4917E;
-    font-size: 30px;
+.bk-to-store-link h2 {
+    color: #6D6155;
 }
 
-.bk-to-store-link a h1:hover {
-    color: #6D6155;
+.bk-to-store-link a  {
+    text-decoration: none;
+}
+
+
+.bk-to-store-link a h2:hover {
+    color: #A4917E;
+    text-decoration: underline;
 }
 
 

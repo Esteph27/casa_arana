@@ -41,12 +41,12 @@
                     {{ order_form.country | as_crispy_field }}
                     <div class="form-check form-check-inline float-left mr-0 pl-0">
                         {% if user.is_authenticated %}
-                            <label class="form-check-label ml-2" for="id-save-info"><p>Save this delivery information to my profile</p></label>
-                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                            <label class="form-check-label ml-2 small" for="id-save-info"><p>Save this delivery information to my profile</p></label>
+                            <input class="form-check-input ml-2 mr-0 small" type="checkbox" id="id-save-info" name="save-info" checked>
                         {% else %}
                             <label class="form-check-label" for="id-save-info">
-                                <a href="{% url 'account_signup' %}">Create an account</a> or 
-                                <a href="{% url 'account_login' %}">login</a><p>to save this information</p>
+                                <a href="{% url 'account_signup' %}" class="small">Create an account</a> 
+                                <a href="{% url 'account_login' %}" class="small"> or login</a><p class="small">to save this information</p>
                             </label>
                         {% endif %}
                     </div>
@@ -105,7 +105,6 @@
                     </div>
                     <div class="col-7">
                         <p class="my-0">{{ item.product.name }}</p>
-                        <p class="my-0">{{ item.product.dimensions_and_composition }}</p>
                         <p>Qty: {{ item.quantity }}</p>
                     </div>
                     <div class="col-3 text-right">
