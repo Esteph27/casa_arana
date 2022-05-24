@@ -34,6 +34,10 @@ class Order(models.Model):
         max_digits=10, decimal_places=2, null=False, default=0)
     order_grand_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
+    
+    # for stripe payment intent
+    original_bag = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     def _create_order_id(self):
         """
@@ -69,7 +73,9 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    """Order line item info"""
+    """
+    Order line item info
+    """
 
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
