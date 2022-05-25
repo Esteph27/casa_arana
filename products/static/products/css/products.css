@@ -1,15 +1,13 @@
-
-a {
-    color: #6D6155
-}
-
-/* ------------------------------------------ back to previous page btn */
+/* buttons and links */
 
 .go-bk-btn {
     text-align: center;
     margin-top: 8rem;
 }
 
+a {
+    color: #6D6155;
+}
 
 /* ------------------------------------------ all products page */
 
@@ -169,7 +167,7 @@ li.nav-item.dropdown {
     font-size: 20px;
 }
 
-/* ------------------------------------------ add product */
+/* ------------------------------------------ add product page */
 
 .add-product-header {
     text-align: center;
