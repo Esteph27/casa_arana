@@ -66,10 +66,18 @@
                 <a class="text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
                     <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
                 </a>
-                <div class="card-body pl-0">
+                <div class="card-body">
                     <p>{{ product.name }}</p>
                     <p class="text-smaller">£{{ product.price }}</p>
                 </div>
+                <div class="card-body">
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                    {% endif %}
+                </div>                    
             </div>
         </div>
         {% endfor %}

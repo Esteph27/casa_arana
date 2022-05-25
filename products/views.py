@@ -6,7 +6,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
-# Create your views here.
+
 def all_products(request):
     """
     Returns all products page, includes search queries and filtering
@@ -83,9 +83,9 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Product added successfully!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_info', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid and try again.')
     else:
@@ -125,3 +125,12 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
+def delete_product(request, product_id):
+    """
+    Delete a product
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted successfully!')
+    return redirect(reverse('products'))
