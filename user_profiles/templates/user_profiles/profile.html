@@ -10,14 +10,70 @@
 {% block content %}
 
 <!-- header -->
-<div class="container-fluid">
+<div class="container-fluid profile-header mb-5">
     <div class="row">
-        <div class="col-12">
-            <h1>User Profile</h1>
-            {{ profile }}
+        <div class="col-12" id="logo-circle">
+            <img src="/media/ca_logo.png">
+        </div>
+        <div class="col-12 mt-4">
+            <h2>Hello, {{ profile.user }}</h2>
         </div>
     </div>
 </div>
+
+<!-- Delivery info / order history / wish list -->
+<!-- bootstrap accordian source https://getbootstrap.com/docs/5.2/components/accordion/#content -->
+<div class="container-fluid extra-margin-bottom">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Default Delivery Info
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <form class="mt-4" action="{% url 'profile' %}" method="POST" id="user-profile-update-form">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <button class="btn">Update</button>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Order History
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        {{ orders }}
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Wish List
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 
 {% endblock %}

@@ -77,11 +77,6 @@ hr {
     margin: 0 auto;
 }
 
-/* extra margin or padding */
-.extra-margin-bottom {
-    margin-bottom: 8rem;
-}
-
 /* connect to signup continer in sign up page */
 .connect-to-signup {
     margin-top: 2rem;
@@ -105,6 +100,12 @@ hr {
 .container-center #login {
     text-align: center;
 }
+
+/* extra margin or padding */
+.extra-margin-bottom {
+    margin-bottom: 8rem;
+}
+
 
 
 /* ------------------------------------------ media queries */
