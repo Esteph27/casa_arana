@@ -27,12 +27,21 @@ hr {
     font-size: 30px;
 }
 
-/* main container */
-
+/* main container  */
 .container-center {
     text-align: center;
 }
 
+.container-center p {
+    font-size: 16px;
+    color: #6D6155;
+}
+
+.container-center a {
+    color: #6D6155;
+}
+
+/* all auth form  */
 .container-center form {
     font-family: 'Libre Bondi', serif;
     color: #6D6155;
@@ -45,6 +54,11 @@ hr {
     text-align: left;
 }
 
+.form-check-input:checked {
+    background-color: #A4917E;
+    border-color: transparent;
+}
+
 .container-center button {
     border: none;
     background-color: #EFE9E2;
@@ -53,19 +67,10 @@ hr {
     color: #6D6155;
 }
 
-.container-center p {
-    font-size: 16px;
-    color: #6D6155;
+.form-control {
+    border: solid #A4917E;
 }
 
-.container-center a {
-    color: #6D6155;
-}
-
-.form-check-input:checked {
-    background-color: #A4917E;
-    border-color: transparent;
-}
 
 /* push to center container */
 .container-center .push-to-center {
