@@ -171,6 +171,40 @@ li.nav-item.dropdown {
     font-size: 20px;
 }
 
+/* ------------------------------------------ add product */
+
+.add-product-header {
+    text-align: center;
+    height: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.add-product-header hr {
+    margin: 0 auto;
+}
+
+.add-product-header h2 {
+    font-size: 30px;
+}
+
+.container-center {
+    text-align: center;
+}
+
+.container-center .push-to-center {
+    margin: 0 auto;
+}
+
+.add_product_form .btn, a {
+    padding: 1rem 2rem;
+}
+
+.extra-margin-bottom {
+    margin-bottom: 8rem;
+}
+
+
 /* ------------------------------------------ media queries */
 
 

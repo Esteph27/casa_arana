@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- header -->
+<div class="container-fluid add-product-header">
+    <div class="row">
+        <div class="col-12">
+            <h1>Product Management</h1>
+        </div>
+        <div class="col-12">
+            <hr>
+        </div>
+        <div class="col-12 mt-2">
+            <h5>Add a product here</h5>
+        </div>
+    </div>
+</div>
+
+<!-- add product section-->
+<div class="container-fluid container-center extra-margin-bottom">
+    <div class="row">
+        <div class="col-12 col-lg-6 push-to-center">
+            <form method="POST" action="{% url 'add_product' %}" class="form mb-2 add_product_form"  enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-left mt-4">
+                    <a class="btn" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>  
+    </div>
+</div>
+
+{% endblock %}
