@@ -203,6 +203,32 @@ li.nav-item.dropdown {
 }
 
 /* product form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border: none;
+    background-color: #A4917E;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #6D6155;
+    border: none;
+    border-radius: 0;
+}
 
 
 /* ------------------------------------------ media queries */
