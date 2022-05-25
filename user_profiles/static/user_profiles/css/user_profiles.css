@@ -39,3 +39,7 @@
 .order-history {
     font-family: 'Libre Bondi', serif;
 }
+
+.order-history a {
+    color: #55595C;
+}

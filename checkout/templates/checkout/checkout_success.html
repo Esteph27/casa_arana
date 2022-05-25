@@ -175,12 +175,12 @@
     <div class="row">
         <div class="col">
             {% if from_profile %}
-            <span> <a href="{% url 'profile' %}"><h2>View Account</h2></a></span>
-            {% else %}
-            <span class="col bk-to-store-link">
-                <a href="{% url 'products' %}"><h2>Back to Store</h2></a>
-            </span>
-            {% end if  %}
+            <span> <a href="{% url 'profile' %}"><h2>Back to Account</h2></a></span>
+                {% else %}
+                <span class="col bk-to-store-link">
+                    <a href="{% url 'products' %}"><h2>Shop More</h2></a>
+                </span>
+            {% endif %}
         </div>
     </div>
 </div>

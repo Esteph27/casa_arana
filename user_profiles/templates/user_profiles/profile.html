@@ -51,27 +51,26 @@
                   </h2>
                   <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <div class="row order-history ">
-                            {% if order in order %}
-                                {% for order in orders %}
-                                <div class="col-6">
-                                    <p>Order ID:
-                                        <a href="{% url 'order_history' order.order_id %}" title="{{ order.order_id }}">
-                                            {{ order.order_id }}
-                                        </a>
-                                    </p>
-                                </div>
-                                <div class="col-6">
-                                    <p>Order Date: {{ order.order_date }}</p>
-                                </div>
-                                {% endfor %}
-                            {% else%}
-                            <div class="col">
+                        <div class="row order-history">
+                          {% if orders %}
+                              {% for order in orders %}
+                              <div class="col-6">
+                                  <p>Order ID:
+                                      <a href="{% url 'order_history' order.order_id %}" title="{{ order.order_id }}">
+                                          {{ order.order_id }}
+                                      </a>
+                                  </p>
+                              </div>
+                              <div class="col-6">
+                                  <p>Order Date: {{ order.order_date }}</p>
+                              </div>
+                              {% endfor %}
+                            {% else %}
+                              <div class="col">
                                 <p>You have no orders at the moment</p>
                                 <p>Take a look at our latest <a href="{% url 'products' %}">Collections</a></p>
-                            </div>
-                            {% endif %}
-
+                              </div>
+                          {% endif %}
                         </div>
                     </div>
                   </div>
