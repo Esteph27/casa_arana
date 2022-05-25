@@ -1,8 +1,8 @@
 
 /* header */
-
 .profile-header {
     text-align: center;
+    margin-top: 4rem;
 }
 
 #logo-circle {
@@ -10,8 +10,8 @@
 }
 
 #logo-circle img {
-    height: 200px;
-    width: 200px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
 }
 
@@ -28,14 +28,25 @@
 
 }
 
+#user-profile-update-form button {
+    font-size: 16px;
+}
+
 /* accordian */
 .accordion-button:not(.collapsed) {
     color: #6D6155;
     background-color: #F2EDE8;
 }
 
-/* order hisotry */
+.center-container {
+    text-align: center;
+}
 
+.center-container .push-to-center {
+    margin: 0 auto;
+}
+
+/* order hisotry */
 .order-history {
     font-family: 'Libre Bondi', serif;
 }

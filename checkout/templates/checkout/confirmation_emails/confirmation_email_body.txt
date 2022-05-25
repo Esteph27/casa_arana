@@ -1,0 +1,24 @@
+Hello {{ order.full_name }},
+
+This is a confirmation of your order at Casa Arana. Your order information is below:
+
+Order Number: {{ order.order_id }}
+Order Date: {{ order.order_date }}
+
+Order Total: ${{ order.order_sub_total }}
+Delivery: ${{ order.delivery_cost }}
+Grand Total: ${{ order.order_grand_total }}
+
+Delivery Address:
+Line Address 1: {{ order.street_address1 }} 
+Town or City: {{ order.town_or_city }}
+Country: {{ order.country }}
+
+Contact number: 
+{{ order.contact_number }}.
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+Your order means a lot to us and our Artisans and we hope to see you shop with us again soon.  
+
+Casa Arana x
