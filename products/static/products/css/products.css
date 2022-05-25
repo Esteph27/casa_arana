@@ -32,7 +32,6 @@ a {
 }
 
 /* search bar container */
-
 .form-control {
     background-color: transparent;
     border: 1px solid #A4917E;
@@ -155,7 +154,6 @@ li.nav-item.dropdown {
     font-size: 16px;
 }
 
-
 .prouct-info-container {
     margin-bottom: 12rem;
     text-align: left;
@@ -204,10 +202,10 @@ li.nav-item.dropdown {
     margin-bottom: 8rem;
 }
 
+/* product form */
+
 
 /* ------------------------------------------ media queries */
-
-
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
