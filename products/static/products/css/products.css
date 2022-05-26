@@ -79,12 +79,12 @@ li.nav-item.dropdown {
     text-align: left;
 }
 
-.back-to-all-product-link p a {
+.back-to-all-product-link a {
     color: #6D6155;
     text-decoration: none;
 }
 
-.back-to-all-product-link p a:hover {
+.back-to-all-product-link a:hover {
     color: #A4917E;
     text-decoration: underline;
 }
@@ -130,8 +130,8 @@ li.nav-item.dropdown {
     margin-bottom: 1rem;
 }
 
-.product-info h2 {
-    font-size: 25px;
+.product-info h3 {
+    font-size: 22px;
 }
 
 .product-info p {
@@ -158,7 +158,6 @@ li.nav-item.dropdown {
 }
 
 /* artisan section */
-
 .background-col-container {
     background-color: #F3ECE4;
     height: auto;
@@ -172,7 +171,6 @@ li.nav-item.dropdown {
 }
 
 /* product review */
-
 #product-reviews .card {
     border: none;
 }
@@ -196,10 +194,6 @@ li.nav-item.dropdown {
     display: inline-block;
     float: left;
 }
-
-
-
-
 
 
 /* ------------------------------------------ add product page */
@@ -283,19 +277,14 @@ li.nav-item.dropdown {
 
     /*------------------------- product info */
  
-    .image-container img {
+    .product-image-container img {
         height: 60vw;
         width: 80vw;
         object-fit: cover;
     }
 
-    .image-container {
-       margin-top: 8rem;
-       text-align: center;
-    }
-
-    .image-product-info {
-        margin-left: 10rem;
+    .product-info .product-name {
+        font-size: 30px;
     }
 
 }
