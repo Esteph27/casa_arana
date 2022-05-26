@@ -12,20 +12,20 @@ a {
 /* ------------------------------------------ all products page */
 
 /* header container */
-#product-header {
+#all-product-header {
     background-color: #EFE9E2;
     height: 230px;
     text-align: left;
     color: #6D6155;
 }
 
-#product-header h1 {
+#all-product-header h1 {
     font-size: 60px;
     letter-spacing: 4px;
     margin-top: 4rem;
 }
 
-#product-header p {
+#all-product-header p {
     color: #6D6155;
 }
 
@@ -84,7 +84,6 @@ li.nav-item.dropdown {
     text-decoration: none;
 }
 
-
 .back-to-all-product-link p a:hover {
     color: #A4917E;
     text-decoration: underline;
@@ -92,7 +91,8 @@ li.nav-item.dropdown {
 
 /* image display */
 .card a {
-    color: #6D6155;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .card-body {
@@ -101,11 +101,11 @@ li.nav-item.dropdown {
 }
 
 .card-body p {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .card-body .text-smaller {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .card img {
@@ -122,19 +122,24 @@ li.nav-item.dropdown {
 
 /* ------------------------------------------ product info page */
 
-.image-container {
+.product-image-container {
     text-align: left;
 }
 
-.image-container img {
+.product-image-container img {
     margin-bottom: 1rem;
 }
 
-.image-product-info p {
+.product-info h2 {
     font-size: 25px;
-    color: #6D6155;
 }
 
+.product-info p {
+    font-size: 18px;
+}
+
+
+/*  +/- selector boxes */
 .qty-selector-container {
     text-align: left;
     margin-top: 3rem;
@@ -152,20 +157,7 @@ li.nav-item.dropdown {
     font-size: 16px;
 }
 
-.prouct-info-container {
-    margin-bottom: 12rem;
-    text-align: left;
-}
 
-.prouct-info-container h1 {
-    font-size: 30px;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-}
-
-.prouct-info-container p {
-    font-size: 20px;
-}
 
 /* ------------------------------------------ add product page */
 
@@ -241,8 +233,9 @@ li.nav-item.dropdown {
         object-fit: cover;
     }
 
-    #product-header {
+    #all-product-header {
         margin-top: 6rem;
+        height: 260px;
     }
 
     /*------------------------- product info */

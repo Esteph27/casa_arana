@@ -20,16 +20,16 @@
 </div>
 
 <!-- header with sorting -->
-<div class="container-fluid" id="product-header">
+<div class="container-fluid mb-4" id="all-product-header">
     <div class="row">
         <div class="col">
             <h1>Shop</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col mt-2">
+        <div class="col-12 mt-2">
             <!--add functionality so that when the user clicks on a category the category name will appear -->
-            <p>All Products | {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</p> 
+            <p>All Products | {{ products|length }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</p> 
         </div>
         <div class="col-12 sort-by-price-container mt-2">
             <li class="nav-item dropdown">
@@ -44,7 +44,7 @@
 </div>
 
 <!-- back to all products link -->
-<div class="back-to-all-product-link ml-2">
+<!-- <div class="back-to-all-product-link">
     <span>
         <p>
             {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -52,25 +52,29 @@
             {% endif %}
         </p>
     </span>
-</div>
+</div> -->
+
 
 <!-- products -->
 <div class="container-fluid">
     <div class="row">
         {% for product in products %}
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
-            <div class="card h-100 border-0 mt-5">
+            <!-- product image -->
+            <div class="card h-100 border-0">
                 <a href="{% url 'product_info' product.id %}">
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
-                <a class="text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
+                <!-- category tag -->
+                <a class="text-decoration-none pt-0" href="{% url 'products' %}?category={{ product.category.name }}">
                     <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
                 </a>
-                <div class="card-body">
+                <!-- card body -->
+                <div class="card-body pl-0 pt-0">
                     <p>{{ product.name }}</p>
                     <p class="text-smaller">£{{ product.price }}</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body pl-0">
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
