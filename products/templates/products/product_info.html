@@ -34,17 +34,16 @@
                     <h2 class="mt-4">£{{ product.price }}</h2>
                 </div>
                 <div class="col-12 mt-4">
-                    <h2>Color</h2>
-                    <p class="mt-2">{{ product.color }}</p>
+                    <h2>Color:{{ product.color }}</h2>
                 </div>
-                <div class="col-12 mt-4 mb-4 text-left pl-0">
-                    {% if request.user.is_superuser %}
+                {% if request.user.is_superuser %}
+                    <div class="col-12 mt-4 mb-4 text-left pl-0">
                         <small>
                             <a href="{% url 'edit_product' product.id %}" class="pl-3">Edit</a> | 
                             <a class="text-danger pl-3" href="{% url 'delete_product' product.id %}">Delete</a>
                         </small>
-                    {% endif %}
-                </div>
+                    </div>
+                {% endif %}
                 <div class="col-12">
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
@@ -80,7 +79,9 @@
                 </div>
                 <div class="col-12 mt-4">
                     <h2>Composition and Dimensions</h2>
-                    <p class="mt-2">{{ product.dimensions_and_composition }}</p>
+                    <!-- <p class="mt-2">Dimensions: {{ product.dimensions }}</p>
+                    <p class="mt-2">Composition: {{ product.composition }}</p> -->
+                    <!-- <p class="mt-2">{{ product.dimensions_and_composition }}</p> -->
                 </div>
             </div>
         </div>
