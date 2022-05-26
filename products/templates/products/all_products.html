@@ -73,15 +73,13 @@
                 <div class="card-body pl-0 pt-0">
                     <p>{{ product.name }}</p>
                     <p class="text-smaller">£{{ product.price }}</p>
-                </div>
-                <div class="card-body pl-0">
                     {% if request.user.is_superuser %}
-                        <small class="ml-3">
+                        <small>
                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
                             <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                         </small>
                     {% endif %}
-                </div>                    
+                </div>                 
             </div>
         </div>
         {% endfor %}

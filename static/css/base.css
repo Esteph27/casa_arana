@@ -109,12 +109,18 @@ footer hr {
     padding-top: 25%;
 }
 
-.social-media-icons a {
+.social-media-icons i {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 25px;
     color: #6D6155;
 }
+
+.social-media-icons a {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+
 
 .social-media-icons i:hover{
     color: #A4917E;
@@ -310,6 +316,17 @@ footer hr {
     text-align: center;
 }
 
+#background-col-container h1 {
+    font-size: 35px;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
+#background-col-container .custom-link a {
+    font-size: 25px;
+}
+
+
 #background-col-container #ehtos-image {
     background-color: #C8C1B9;
     background-image: url('/media/ethos-image.jpg');
@@ -320,16 +337,6 @@ footer hr {
     height: 600px;
     width: 100%;
     margin-top: 1rem;
-}
-
-#background-col-container h1 {
-    font-size: 35px;
-    padding-top: 7rem;
-    padding-bottom: 2rem;
-}
-
-#background-col-container .custom-link a {
-    font-size: 25px;
 }
 
 /* ------------------------------------------ About */
