@@ -8,7 +8,7 @@
 
 {% block content %}
 
-<!-- new layout -->
+<!-- Product info -->
 <div class="container-fluid mt-5">
     <div class="row">
         <!-- back link -->
@@ -89,43 +89,28 @@
                 </div>
             </div>
         </div>
+        <!-- Artisan section -->
         <div class="col-12 pl-0 pr-0">
             <div class="background-col-container mt-5 mb-5" id="artisan-info">
                 <div class="row g-0">
-                    <div class="col-12 text-center">
-                        <h2 class="pb-4 pl-2">Who made it</h2>
+                    <div class="col-sm-12 col-md-7 mb-4">
+                        <h2 class="pb-4">Made By</h2>
+                        <h2 class="mt-4">{{ product.artisan.name }}</h2>
+                        <p>{{ product.artisan.story }}</p>
+                        <a href="#">View their profile</a>
                     </div>
-                    <div class="col-12 text-center mb-5">
+                    <div class="col-sm-12 col-md-4 mb-5">
                         <div id="artisan-image" class="col">
-                            <img class="img-fluid" src="{{ product.artisan.profile_image.url }}" alt="{{ product.artisan.name }}" >
+                            <img class="img-fluid text-right" src="{{ product.artisan.profile_image.url }}" alt="{{ product.artisan.name }}" >
                         </div>
                     </div>
-                    <div class="col-12 text-center">
-                        <h3 class="mt-4">{{ product.artisan.name }}</h3>
-                        <p class="mt-4">{{ product.artisan.story }}</p>
-                    </div>
                 </div>
-
-                <!-- <div class="col-sm-12 col-md-3 text-left">
-                    <h2 class="pt-5 pb-4">Who made it</h2>
-                </div>
-                <div class="col-sm-12 col-md-6 text-right">
-                    <div id="artisan-image" class="col">
-                        <img class="img-fluid" src="{{ product.artisan.profile_image.url }}" alt="{{ product.artisan.name }}" >
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3 text-left">
-                    <h3 class="mt-4">{{ product.artisan.name }}</h3>
-                    <p class="mt-4">{{ product.artisan.story }}</p>
-                </div>
-                <div class="col-sm-12 col-md-3 text-left">
-                    <p class="mt-4">See more Products made by (artisan name)</p>
-                </div> -->
             </div>
         </div>
     </div>
 </div>
 
+<!-- Product reviews -->
 <div class="container-fluid mb-5" id="product-reviews">
     <div class="row">
         <div class="col-12 text-left">

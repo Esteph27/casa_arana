@@ -165,6 +165,7 @@ footer hr {
 
 /* ------------------------------------------ back to top scroll */
 
+/* source from:  https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
 #back-to-top-arrow {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
@@ -225,7 +226,6 @@ footer hr {
     padding-top: 10rem;
     color: white;
 }
-
 
 .text-container {
     margin-bottom: 5rem;

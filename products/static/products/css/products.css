@@ -159,27 +159,38 @@ li.nav-item.dropdown {
 
 /* artisan section */
 .background-col-container {
-    background-color: #F3ECE4;
+    background-color: #EFE9E2;
     height: auto;
-    padding-top: 5rem;
+    padding-top: 8rem;
     padding-bottom: 5rem;
 }
 
 #artisan-info h2 {
     font-size: 32px;
+    padding-left: 2rem;
+}
+
+#artisan-info a {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+#artisan-info p {
+    text-align: left;
+    font-size: 18px;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 #artisan-image {
     text-align: center;
 }
 
-
 #artisan-image img {
     background-color: #A4917E;
     object-fit: cover;
-    object-position: 80% 20%;
-    height: 300px;
-    width: 300px;
+    object-position: 30% 70%;
+    height: 450px;
+    width: 100%;
 }
 
 /* product review */
@@ -305,6 +316,21 @@ li.nav-item.dropdown {
 
     .product-info .product-name {
         font-size: 30px;
+    }
+
+    #artisan-info h2 {
+        padding-left: 5rem;
+    }
+
+    #artisan-info a {
+        padding-left: 5rem;
+    }
+
+    #artisan-info p {
+        text-align: left;
+        font-size: 18px;
+        padding-right: 10rem;
+        padding-left: 5rem;
     }
 
 }
