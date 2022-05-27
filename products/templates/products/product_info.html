@@ -120,14 +120,14 @@
             <hr>
         </div>
         <div class="row">
-            {% for review in reviews %}
             <div class="col-12">
+                {% for review in reviews %}
                 <div class="card">
                     <div class="card-header">
                         <h3>{{ review.title }}</h3>
-                        <h5>{{ review.date }}</h5>
+                        <h5 class="mt-2 pr-0">{{ review.date }}</h5>
                     </div>
-                    <div class="card-body pl-0">
+                    <div class="card-body pl-0 pb-0">
                         <div class="col-12">
                             <p class="card-text">{{ review.text }}.</p>
                         </div>
@@ -135,21 +135,32 @@
                             <h3>{{ reivew.rating }}</h3>
                         </div>
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer pt-0">
                         <p>{{ review.user.username }}</p>
                     </div>
                 </div>
+                 <!-- leave review -->
+                    {% if request.user.is_authenticated %}
+                        <div class="col-12 mt-5 mb-5 pl-3">
+                            <a href="{% url 'product_review' product.id %}" class="btn">Leave a Review</a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
-            {% endfor %}
+
+            <!-- if product has no reviews -->
+            {% if reviews|length == 0  %}
+            <div class="col-12 mt-3">
+                <h3>No reviews yet, be the first one</h3>
+                <a href="{% url 'product_review' product.id %}" class="btn mt-3 mb-5">Leave a Review</a>
+            </div>
+            {% endif %}
         </div>
-        <!-- leave review -->
-        {% if request.user.is_authenticated %}
-        <div class="col-12">
-            <a href="{% url 'product_review' product.id %}" class="btn ml-4">Leave a Product Review</a>
-        </div>
-        {% endif %}
     </div>
 </div>
+
+
+
 
 
 
