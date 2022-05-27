@@ -205,6 +205,19 @@ footer hr {
     height: 2px;
 }
 
+/* ------------------------------------------ base.html  */
+
+
+#delivery-banner {
+    background-color: #6D6155;
+}
+
+#delivery-banner p {
+    padding-top: 0.5em;
+    color: #EFE9E2;
+    font-size: 16px;
+}
+
 /* ------------------------------------------ index page  */
 
 #index-header-container {

@@ -43,6 +43,14 @@
   </head>
   <body>
 
+    <div class="conatiner-fluid" id="delivery-banner">
+      <div class="row g-0">
+        <div class="col-12 text-center">
+          <p>Free Delviery over £{{ free_delivery_threshold }}</p>
+        </div>
+      </div>
+    </div>
+
     {% include 'includes/navbar.html' %}
 
     {% if messages %}
