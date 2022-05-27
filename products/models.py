@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -59,3 +60,29 @@ class Artisan(models.Model):
     def __str__(self):
         return self.name
 
+
+RATING_CHOICES = [ 
+    (1, '1 - Very Bad'),
+    (2, '2 - Bad'),
+    (3, '3 - Ok'),
+    (4, '4 - Good'),
+    (5, '5 - Excellent'),
+]
+
+class Reviews(models.Model):
+    """
+    Product review model
+    """
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=254, null=True, blank=True)
+    text = models.TextField(max_length=3000, blank=True)
+    rating = models.PositiveIntegerField(choices=RATING_CHOICES)
+
+    class Meta:
+        ordering = ['-date']
+
+    def __str__(self):
+        return self.user.username
