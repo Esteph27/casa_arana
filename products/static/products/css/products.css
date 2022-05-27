@@ -135,7 +135,7 @@ li.nav-item.dropdown {
 }
 
 .product-info p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 
@@ -154,7 +154,7 @@ li.nav-item.dropdown {
 }
 
 .input-group-append .increment-qty {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* artisan section */
@@ -177,7 +177,7 @@ li.nav-item.dropdown {
 
 #artisan-info p {
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     padding: 1rem 2rem 2rem 2rem;
 }
 
@@ -222,6 +222,15 @@ li.nav-item.dropdown {
     float: left;
 }
 
+#product-reviews a {
+    text-decoration: none;
+}
+
+#product-reviews a:hover {
+    text-decoration: underline;
+    color:#A4917E;
+}
+
 #product-reviews .card-text {
     font-size: 18px;
 }
@@ -230,6 +239,13 @@ li.nav-item.dropdown {
     color: #6D6155;
     font-size: 20px;
     letter-spacing: 2px;
+}
+
+
+/* ------------------------------------------ Product Review page  */
+
+#product-review-form {
+    font-family: 'Libre Bondi', serif;
 }
 
 /* ------------------------------------------ add product page */
@@ -333,7 +349,7 @@ li.nav-item.dropdown {
 
     #artisan-info p {
         text-align: left;
-        font-size: 18px;
+        font-size: 16px;
         padding-right: 10rem;
         padding-left: 5rem;
     }

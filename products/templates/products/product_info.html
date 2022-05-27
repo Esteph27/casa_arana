@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-12 mt-4">
                     <h3>Color</h3>
-                    <p>{{ product.color }}</p>
+                    <p class="mt-2">{{ product.color }}</p>
                 </div>
                 <div class="col-12 mt-4">
                     <h3>Description</h3>
@@ -112,7 +112,7 @@
 
 <!-- Product reviews -->
 <div class="container-fluid mb-5 pl-0 pr-0" id="product-reviews">
-    <div class="row">
+    <div class="row g-0">
         <div class="col-12 text-left">
             <h2 class="ml-3">Product Reviews</h2>
         </div>
@@ -140,35 +140,14 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- leave review -->
-    {% if request.user.is_authenticated %}
-        <div class="row">
-            <div class="col-12 col-lg-6 mt-5">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Leave Product Review
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <form class="mt-4" action="{% url 'profile' %}" method="POST" id="user-profile-update-form">
-                                {% csrf_token %}
-                                <!-- {{ form | crispy }} -->
-                                <button class="btn">Update</button>
-                            </form>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
+        <!-- leave review -->
+        {% if request.user.is_authenticated %}
+        <div class="col-12">
+            <a href="{% url 'product_review' product.id %}" class="btn ml-4">Leave a Product Review</a>
         </div>
-    {% endif %}
+        {% endif %}
+    </div>
 </div>
-
-
 
 
 

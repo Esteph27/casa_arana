@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Artisan
-from .forms import ProductForm
+from .models import Product, Category, Artisan, Reviews
+from .forms import ProductForm, ReviewsForm
 
 
 def all_products(request):
@@ -63,7 +63,7 @@ def all_products(request):
 
 def product_info(request, product_id):
     """
-    Shows prodiuct information for a single product
+    Shows product information for a single product
     """
 
     artisan = Product.artisan 
@@ -75,6 +75,34 @@ def product_info(request, product_id):
     }
 
     return render(request, 'products/product_info.html', context)
+
+
+def product_review(request, product_id):
+    """
+    Handles products reviews
+    """
+
+    product = get_object_or_404(Product, pk=product_id)
+    user = request.user
+
+    if request.method == 'POST':
+        form = ReviewsForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = user
+            review.product = product
+            review.save()
+            return redirect(reverse('product_info', args=[product_id]))
+    else:
+        form = ReviewsForm()
+
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request,  'products/product_review.html', context)
 
 
 # ---------------------- admin
