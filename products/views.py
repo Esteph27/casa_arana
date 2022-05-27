@@ -94,6 +94,7 @@ def product_review(request, product_id):
             review.user = user
             review.product = product
             review.save()
+            messages.success(request, f'Thank you for your review.')
             return redirect(reverse('product_info', args=[product_id]))
     else:
         form = ReviewsForm()

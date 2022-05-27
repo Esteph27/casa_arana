@@ -125,11 +125,11 @@
                 <div class="card">
                     <div class="card-header">
                         <h3>{{ review.title }}</h3>
-                        <h5 class="mt-2 pr-0">{{ review.date }}</h5>
+                        <h5 class="pr-0">{{ review.date }}</h5>
                     </div>
                     <div class="card-body pl-0 pb-0">
                         <div class="col-12">
-                            <p class="card-text">{{ review.text }}.</p>
+                            <p class="card-text">{{ review.text }}</p>
                         </div>
                         <div class="col-12 mt-5">
                             <h3>{{ reivew.rating }}</h3>
@@ -137,30 +137,27 @@
                     </div>
                     <div class="card-footer pt-0">
                         <p>{{ review.user.username }}</p>
+                        <hr>
                     </div>
                 </div>
-                 <!-- leave review -->
-                    {% if request.user.is_authenticated %}
-                        <div class="col-12 mt-5 mb-5 pl-3">
-                            <a href="{% url 'product_review' product.id %}" class="btn">Leave a Review</a>
-                        </div>
-                    {% endif %}
                 {% endfor %}
             </div>
-
             <!-- if product has no reviews -->
             {% if reviews|length == 0  %}
             <div class="col-12 mt-3">
                 <h3>No reviews yet, be the first one</h3>
                 <a href="{% url 'product_review' product.id %}" class="btn mt-3 mb-5">Leave a Review</a>
             </div>
+            {% else%}
+                {% if request.user.is_authenticated %}
+                <div class="col-12 mt-5 mb-5 pl-3">
+                    <a href="{% url 'product_review' product.id %}" class="btn">Leave a Review</a>
+                </div>
+                {% endif %}
             {% endif %}
         </div>
     </div>
 </div>
-
-
-
 
 
 

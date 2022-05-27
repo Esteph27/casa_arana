@@ -226,6 +226,7 @@ li.nav-item.dropdown {
 #product-reviews .card-header h3 {
     display: inline-block;
     float: left;
+    font-size: 18px;
 }
 
 #product-reviews a {
