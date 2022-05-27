@@ -4,18 +4,19 @@
 {% block content %}
 
 <!-- header -->
-<div id="header-block" class="container-fluid">
-    <div id="logo-tile"></div>
-    <h1>Welcome Home...</h1>
-</div>
-<!-- intro -->
-<div class="container-fluid text-container">
-    <p>Bringing beautiful hand-made artisanal homewear and decor from the Artisans of Peru right to your home.</p>
-    <div class="custom-link row">
-        <div class="col-sm">
-            <a class="text-decoration-none" href="{% url 'products' %}">Shop the range</a>
-            <hr>
+<div class="container-fluid" id="index-header-container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Welcome Home...</h1>    
         </div>
+    </div>
+</div>
+
+<div class="container-fluid text-container">
+    <p>Bringing beautiful homewear from the Artisans of Peru right to your <strong>Home</strong></p>
+    <div class="col-sm custom-link">
+        <a class="text-decoration-none" href="{% url 'products' %}">Shop the range</a>
+        <hr>
     </div>
 </div>
 
@@ -49,11 +50,11 @@
 
 <!-- sign up section -->
 <div class="container-fluid">
-    <div class="text-container">
+    <div class="email-sign-up-container">
         <h1>Be Inspired</h1>
         <hr>
         <p>Sign up to our newletter for the latest updates and home inspiration</p>
-        <div class="form-floating mb-3">
+        <div class="form-floating col-sm-12 col-md-6 mb-3">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
         </div>
