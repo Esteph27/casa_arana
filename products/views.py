@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Artisan
 from .forms import ProductForm
 
 
@@ -66,10 +66,12 @@ def product_info(request, product_id):
     Shows prodiuct information for a single product
     """
 
+    artisan = Product.artisan 
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
         'product': product,
+        'artisan': artisan,
     }
 
     return render(request, 'products/product_info.html', context)
