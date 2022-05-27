@@ -222,9 +222,14 @@ li.nav-item.dropdown {
     float: left;
 }
 
-
 #product-reviews .card-text {
     font-size: 18px;
+}
+
+#product-reviews .accordion-header button {
+    color: #6D6155;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
 /* ------------------------------------------ add product page */

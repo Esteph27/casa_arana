@@ -364,6 +364,17 @@ footer hr {
     font-size: 20px;
 }
 
+.email-sign-up-container a {
+  text-decoration: none;
+  color: #6D6155;
+}
+
+.email-sign-up-container a:hover {
+    text-decoration: underline;
+    color:#A4917E;
+  }
+
+
 .email-sign-up-container .form-floating {
     margin: 0 auto;
 }
