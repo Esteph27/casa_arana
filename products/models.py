@@ -76,7 +76,7 @@ class Reviews(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
     title = models.CharField(max_length=254, null=True, blank=True)
     text = models.TextField(max_length=3000, blank=True)
     rating = models.PositiveIntegerField(choices=RATING_CHOICES)

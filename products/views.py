@@ -68,10 +68,12 @@ def product_info(request, product_id):
 
     artisan = Product.artisan 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Reviews.objects.filter(product=product)
 
     context = {
         'product': product,
         'artisan': artisan,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_info.html', context)
