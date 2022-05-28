@@ -138,6 +138,20 @@ li.nav-item.dropdown {
     font-size: 16px;
 }
 
+/* add product list icon (heart icon) */
+
+#add-to-wishlist-icon i {
+    color: #A4917E;
+}
+
+#add-to-wishlist-icon i:hover {
+    color: #6D6155;
+}
+
+#add-to-wishlist-icon i:active {
+    color: #6D6155;
+}
+
 /*  +/- selector boxes */
 .qty-selector-container {
     text-align: left;

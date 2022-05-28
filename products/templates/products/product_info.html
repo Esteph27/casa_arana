@@ -8,7 +8,6 @@
 
 {% block content %}
 
-<!-- Product info -->
 <div class="container-fluid mt-5">
     <div class="row">
         <!-- back link -->
@@ -23,16 +22,26 @@
                 <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
             </a>
         </div>
-        <!-- product info section -->
+        <!-- product info -->
         <div class="col-sm-12 col-md-12 col-lg-5 text-left product-info">
-            <a class="text-decoration-none pl-0" href="{% url 'products' %}?category={{ product.category.name }}">
-                <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
-            </a>
+            <div class="row">
+                <span>
+                    <a class="text-decoration-none float-left pl-0" href="{% url 'products' %}?category={{ product.category.name }}">
+                        <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
+                    </a>
+                    {% if request.user.is_authenticated %}
+                    <a id="add-to-wishlist-icon" class="text-decoration-none pl-0 pr-0 float-right" href="#">
+                        <i class="fa-solid fa-xl fa-heart"></i>
+                    </a>
+                    {% endif %}
+                </span>
+            </div>
             <div class="row">
                 <div class="col-12">
                     <h3 class="mt-4 product-name">{{ product.name }}</h3>
                     <h3 class="mt-4">£{{ product.price }}</h3>
                 </div>
+                <!-- Edit / Delete links for admin users -->
                 {% if request.user.is_superuser %}
                     <div class="col-12 mt-4 mb-4 text-left pl-0">
                         <small>
@@ -41,6 +50,7 @@
                         </small>
                     </div>
                 {% endif %}
+                <!-- Item qauntity selection -->
                 <div class="col-12">
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
@@ -70,6 +80,7 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
                 </div>
+                <!-- product details -->
                 <div class="col-12 mt-4">
                     <h3>Color</h3>
                     <p class="mt-2">{{ product.color }}</p>

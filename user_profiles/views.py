@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -58,3 +58,44 @@ def order_history(request, order_id):
 
     return render(request, template, context)
 
+
+def view_wish_list(request):
+    """
+    a view render a customer's wish list
+    """
+
+    wishlist = None
+
+    try:
+        wishlist = WishList.objects.get(user=request.user)
+    except WishList.DoesNotExist:
+        pass
+
+
+    template = 'user_profiles/profile.html'
+
+    context = {
+        'wishlist': wishlist,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def add_to_wishlist(request, product_id):
+    """
+    Add a product to wish list
+    """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    # Create a wishlist if wishlist does not exist yet
+    wishlist = WishList.objects.get_or_create(user=request.user)
+
+    # Add product to the wishlist
+    wishlist.products.aggregate(product)
+    messages.info(request, (
+        f'{product_id} was added to your wish list'
+    ))
+
+    return redirect(reverse('product_info'))
