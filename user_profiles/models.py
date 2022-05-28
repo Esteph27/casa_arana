@@ -5,10 +5,12 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
+from products.models import Product
+
 
 class UserProfile(models.Model):
     """
-    Model to store default delivery information and order history
+    Model to store a user's default delivery information and order history
     """
     # user info
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -36,4 +38,15 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     # Existing users: just save the profile
     instance.userprofile.save()
 
-    
+
+class Wishlist(models.Model):
+    """
+    Model to store products in a user's wish list
+    """
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ManyToManyField(Product, blank=True, related_name='wishlist')
+
+    def __str__(self):
+        return self.name
+

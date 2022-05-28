@@ -11,7 +11,9 @@ from user_profiles.models import UserProfile
 
 
 class Order(models.Model):
-    """Order information including order number generator"""
+    """
+    Order information including order number generator
+    """
 
     # order number and date
     order_id = models.CharField(max_length=32, null=False, editable=False)
