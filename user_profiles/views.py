@@ -1,9 +1,10 @@
-from django.shortcuts import render, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import UserProfile
+from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
+
 
 from checkout.models import Order
 
@@ -11,7 +12,9 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """
-    Display user profile
+    Display user's profile account.
+    User can update default delivery info, view order histroy
+    and wishlist items
     """
 
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -27,12 +30,14 @@ def profile(request):
         form = UserProfileForm(instance=profile)
 
     orders = profile.orders.all()
+    wishlist = profile.wishlist.all()
 
     template = 'user_profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
-        'profile': profile
+        'profile': profile,
+        'wishlist': wishlist,
     }
 
     return render(request, template, context)
@@ -59,43 +64,22 @@ def order_history(request, order_id):
     return render(request, template, context)
 
 
-def view_wish_list(request):
-    """
-    a view render a customer's wish list
-    """
-
-    wishlist = None
-
-    try:
-        wishlist = WishList.objects.get(user=request.user)
-    except WishList.DoesNotExist:
-        pass
-
-
-    template = 'user_profiles/profile.html'
-
-    context = {
-        'wishlist': wishlist,
-    }
-
-    return render(request, template, context)
-
-
 @login_required
 def add_to_wishlist(request, product_id):
     """
     Add a product to wish list
     """
 
-    product = get_object_or_404(Product, pk=product_id)
+    redirect_url = request.POST.get('redirect_url') 
+    
+    # get product from product page 
+    product = get_object_or_404(Product, product_id=product_id)
+    
 
-    # Create a wishlist if wishlist does not exist yet
+    # create wishlist if one does not exsist
     wishlist = WishList.objects.get_or_create(user=request.user)
-
     # Add product to the wishlist
-    wishlist.products.aggregate(product)
-    messages.info(request, (
-        f'{product_id} was added to your wish list'
-    ))
+    wishlist.products.add(product)
+    messages.info(request, 'Added to your wish list')
 
-    return redirect(reverse('product_info'))
+    return redirect(redirect_url)
