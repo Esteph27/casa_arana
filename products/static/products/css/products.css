@@ -20,7 +20,7 @@ a {
 }
 
 #all-product-header h1 {
-    font-size: 60px;
+    font-size: 50px;
     letter-spacing: 4px;
     margin-top: 4rem;
 }
@@ -33,7 +33,7 @@ a {
 .form-control {
     background-color: transparent;
     border: 1px solid #A4917E;
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
     padding: 5px 5px 5px 12px;
     font-size: 18px;
     margin-left: 2px;
@@ -266,7 +266,7 @@ li.nav-item.dropdown {
 /* ------------------------------------------ Product Review page  */
 
 #product-review-form {
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
 }
 
 /* ------------------------------------------ add product page */

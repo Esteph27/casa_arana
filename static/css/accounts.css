@@ -5,7 +5,7 @@
 }
 
 h1, h2, h3, h5 {
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
     text-transform: unset;
     font-weight: 300;
     color: #6D6155
@@ -43,13 +43,13 @@ hr {
 
 /* all auth form  */
 .container-center form {
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
     color: #6D6155;
     text-align: left;
 }
 
 .container-center .form-group {
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
     color: #6D6155;
     text-align: left;
 }
@@ -62,7 +62,7 @@ hr {
 .container-center button {
     border: none;
     background-color: #EFE9E2;
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
     padding: 5px 40px;
     color: #6D6155;
 }

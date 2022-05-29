@@ -1,5 +1,5 @@
 h1, h2, h3, h5 {
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
     text-transform: unset;
     font-weight: 300;
     color: #6D6155;
@@ -38,7 +38,7 @@ td .update-link:hover {
 }
 
 .table {
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
 }
 
 

@@ -1,5 +1,5 @@
 h1, h2, h3, h5 {
-    font-family: 'Libre Bondi', serif;
+    font-family: 'Libre Bodoni', serif;
     text-transform: unset;
     font-weight: 300;
     color: #6D6155;
@@ -45,7 +45,7 @@ fieldset label p {
 /* Stripe */
 .StripeElement,
 .custom-stripe-input {
-  font-family: 'Libre Bondi', serif;
+  font-family: 'Libre Bodoni', serif;
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
@@ -74,7 +74,7 @@ fieldset label p {
 }
 
 #card-errors {
- font-family: 'Libre Bondi', serif;
+ font-family: 'Libre Bodoni', serif;
 } 
 
 /* country drop down*/
