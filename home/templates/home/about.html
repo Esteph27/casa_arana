@@ -5,13 +5,37 @@
 {% block content %}
 
 <!-- header -->
-<div id="logo-background" class="container-fluid">
-    <h1>Welcome to our Home</h1>
+<div id="half-width-container" class="container-fluid">
+    <div class="row">
+        <div class="col" id="about-us-img-0">
+            <h1>Our Casa</h1>
+        </div>
+    </div>
 </div>
 
 <div class="container-fluid text-container">
-    <div>
-        <h1>intro section</h1>
+    <div class="row">
+        <div class="col-12">
+            <p>
+                We're here to introduce Peruvian homewear and decor into your homes. We're a place where you can find exquisite and exclusive
+                homewear pieces that are sourced directly from talented artisans from across Peru. 
+                <br>
+                <br>
+                We're not your usual homewear store where products are made in factories, instead we source our products from a handful of carefully
+                selected artisans (or makers) meaning all of our products are sold for a limited time only, and most importantly, are not mass produced.
+                We believe true craftsmanship should be celebrated, not replicated. We believe we should support our Artisans (who often still work with
+                ancient Incan techniques) to bring them the business their skills and creativity demand. Our Artisans have provided some of the most
+                beautiful and unique pieces we have seen and we want to introduce them to the world, in a fair and honest way.
+                <br>
+                <br>
+                What we sell is part of a bigger picture, we don't just sell beautiful pieces for the home, we also provide support to the artisan
+                community of Peru to help maintain their craft and their individual businesses. Each item sold here holds a story, a history and a purpose.
+                We're so proud to be able to do what we do and we hope that you're able to find something special for your home.
+                <br>
+                <br>
+                CA x 
+            </p>
+        </div>    
     </div>
 </div>
 
@@ -20,13 +44,20 @@
     <div class="row">
         <div id="about-us-img-1" class="col-md"></div>
         <div id="background-col-container" class="text-container-2">
-            <h1 class="extra-padding-top">Our Values</h1>
+            <h1 class="extra-padding-top">How we Work</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Here we celebrate the labour of love and unique design, it's incredibly important to us that we support our
+                artisans as much as possible. Most of our artisans have been refining their craft for generations and it's sad
+                to see their craft end because they're not getting the income needed to sustain their business, or family.
+                As well as this, we have seen cheap imitations in the western world and although are happy to see Peruvian design
+                become more accessible, we do not believe in mass production. We're here to bring the power back to the marker,
+                give them the business opportunity they deserve to continue sharing their craft and help them support their families.
+                <br>
+                <br>
+                We take great pride in the relationships we have you with our artisans, they're not just our makers, but most importantly,
+                our clients. We ensure complete transparency along our supply chain buying directly buying from our artisans, no middle men
+                involved. When it's time to buy new products, we head out to visit out artisans and collectively curate a collection to
+                sell together. It's a collaboration where the artisans are as involved as we are and its our mission to keep it that way. 
             </p>
         </div>
         <div id="about-us-img-2" class="col-md"></div>
@@ -37,7 +68,18 @@
 <div class="container" id="half-width-container">
     <div class="text-container-2">
         <h1 class="extra-padding-top">Support More</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>
+            We have seen a lot of artisans and their business close down due of limited trade and profits, it's our mission to bring these
+            individuals to the surface and give them the opportunity to make a real living for themselves.Through our business we endeavour
+            to provide our artisans with the best possible business and support, simply buying one item from out store makes a huge impact to
+            the lives of our artisans and we could not be more thankful. However, if you'd like to support our artisans and other communities
+            in Peru then we would be most humbled if you could extend your support by donating to one of our selected charities below.
+            <br>
+            <br>
+            We have worked with these charities for years and have always collaborated with them. They're all fully certified and respected
+            charities which have done wonders for various communities in Peru. Head over to their websites where you can find out more about
+            them and you can see which charity most aligns with you the most. We will be forever grateful for your for additional donations. 
+        </p>
     </div>
     <div class="row">
         <div id="about-us-img-3" class="col-md"></div>
@@ -53,16 +95,17 @@
 </div>
 
 <!-- sign up section and back to store link -->
-<div class="container-fluid">
-    <div class="email-sign-up-container">
+<div class="container-fluid pl-0 pr-0" id="half-width-container">
+    <div class="sign-up-container" id="background-col-container">
         <h1>Join Us</h1>
-        <hr>
-        <p><a href="{% url 'account_signup' %}">Sign Up</a></p>
+        <hr class="mb-4">
+        <a href="{% url 'account_signup' %}">Create Account</a>
     </div>
     <div class="bk-to-store-link">
         <a class="text-decoration-none" href="{% url 'products' %}"><p>Back to Store</p></a>
         <hr>
     </div>
 </div>
+
 
 {% endblock %}

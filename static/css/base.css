@@ -112,7 +112,7 @@ footer hr {
 .social-media-icons i {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
-    font-size: 25px;
+    font-size: 20px;
     color: #6D6155;
 }
 
@@ -252,7 +252,7 @@ footer hr {
 
 .text-container p {
     margin: 10% 5% 10%;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .text-container hr {
@@ -386,22 +386,22 @@ footer hr {
 
 /* ------------------------------------------ About */
 
-#logo-background h1 {
+#about-us-img-0 h1 {
+    text-align: center;
     color: #FEF9F4;
     font-size: 50px;
-    padding-top: 24rem;
-    padding-right: 5rem;
+    padding-top: 10rem;
 }
 
-#logo-background {
+#about-us-img-0 {
     background-color: #C8C1B9;
-    background-image: url("/media/ca_logo.png");
+    background-image: url("/media/deconovo-fC18Z523kj8-unsplash.jpg");
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50%;
 	overflow: hidden;
     height: 650px;
-    width: 100vw;
+    width: 100%;
 }
 
 #about-us-img-1 {
@@ -416,7 +416,7 @@ footer hr {
 }
 
 .extra-padding-top {
-    padding-top: 20rem;
+    padding-top: 15rem;
 }
 
 .text-container-2 {
@@ -428,7 +428,7 @@ footer hr {
 }
 
 .text-container-2 p {
-    font-size: 20px;
+    font-size: 16px;
     margin: 10% 5% 10%;
 }
 
@@ -472,12 +472,14 @@ footer hr {
     padding-top: 4rem;
     padding-bottom: 0;
     margin-bottom: 0;
-    font-size: 20px
+    font-size: 22px;
+    letter-spacing: 2px;
 }
 
 .links-container a {
     color: #6D6155;
 }
+
 
 .sign-up-container {
     text-align: center;
@@ -487,9 +489,17 @@ footer hr {
 
 .sign-up-container hr {
     width: 80%;
-    margin: 0 auto;  
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 0 auto;
+}
+
+.sign-up-container h1 {
+    padding-top: 3rem;
+}
+
+.sign-up-container a {
+    color: #6D6155;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .bk-to-store-link {
@@ -509,6 +519,7 @@ footer hr {
 
 .bk-to-store-link a {
     color: #6D6155;
+
 }
 
 
@@ -679,7 +690,7 @@ footer hr {
     .text-container p {
         margin: 12% 20% 9%;
         padding-bottom: 0;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .text-container .custom-link hr {
@@ -722,7 +733,7 @@ footer hr {
         width: 90vw;
     }
 
-     .links-container hr {
+    .links-container hr {
         width: 10%;
     }
 
@@ -741,6 +752,10 @@ footer hr {
 
     .text-container-2 h1 {
         font-size: 40px;
+    }
+
+    .text-container-2 p {
+        font-size: 18px;
     }
 
     /*------------------ footer */
@@ -783,9 +798,9 @@ footer hr {
     }
 
     .text-container p {
-        margin: 5% 25% 9%;
+        margin: 5% 25% 5%;
         padding-bottom: 0;
-        font-size: 25px;
+        font-size: 18px;
     }
 
     .text-container .custom-link a {
@@ -891,6 +906,10 @@ footer hr {
 
     .text-container-2 h1 {
         font-size: 40px;
+    }
+
+    .text-container-2 p {
+        font-size: 18px;
     }
 
 

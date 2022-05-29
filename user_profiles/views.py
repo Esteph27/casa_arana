@@ -72,13 +72,10 @@ def add_to_wishlist(request, product_id):
 
     redirect_url = request.POST.get('redirect_url') 
     
-    # get product from product page 
     product = get_object_or_404(Product, product_id=product_id)
     
-
-    # create wishlist if one does not exsist
     wishlist = WishList.objects.get_or_create(user=request.user)
-    # Add product to the wishlist
+
     wishlist.products.add(product)
     messages.info(request, 'Added to your wish list')
 
