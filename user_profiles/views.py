@@ -30,14 +30,12 @@ def profile(request):
         form = UserProfileForm(instance=profile)
 
     orders = profile.orders.all()
-    wishlist = profile.wishlist.all()
 
     template = 'user_profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
         'profile': profile,
-        'wishlist': wishlist,
     }
 
     return render(request, template, context)
@@ -64,19 +62,36 @@ def order_history(request, order_id):
     return render(request, template, context)
 
 
-@login_required
+def view_wishlist(request):
+    """
+    A view to render a user's wish list
+    """
+    
+    wishlist = Wishlist.objects.all()
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    template = 'user_profiles/wishlist.html'
+
+    context = {
+        'wishlist': wishlist,
+        'profile': profile,
+    }
+
+    return render(request, template, context)
+
+
 def add_to_wishlist(request, product_id):
     """
     Add a product to wish list
     """
 
-    redirect_url = request.POST.get('redirect_url') 
+    redirect_url = request.POST.get('redirect_url')
     
     product = get_object_or_404(Product, product_id=product_id)
     
-    wishlist = WishList.objects.get_or_create(user=request.user)
+    wishlist = Wishlist.objects.get_or_create(user=request.user)
 
     wishlist.products.add(product)
-    messages.info(request, 'Added to your wish list')
+    messages.info(request, 'Added to your wish list!')
 
     return redirect(redirect_url)

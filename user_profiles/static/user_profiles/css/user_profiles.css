@@ -54,3 +54,16 @@
 .order-history a {
     color: #55595C;
 }
+
+/* ------------------------------------------ wishlisr page */
+
+#wishlist-card .card-header, .card-footer {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+#wishlist-card .card-img-top {
+    height: 500px;
+    width: 100%;
+    background-color: #F2EDE8;
+}
