@@ -44,8 +44,8 @@ class Wishlist(models.Model):
     Model to store products in a user's wish list
     """
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    product = models.ManyToManyField(Product, blank=True, related_name='wishlist')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='wishlist')
+    product = models.ManyToManyField(Product, blank=True)
 
     def __str__(self):
         return self.name

@@ -62,6 +62,7 @@ def order_history(request, order_id):
     return render(request, template, context)
 
 
+@login_required
 def view_wishlist(request):
     """
     A view to render a user's wish list
@@ -80,18 +81,26 @@ def view_wishlist(request):
     return render(request, template, context)
 
 
-def add_to_wishlist(request, product_id):
+@login_required
+def add_or_remove_item_from_wishlist(request, product_id):
     """
-    Add a product to wish list
+    Handles adding and removing items from wish list when user clicks on heart icon
     """
 
-    redirect_url = request.POST.get('redirect_url')
-    
-    product = get_object_or_404(Product, product_id=product_id)
-    
-    wishlist = Wishlist.objects.get_or_create(user=request.user)
+    user = request.user
+    product_id = request.POST.get('product_id')
+    product = Product.objects.get(pk=product_id)
 
-    wishlist.products.add(product)
-    messages.info(request, 'Added to your wish list!')
-
-    return redirect(redirect_url)
+    if request.method == 'POST':
+        wishlist = Wishlist.objects.filter(user=user)
+        if product in wishlist.prodducts.all():
+            wishlist.products.remove(product)
+            messages.info(request, (
+                f'{product_id} removed from your wishlist'
+            ))
+        else:
+            wishlist.products.add(product)
+            messages.info(request, (
+                f'{product_id} added from your wishlist.'))
+    
+    return redirect(reverse('product_info'))

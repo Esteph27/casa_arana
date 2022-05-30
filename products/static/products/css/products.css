@@ -119,6 +119,17 @@ li.nav-item.dropdown {
     font-size: 12px;
 }
 
+/* heart icon - add or remove from wishlist */
+
+#remove-from-wishlist-icon {
+    color: red;
+
+}
+
+#add-to-wishlist-icon {
+    color: green;
+}
+
 
 /* ------------------------------------------ product info page */
 

@@ -29,10 +29,23 @@
                     <a class="text-decoration-none float-left pl-0" href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
                     </a>
-                    {% if request.user.is_authenticated %}
-                    <a id="add-to-wishlist-icon" class="text-decoration-none pl-0 pr-0 float-right" href="#">
-                        <i class="fa-solid fa-xl fa-heart"></i>
-                    </a>
+                    {% if wishlist %}
+                        {% if request.user.is_authenticated %}
+                            <form action="{% url 'add_or_remove_item_from_wishlist' %}" method="POST">
+                                <input name="product_id" type="hidden" value="{{product.id}}">
+                                {% if product in wishlist %}
+                                <button type="submit">
+                                    <i  id="remove-from-wishlist-icon" class="fa-solid fa-xl fa-heart"></i>
+                                    REMOVE
+                                </button>
+                                {% else%}
+                                <button type="submit">
+                                    <i  id="addto-wishlist-icon" class="fa-solid fa-xl fa-heart"></i>
+                                    ADD
+                                </button>
+                            </form>
+                            {% endif %}
+                        {% endif %}
                     {% endif %}
                 </span>
             </div>
@@ -159,7 +172,7 @@
                 <h3>No reviews yet, be the first one</h3>
                 <a href="{% url 'product_review' product.id %}" class="btn mt-3 mb-5">Leave a Review</a>
             </div>
-            {% else%}
+            {% else %}
                 {% if request.user.is_authenticated %}
                 <div class="col-12 mt-5 mb-5 pl-3">
                     <a href="{% url 'product_review' product.id %}" class="btn">Leave a Review</a>
@@ -169,7 +182,6 @@
         </div>
     </div>
 </div>
-
 
 
 {% endblock %}
