@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 
 
 from .models import Product, Category, Artisan, Reviews
-from user_profiles.models import Wishlist
 from .forms import ProductForm, ReviewsForm
 
 
@@ -73,17 +72,10 @@ def product_info(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Reviews.objects.filter(product=product)
 
-    # checks for a wishlist for logged in users
-    wishlist = None
-    if request.user.is_authenticated:
-        user = User.objects.get(username=request.user.username)
-        wishlist = Wishlist.objects.get(user=user)
-
     context = {
         'product': product,
         'artisan': artisan,
         'reviews': reviews,
-        'wishlist': wishlist,
     }
 
     return render(request, 'products/product_info.html', context)

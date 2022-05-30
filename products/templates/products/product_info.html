@@ -29,23 +29,9 @@
                     <a class="text-decoration-none float-left pl-0" href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
                     </a>
-                    {% if wishlist %}
-                        {% if request.user.is_authenticated %}
-                            <form action="{% url 'add_or_remove_item_from_wishlist' %}" method="POST">
-                                <input name="product_id" type="hidden" value="{{product.id}}">
-                                {% if product in wishlist %}
-                                <button type="submit">
-                                    <i  id="remove-from-wishlist-icon" class="fa-solid fa-xl fa-heart"></i>
-                                    REMOVE
-                                </button>
-                                {% else%}
-                                <button type="submit">
-                                    <i  id="addto-wishlist-icon" class="fa-solid fa-xl fa-heart"></i>
-                                    ADD
-                                </button>
-                            </form>
-                            {% endif %}
-                        {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'add_to_wishlist' product.id %}">Add to wish list</a>
+                        <a href="{% url 'remove_from_wishlist' product.id %}">Remove from wish list</a>
                     {% endif %}
                 </span>
             </div>

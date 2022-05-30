@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile, Wishlist
+from products.models import Product
 from .forms import UserProfileForm
 
 
@@ -65,42 +66,51 @@ def order_history(request, order_id):
 @login_required
 def view_wishlist(request):
     """
-    A view to render a user's wish list
+    A view to render a user's wishlist
     """
-    
-    wishlist = Wishlist.objects.all()
-    profile = get_object_or_404(UserProfile, user=request.user)
 
-    template = 'user_profiles/wishlist.html'
+    wishlist = None
+
+    try:
+        wishlist = Wishlist.objects.get(user=request.user)
+    except Wishlist.DoesNotExist:
+        pass
 
     context = {
         'wishlist': wishlist,
-        'profile': profile,
     }
 
-    return render(request, template, context)
+    return render(request, 'user_profiles/wishlist.html', context)
 
 
 @login_required
-def add_or_remove_item_from_wishlist(request, product_id):
+def add_to_wishlist(request, product_id):
     """
-    Handles adding and removing items from wish list when user clicks on heart icon
+    A view to add a product to a user's wishlist 
     """
 
-    user = request.user
-    product_id = request.POST.get('product_id')
-    product = Product.objects.get(pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist, _ = Wishlist.objects.get_or_create(user=request.user)
 
-    if request.method == 'POST':
-        wishlist = Wishlist.objects.filter(user=user)
-        if product in wishlist.prodducts.all():
-            wishlist.products.remove(product)
-            messages.info(request, (
-                f'{product_id} removed from your wishlist'
-            ))
-        else:
-            wishlist.products.add(product)
-            messages.info(request, (
-                f'{product_id} added from your wishlist.'))
-    
-    return redirect(reverse('product_info'))
+    wishlist.products.add(product)
+    messages.info(request, (
+                f'{product.name} added to your wishlist.'))
+
+    return redirect(request.META.get('HTTP_REFERER'))
+
+
+def remove_from_wishlist(request, product_id):
+    """
+    A view to delete a product from a user's wishlist
+    """
+
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist = Wishlist.objects.get(user=request.user)
+
+    wishlist.products.remove(product)
+    messages.info(request, (
+                f'{product.name} removed from your wishlist.'))
+
+    return redirect(request.META.get('HTTP_REFERER'))
+
+

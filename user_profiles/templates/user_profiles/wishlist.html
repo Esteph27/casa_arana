@@ -28,11 +28,17 @@
 <div class="container-fluid">
     <div class="row">
         <!--if items in wishlist -->
+        {% for product in wishlist.products.all %}
+            {{ product.name }}
+            <a href="{% url 'remove_from_wishlist' product.id %}">Remove from wish list</a>
+        {% empty %}
+            <h1>THIS SHIT IS FUCKING EMPTY</h1>
+        {% endfor %}
         <div class="col-sm-12 col-md-4" id="wishlist-card">
             <div class="card border-0">
                 <img class="card-img-top" src="#" alt="Card image cap">
                 <div class="card-header">
-                    <h2>product name</h2>
+                    <h2>{{ product.name }}</h2>
                 </div>
                 <div class="card-body">
                   <p class="card-text">
@@ -44,7 +50,8 @@
                 </div>
               </div>
         </div>
-        <!--if wish list is emplty -->
+        
+        <!--if wish list is empty -->
         <div class="col-12">
             <h2 class="mb-3">Your Wishlist is empty</h2>
             <p>Add to your Wishlist by cliking on the heart icon. You can save items here and remove them as needed.</p>
