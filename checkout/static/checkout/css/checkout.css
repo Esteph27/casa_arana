@@ -1,5 +1,5 @@
 h1, h2, h3, h5 {
-    font-family: 'Libre Bodoni', serif;
+    font-family: 'Libre Caslon Display', serif;
     text-transform: unset;
     font-weight: 300;
     color: #6D6155;
@@ -45,15 +45,12 @@ fieldset label p {
 /* Stripe */
 .StripeElement,
 .custom-stripe-input {
-  font-family: 'Libre Bodoni', serif;
+  font-family: 'Libre Caslon Display', serif;
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
   border-radius: 0px;
   background-color: white;
-  /* box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease; */
 }
 
 .StripeElement--webkit-autofill {
@@ -74,7 +71,7 @@ fieldset label p {
 }
 
 #card-errors {
- font-family: 'Libre Bodoni', serif;
+ font-family: 'Libre Caslon Display', serif;
 } 
 
 /* country drop down*/
