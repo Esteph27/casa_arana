@@ -96,15 +96,22 @@
 
 <!-- sign up section and back to store link -->
 <div class="container-fluid pl-0 pr-0" id="half-width-container">
+    {% if user.is_authenticated %}
+        <div class="bk-to-store-link">
+            <a class="text-decoration-none" href="{% url 'products' %}"><p>Back to Store</p></a>
+            <hr>
+        </div>
+   {% else %}
     <div class="sign-up-container">
-        <h1>Become part of our Home</h1>
-        <hr class="mb-4">
-        <a href="{% url 'account_signup' %}">Create Account</a>
-    </div>
-    <div class="bk-to-store-link">
-        <a class="text-decoration-none" href="{% url 'products' %}"><p>Back to Store</p></a>
-        <hr>
-    </div>
+            <h1>Become part of our Home</h1>
+            <hr class="mb-4">
+            <a href="{% url 'account_signup' %}">Create Account</a>
+        </div>
+        <div class="bk-to-store-link">
+            <a class="text-decoration-none" href="{% url 'products' %}"><p>Back to Store</p></a>
+            <hr>
+        </div>
+    {% endif %}
 </div>
 
 

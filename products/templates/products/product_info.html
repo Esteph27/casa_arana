@@ -21,40 +21,44 @@
             <a href="{{ product.image.url }}" target="_blank" class="pl-0 pr-0">
                 <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
             </a>
+              <!-- Edit / Delete links for admin users -->
+            {% if request.user.is_superuser %}
+              <div class="col-12 mt-2 mb-2 text-center pl-0">
+                  <small>
+                      <a href="{% url 'edit_product' product.id %}" class="pl-3">Edit</a> | 
+                      <a class="text-danger pl-3" href="{% url 'delete_product' product.id %}">Delete</a>
+                  </small>
+                  <hr class="mt-3">
+              </div>
+            {% endif %}
         </div>
         <!-- product info -->
         <div class="col-sm-12 col-md-12 col-lg-5 text-left product-info">
             <div class="row pr-0">
-                <div class="col-3 text-left">
+                <div class="col-12 text-left">
                     <a class="text-decoration-none pl-0" href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
                     </a>
                 </div>
-                <div class="col-8 text-right">
-                    {% if request.user.is_authenticated %}
-                        <a href="{% url 'remove_from_wishlist' product.id %}" class="text-decoration-none">
-                            <i class="fa-solid fa-heart" id="remove-from-wishlist-icon"></i>
-                        </a>
-                        <a href="{% url 'add_to_wishlist' product.id %}" class="text-decoration-none">
-                            <i class="fa-solid fa-heart" id="add-to-wishlist-icon"></i>
-                        </a>
-                    {% endif %}
+                {% if request.user.is_authenticated %}
+                <div class="col-12 mt-4 text-left">
+                    <a href="{% url 'add_to_wishlist' product.id %}" class="text-decoration-none p-0">
+                        <!-- <i class="fa-solid fa-heart" id="add-to-wishlist-icon"></i> -->
+                        Add to wishlist
+                    </a> |
+                    <a href="{% url 'remove_from_wishlist' product.id %}" class="text-decoration-none p-0">
+                        Remove from wishlist
+                        <!-- <i class="fa-solid fa-heart" id="remove-from-wishlist-icon"></i> -->
+                    </a>
+                    <hr>
                 </div>
+                {% endif %}
             </div>
             <div class="row">
                 <div class="col-12">
                     <h3 class="mt-4 product-name">{{ product.name }}</h3>
                     <h3 class="mt-4">£{{ product.price }}</h3>
                 </div>
-                <!-- Edit / Delete links for admin users -->
-                {% if request.user.is_superuser %}
-                    <div class="col-12 mt-4 mb-4 text-left pl-0">
-                        <small>
-                            <a href="{% url 'edit_product' product.id %}" class="pl-3">Edit</a> | 
-                            <a class="text-danger pl-3" href="{% url 'delete_product' product.id %}">Delete</a>
-                        </small>
-                    </div>
-                {% endif %}
                 <!-- Item qauntity selection -->
                 <div class="col-12">
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">

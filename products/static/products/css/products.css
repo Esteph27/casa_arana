@@ -166,7 +166,7 @@ li.nav-item.dropdown {
 /*  +/- selector boxes */
 .qty-selector-container {
     text-align: left;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .qty-selector-container .form-control {
