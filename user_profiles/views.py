@@ -95,9 +95,14 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     wishlist, _ = Wishlist.objects.get_or_create(user=request.user)
 
-    wishlist.products.add(product)
-    messages.info(request, (
-                f'{product.name} added to your wishlist.'))
+    # check first to see if product already exsists in wishlist
+    if product in wishlist.products.all():
+        messages.info(request, (
+                f'{product.name} already exsists in your wishlist.'))
+    else:
+        wishlist.products.add(product)
+        messages.info(request, (
+                    f'{product.name} added to your wishlist.'))
 
     return redirect(request.META.get('HTTP_REFERER'))
 
