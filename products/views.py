@@ -111,6 +111,30 @@ def product_review(request, product_id):
     return render(request,  'products/product_review.html', context)
 
 
+
+def artisan_profile(request, product_artisan_id):
+    """
+    A view to render Artisan profile of a selected Artisan
+    """
+
+    # artisan = Artisan.objects()
+    artisan = get_object_or_404(Artisan, pk=product_artisan_id)
+
+    context = {
+        'artisan': artisan,
+    }
+
+
+    template = 'products/artisan_profile.html'
+
+    context = {
+        'artisan': artisan,
+    }
+
+    return render(request, template, context)
+
+
+
 # ---------------------- admin
 @login_required
 def add_product(request):
