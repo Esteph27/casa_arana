@@ -287,6 +287,55 @@ li.nav-item.dropdown {
     font-family: 'Libre Caslon Display', serif;
 }
 
+/* ------------------------------------------ Artisan profile page  */
+
+#circle-profile-img {
+    margin: 0 auto;
+}
+
+
+#circle-profile-img img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#artisan-info-container hr {
+    width: 50%;
+    text-align: center;
+}
+
+#artisan-product-card .card-header, .card-footer {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+#artisan-product-card .card-img-top {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    background-color: #F2EDE8;
+}
+
+#artisan-product-card a {
+    text-decoration: none;
+    color: #6D6155;
+}
+
+#artisan-product-card a:hover {
+    color: #A4917E;
+}
+
+.center-container {
+    text-align: center;
+}
+
+.center-container .push-to-center {
+    margin: 0 auto;
+}
+
+
 /* ------------------------------------------ add product page */
 
 .add-product-header {

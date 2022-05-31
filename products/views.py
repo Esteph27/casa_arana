@@ -117,18 +117,14 @@ def artisan_profile(request, product_artisan_id):
     A view to render Artisan profile of a selected Artisan
     """
 
-    # artisan = Artisan.objects()
     artisan = get_object_or_404(Artisan, pk=product_artisan_id)
-
-    context = {
-        'artisan': artisan,
-    }
-
+    products = Product.objects.filter(artisan=product_artisan_id)
 
     template = 'products/artisan_profile.html'
 
     context = {
         'artisan': artisan,
+        'products': products,
     }
 
     return render(request, template, context)
