@@ -12,7 +12,7 @@
 <!-- header -->
 <div class="container-fluid profile-header mb-5">
     <div class="row">
-        <div class="col-12" id="logo-circle">
+        <div class="col-12 mb-5" id="logo-circle">
             <img src="/media/ca_logo.png">
         </div>
         <div class="col-12 mt-4">
@@ -29,35 +29,30 @@
     <div class="row">
         <!--if items in wishlist -->
         {% for product in wishlist.products.all %}
-            {{ product.name }}
-            <a href="{% url 'remove_from_wishlist' product.id %}">Remove from wish list</a>
+            <div class="col-sm-12 col-md-4 pb-4" id="wishlist-card">
+                <div class="card border-0">
+                    <img class="card-img-top" src="{{ product.image.url }}" alt="Card image cap">
+                    <div class="card-header">
+                        <h2>{{ product.name }}</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">£{{ product.price }}</p>
+                        <a href="{% url 'product_info' product.id %}">View all product details</a>
+                    </div>
+                    <div class="card-footer">
+                        <p><a href="{% url 'remove_from_wishlist' product.id %}" id="remove">Remove from wish list</a></p>
+                    </div>
+                </div>
+            </div>
         {% empty %}
-            <h1>THIS SHIT IS FUCKING EMPTY</h1>
+             <!--if wish list is empty -->
+            <div class="col-12 text-center mb-5">
+                <h2 class="mb-3">Your Wishlist is empty</h2>
+                <p>Add to your Wishlist by clicking on the heart icon. You can save items here and remove them as needed.</p>
+                <br>
+                <p>Need some inspirarion? <a href="{% url 'products' %}">View Products</a></p>
+            </div>
         {% endfor %}
-        <div class="col-sm-12 col-md-4" id="wishlist-card">
-            <div class="card border-0">
-                <img class="card-img-top" src="#" alt="Card image cap">
-                <div class="card-header">
-                    <h2>{{ product.name }}</h2>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">
-                      product description 
-                  </p>
-                </div>
-                <div class="card-footer">
-                    <p>Delete</p>
-                </div>
-              </div>
-        </div>
-        
-        <!--if wish list is empty -->
-        <div class="col-12">
-            <h2 class="mb-3">Your Wishlist is empty</h2>
-            <p>Add to your Wishlist by cliking on the heart icon. You can save items here and remove them as needed.</p>
-            <br>
-            <p>Need some inspirarion? <a href="{% url 'products' %}">View Products</a></p>
-        </div>
     </div>
 </div>
 

@@ -69,6 +69,8 @@ def view_wishlist(request):
     A view to render a user's wishlist
     """
 
+    profile = get_object_or_404(UserProfile, user=request.user)
+
     wishlist = None
 
     try:
@@ -78,6 +80,7 @@ def view_wishlist(request):
 
     context = {
         'wishlist': wishlist,
+        'profile': profile,
     }
 
     return render(request, 'user_profiles/wishlist.html', context)
@@ -86,7 +89,7 @@ def view_wishlist(request):
 @login_required
 def add_to_wishlist(request, product_id):
     """
-    A view to add a product to a user's wishlist 
+    A view to add a product to a user's wishlist
     """
 
     product = get_object_or_404(Product, pk=product_id)

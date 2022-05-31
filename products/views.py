@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 
 
 from .models import Product, Category, Artisan, Reviews
+from user_profiles.models import Wishlist
 from .forms import ProductForm, ReviewsForm
 
 
@@ -68,7 +69,7 @@ def product_info(request, product_id):
     Shows product information for a single product
     """
 
-    artisan = Product.artisan 
+    artisan = Product.artisan
     product = get_object_or_404(Product, pk=product_id)
     reviews = Reviews.objects.filter(product=product)
 

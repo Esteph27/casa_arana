@@ -24,16 +24,22 @@
         </div>
         <!-- product info -->
         <div class="col-sm-12 col-md-12 col-lg-5 text-left product-info">
-            <div class="row">
-                <span>
-                    <a class="text-decoration-none float-left pl-0" href="{% url 'products' %}?category={{ product.category.name }}">
+            <div class="row pr-0">
+                <div class="col-3 text-left">
+                    <a class="text-decoration-none pl-0" href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fa-solid fa-circle category-tag mr-1"></i>{{ product.category.name }}
                     </a>
+                </div>
+                <div class="col-8 text-right">
                     {% if request.user.is_authenticated %}
-                        <a href="{% url 'add_to_wishlist' product.id %}">Add to wish list</a>
-                        <a href="{% url 'remove_from_wishlist' product.id %}">Remove from wish list</a>
+                        <a href="{% url 'remove_from_wishlist' product.id %}" class="text-decoration-none">
+                            <i class="fa-solid fa-heart" id="remove-from-wishlist-icon"></i>
+                        </a>
+                        <a href="{% url 'add_to_wishlist' product.id %}" class="text-decoration-none">
+                            <i class="fa-solid fa-heart" id="add-to-wishlist-icon"></i>
+                        </a>
                     {% endif %}
-                </span>
+                </div>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -154,7 +160,7 @@
             </div>
             <!-- if product has no reviews -->
             {% if reviews|length == 0  %}
-            <div class="col-12 mt-3">
+            <div class="col-12 mt-3 pl-3">
                 <h3>No reviews yet, be the first one</h3>
                 <a href="{% url 'product_review' product.id %}" class="btn mt-3 mb-5">Leave a Review</a>
             </div>

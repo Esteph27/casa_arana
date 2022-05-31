@@ -55,7 +55,7 @@
     color: #55595C;
 }
 
-/* ------------------------------------------ wishlisr page */
+/* ------------------------------------------ wishlist page */
 
 #wishlist-card .card-header, .card-footer {
     background-color: transparent;
@@ -65,5 +65,28 @@
 #wishlist-card .card-img-top {
     height: 500px;
     width: 100%;
+    object-fit: cover;
     background-color: #F2EDE8;
+}
+
+#wishlist-card a {
+    text-decoration: none;
+    color: #6D6155;
+}
+
+#wishlist-card a:hover {
+    color: #A4917E;
+}
+
+#wishlist-card #remove:hover {
+    color: #B65555;
+}
+
+a {
+    text-decoration: none;
+    color: #6D6155;
+}
+
+a:hover {
+    color: #A4917E;
 }
