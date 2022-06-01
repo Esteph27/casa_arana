@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootswatch@5.1.3/dist/lux/bootstrap.min.css,npm/bootswatch@5.1.3/dist/lux/bootstrap.min.css">
         <!-- custom css -->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <!-- mailchimp css-->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block extra_css%}
@@ -86,6 +88,8 @@
       </div>
     {% endblock%}
 
+    {% include 'includes/mailchimp_sign_up.html' %}
+
     {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
@@ -116,8 +120,8 @@
 
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0;
         }
 
       </script>

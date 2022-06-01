@@ -12,7 +12,7 @@ body {
     background-color: white;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     font-family: 'Libre Caslon Display', serif;
     text-transform: unset;
     color: #6D6155;
@@ -85,8 +85,6 @@ li {
     list-style: none;
 }
 
-
-
 /* ------------------------------------------ footer */
 
 footer {
@@ -140,6 +138,16 @@ footer hr {
     text-align: center;
     padding-bottom: 25%;
 }
+
+/* ------------------------------------------ mailchimp */
+
+#mc_embed_signup {
+    background:#fff;
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    width:600px;
+}
+ 
 
 /* ------------------------------------------ buttons and links */
 
