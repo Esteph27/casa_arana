@@ -13,7 +13,7 @@
 <div class="container-fluid profile-header mb-5">
     <div class="row">
         <div class="col-12 mb-4" id="logo-circle">
-            <img src="/media/ca_logo.png">
+            <img src="/media/ca_logo.jpg">
         </div>
         <div class="col-12 mt-4">
             <h2>Hello, {{ profile.user }}</h2>
@@ -67,7 +67,7 @@
                               {% endfor %}
                             {% else %}
                               <div class="col">
-                                <p>You have no orders at the moment</p>
+                                <p>You have no orders at the moment.</p>
                                 <p>Take a look at our latest <a href="{% url 'products' %}">Collections</a></p>
                               </div>
                           {% endif %}
