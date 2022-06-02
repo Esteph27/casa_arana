@@ -16,9 +16,11 @@
         <div class="col-12">
             <h1>Your Bag</h1>
         </div>
+        {% if bag_item %}
         <div class="col-12 back-to-all-product-link mt-3">
             <a href="{% url 'products' %}"><i class="fa-solid fa-angle-left mr-1"></i>Back to all products</a>
         </div>
+        {% endif %}
     </div>
 </div>
 
@@ -76,7 +78,6 @@
                                         </div>
                                     </form>
                                     <a class="update-link">Update</a>
-                                    <!-- <hr class="w-50"> -->
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0 mt-5">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -85,7 +86,7 @@
                         {% endfor %}
                         <tr>
                             <td>
-                                <p class="my-0 mt-5 float-left">Total number of items: {{product_count}}</p>
+                                <p class="my-0 mt-5 float-left">Total Items: {{product_count}}</p>
                             </td>
                         </tr>
                         <tr>
@@ -110,10 +111,10 @@
                     </table>
                 </div>
             {% else %}
-                <div id="bag-empty-container">
-                    <h2>You have no items in your shopping basket.</h2>
+                <div id="bag-empty-container" class="text-center">
+                    <h3>Your Shopping Bag is Empty.</h3>
                     <hr class="mt-4 mb-4">
-                    <a href="{% url 'products' %}" class="btn">Continue Shopping</a>
+                    <a href="{% url 'products' %}" class="btn">Take Me Shopping</a>
                 </div>
             {% endif %}
         </div>

@@ -158,10 +158,10 @@ footer hr {
 }
 
 #mc_embed_signup form {
-    padding: 0;
+    padding: 10px 3% 10px 3%;
 }
 
-#mc_embed_signup input {
+.email-sign-up-container #mc_embed_signup input {
     border: 1px solid #6D6155;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -172,21 +172,10 @@ footer hr {
     background-color: #6D6155;
     border: 0 none;
     border-radius: 0;
-    transition: all 0.23s ease-in-out 0s;
     color: #FFFFFF;
-    cursor: pointer;
-    font-size: 15px;
-    line-height: 32px;
     margin: 0 5px 10px 0;
     padding: 0 22px;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: top;
-    white-space: nowrap;
-    width: fit-content;
-    width: -moz-fit-content;
 }
-
 
 .email-sign-up-container {
     text-align: center;

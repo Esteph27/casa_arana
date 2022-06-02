@@ -24,7 +24,7 @@ td .update-link:hover {
 /* header */
 .bag-header-container {
     margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .bag-header-container h1 {
@@ -41,7 +41,9 @@ td .update-link:hover {
     font-family: 'Libre Caslon Display', serif;
 }
 
-
+.table p {
+    font-size: 14px
+}
 
 .table th {
     color: #6D6155;
@@ -81,10 +83,6 @@ td .update-link:hover {
     margin-bottom: 12rem;
 }
 
-#bag-empty-container h2 {
-    color: #A4917E;
-    text-align: left;
-}
 
 /* ------------------------------------------ media queries */
 
