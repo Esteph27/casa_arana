@@ -85,6 +85,15 @@ li {
     list-style: none;
 }
 
+#horizontal-list {
+    padding-left: 2px;
+    padding-top: 1rem;
+}
+
+#horizontal-list .nav-link {
+    display: inline-block;
+}
+
 /* ------------------------------------------ footer */
 
 footer {

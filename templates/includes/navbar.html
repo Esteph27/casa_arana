@@ -26,25 +26,29 @@
           </li>
         </ul>
         <!-- user acount -->
-        <li class="nav-item dropdown justify-content-end">
-            <a class="nav-link pl-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-lg fa-user"></i></a>
-            <div class="dropdown-menu text-left">
-              {% if user.is_authenticated %}
-                <a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a>
-                <a class="dropdown-item" href="{% url 'profile' %}">View Account</a>
-                <a class="dropdown-item" href="{% url 'view_wishlist' %}">View Wishlist</a>
-                  {% if request.user.is_superuser %}
-                    <a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a>
-                  {% endif%}
-              {% else %}
-                <a class="dropdown-item" href="{% url 'account_login' %}">Log In</a>
-                <a class="dropdown-item" href="{% url 'account_signup' %}">Create Account</a>
-              {% endif %}
-            </div>
-        </li>
-        <li class="nav-item">
-          <a class="text-decoration-none pl-0 pr-0" href="{% url 'view_shopping_bag' %}"><i class="fa-solid fa-bag-shopping fa-lg mr-2"></i>{{product_count}}</a>
-        </li>
+        <ul id="horizontal-list">
+          <li class="nav-item dropdown justify-content-end d-inline">
+              <a class="nav-link p-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-lg fa-user p-0"></i>
+              </a>
+              <div class="dropdown-menu text-left">
+                {% if user.is_authenticated %}
+                  <a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a>
+                  <a class="dropdown-item" href="{% url 'profile' %}">View Account</a>
+                  <a class="dropdown-item" href="{% url 'view_wishlist' %}">View Wishlist</a>
+                    {% if request.user.is_superuser %}
+                      <a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a>
+                    {% endif%}
+                {% else %}
+                  <a class="dropdown-item" href="{% url 'account_login' %}">Log In</a>
+                  <a class="dropdown-item" href="{% url 'account_signup' %}">Create Account</a>
+                {% endif %}
+              </div>
+          </li>
+          <li class="nav-item d-inline ">
+            <a class="text-decoration-none pl-0 pr-0" href="{% url 'view_shopping_bag' %}"><i class="fa-solid fa-bag-shopping fa-lg mr-2"></i>{{product_count}}</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
