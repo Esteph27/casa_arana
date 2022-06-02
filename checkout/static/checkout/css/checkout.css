@@ -145,6 +145,20 @@ select#id_country.custom-stripe-input.lazyselect.form-control {
     margin-bottom: 5rem;
 }
 
+#shop-more-img {
+    text-align: center;
+}
+
+#shop-more-img {
+    margin: 0 auto;
+}
+
+#shop-more-img img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .bk-to-store-link {
     text-align: center;
     margin-top: 4rem;
@@ -152,7 +166,7 @@ select#id_country.custom-stripe-input.lazyselect.form-control {
     margin: 0 auto;
 }
 
-.bk-to-store-link h2 {
+.bk-to-store-link h3 {
     color: #6D6155;
 }
 
@@ -161,7 +175,7 @@ select#id_country.custom-stripe-input.lazyselect.form-control {
 }
 
 
-.bk-to-store-link a h2:hover {
+.bk-to-store-link a:hover {
     color: #A4917E;
     text-decoration: underline;
 }

@@ -171,15 +171,21 @@
 </div>
 
 <!-- link to all products section -->
-<div class="container container-center">
+<div class="container-fluid container-center">
     <div class="row">
         <div class="col">
             {% if from_profile %}
-            <span><a href="{% url 'profile' %}"><h2>Back to Account</h2></a></span>
+                <span>
+                    <a href="{% url 'profile' %}"><h2>Back To Account</h2></a>
+                </span>
                 {% else %}
                 <span class="col bk-to-store-link">
-                    <a href="{% url 'products' %}"><h2>Shop More</h2></a>
+                    <h2 class="mb-3">Shop A Little More?</h2>
+                    <a href="{% url 'products' %}" class="mb-3"><h3>Back To Store</h3></a>
                 </span>
+                <div class="col-sm-12 col-md-6" id="shop-more-img">
+                    <img alt="Image of a chair and carpet" src="{{ MEDIA_URL }}berber-bazaar-l040UDKHN-o-unsplash.jpg">
+                </div>
             {% endif %}
         </div>
     </div>

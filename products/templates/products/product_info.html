@@ -161,21 +161,21 @@
             </div>
             <!-- if product has no reviews -->
             {% if reviews|length == 0  %}
-            <div class="col-12 mt-3 pl-3">
-                <h3>No reviews yet, be the first one.</h3>
-                <p>Create an account to leave a review.</p>
-                <a href="{% url 'account_login' %}" class="mb-5 btn">Sign Up</a>
-            </div>
-            {% else %}
-                {% if request.user.is_authenticated %}
-                <div class="col-12 mt-5 mb-5 pl-3">
-                    <a href="{% url 'product_review' product.id %}" class="btn">Leave a Review</a>
-                </div>
-                {% else %}
-                <div class="col-12 mt-5 mb-5 pl-3">
+                <div class="col-12 mt-3 pl-3">
+                    <h3>No reviews yet, be the first one.</h3>
                     <p>Create an account to leave a review.</p>
                     <a href="{% url 'account_login' %}" class="mb-5 btn">Sign Up</a>
                 </div>
+            {% else %}
+                {% if request.user.is_authenticated %}
+                    <div class="col-12 mt-5 mb-5 pl-3">
+                        <a href="{% url 'product_review' product.id %}" class="btn">Leave a Review</a>
+                    </div>
+                {% else %}
+                    <div class="col-12 mt-5 mb-5 pl-3">
+                        <p>Create an account to leave a review.</p>
+                        <a href="{% url 'account_login' %}" class="mb-5 btn">Sign Up</a>
+                    </div>
                 {% endif %}
             {% endif %}
         </div>
