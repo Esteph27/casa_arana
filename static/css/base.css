@@ -92,7 +92,7 @@ footer {
     clear: both;
     height: auto;
     width: 100%;
-    background-color: #EFE9E2;
+    background-color: #F9F4EE;
     text-align: center;
 }
 
@@ -142,8 +142,29 @@ footer hr {
 
 /* ------------------------------------------ mailchimp */
 
+.email-sign-up-container {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.email-sign-up-container h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #6D6155;
+}
+
+
+.email-sign-up-container p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.email-sign-up-container form {
+    margin: 0 auto;
+}
+
 #mc_embed_signup {
-    background: white;
+    background: #EFE9E2;
     clear: left;
     font-family: 'Libre Caslon Display', serif;
     font-size: 16px;
@@ -157,15 +178,24 @@ footer hr {
     margin-right: 4%;
 }
 
+.email-sign-up-container #mc_embed_signup .asterisk {
+    color: #6D6155;
+}
+
 #mc_embed_signup form {
     padding: 10px 3% 10px 3%;
 }
 
 .email-sign-up-container #mc_embed_signup input {
-    border: 1px solid #6D6155;
+    background-color: transparent;
+    border: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+}
+
+#mc_embed_signup .mc-field-group input {
+    border: solid 1px #6D6155;
 }
 
 .email-sign-up-container #mc_embed_signup .button {
@@ -175,33 +205,6 @@ footer hr {
     color: #FFFFFF;
     margin: 0 5px 10px 0;
     padding: 0 22px;
-}
-
-.email-sign-up-container {
-    text-align: center;
-    padding-top: 5rem;
-    padding-bottom: 8rem;
-}
-
-.email-sign-up-container h1 {
-    font-size: 30px;
-    text-align: center;
-}
-
-.email-sign-up-container p {
-    font-size: 18px;
-    text-align: center;
-}
-
-.email-sign-up-container hr {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
-
-.email-sign-up-container form {
-    margin: 0 auto;
 }
 
 /* ------------------------------------------ buttons and links */
