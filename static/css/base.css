@@ -333,7 +333,7 @@ footer hr {
 
 .text-container p {
     margin: 10% 5% 10%;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .text-container hr {
@@ -468,7 +468,7 @@ footer hr {
 }
 
 .text-container-2 p {
-    font-size: 16px;
+    font-size: 20px;
     margin: 10% 5% 10%;
 }
 
@@ -739,7 +739,6 @@ footer hr {
     .text-container p {
         margin: 12% 20% 9%;
         padding-bottom: 0;
-        font-size: 18px;
     }
 
     .text-container .custom-link hr {
@@ -803,9 +802,6 @@ footer hr {
         font-size: 40px;
     }
 
-    .text-container-2 p {
-        font-size: 18px;
-    }
 
     /*------------------ footer */
 
@@ -849,7 +845,6 @@ footer hr {
     .text-container p {
         margin: 5% 25% 5%;
         padding-bottom: 0;
-        font-size: 18px;
     }
 
     .text-container .custom-link a {
@@ -955,10 +950,6 @@ footer hr {
 
     .text-container-2 h1 {
         font-size: 40px;
-    }
-
-    .text-container-2 p {
-        font-size: 18px;
     }
 
 

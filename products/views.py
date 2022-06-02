@@ -17,6 +17,8 @@ def all_products(request):
     """
 
     products = Product.objects.all()
+    catergory = Category.objects.all()
+
     query = None
     categories = None
     sort = None
@@ -57,6 +59,7 @@ def all_products(request):
     context = {
         'products': products,
         'search': query,
+        'catergory': catergory,
         'current_categories': categories,
         'current_sorting': current_sorting,
     }

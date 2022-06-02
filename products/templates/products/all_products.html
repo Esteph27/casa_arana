@@ -9,11 +9,11 @@
 {% block content %}
 
 <!-- search bar-->
-<div class="container search-bar-container mt-4 mb-4 float-xl-left">
+<div class="container mt-4 mb-4 float-xl-left" id="search-bar-container">
     <div class="row">
         <div class="col col-xl-6">
             <form class="form" method="GET" action="{% url 'products' %}">
-                <input class="form-control" type="text" name="q" placeholder="Search here...">
+                <input class="form-control" type="text" name="q" placeholder="Search here..." >
             </form>
         </div>  
     </div>
@@ -29,23 +29,38 @@
     <div class="row">
         <div class="col-12 mt-2 text-left">
             {% if products|length == 0 %}
-                <p>{{ products|length }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong> {% endif %} 
+                <p> 
+                    {{ products|length }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong> {% endif %} 
                     | <a href="{% url 'products' %}">Back To All Products</a>
                 </p>
-                {% else %}
-                <p>{{ products|length }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong> {% endif %}</p> 
+            {% else %}
+                <p>
+                    {{ products|length }} Items | {% if search_term %} found for <strong>"{{ search_term }}"</strong> {% endif %}
+                    {% if current_categories %}
+                        {% for c in current_categories %} {{ c.friendly_name }} {% endfor %}
+                    {% else %}
+                        All Items
+                    {% endif %}
+                </p> 
             {% endif %}
         </div>
         {% if products|length > 0 %}
-        <div class="col-12 sort-by-price-container mt-2 ml-3 text-left">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By <i class="fa-solid fa-angle-down"></i></a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - Lowest to Highest</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
-                </div>
-            </li>
-        </div>
+            <div class="col-12 sort-by-price-container mt-2 pl-3 text-left">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By 
+                        <i class="fa-solid fa-angle-down pl-3"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        {% if current_categories %}
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - Lowest to Highest</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
+                        {% else %}
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - Lowest to Highest</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
+                        {% endif %}
+                    </div>
+                </li>
+            </div>
         {% endif %}
     </div>
 </div>
@@ -55,11 +70,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <div class="back-to-all-product-link">
-                {% if search_term or current_categories or current_sorting != 'None_None' %}
+            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <div class="back-to-all-product-link">
                     <a href="{% url 'products' %}" class="pl-1"><i class="fa-solid fa-angle-left mr-1"></i>Back to all products</a>
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
         </div>
         {% for product in products %}
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
