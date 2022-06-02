@@ -51,13 +51,8 @@
                         <i class="fa-solid fa-angle-down pl-3"></i>
                     </a>
                     <div class="dropdown-menu">
-                        {% if current_categories %}
                         <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - Lowest to Highest</a>
                         <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
-                        {% else %}
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - Lowest to Highest</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - Highest to Lowest</a>
-                        {% endif %}
                     </div>
                 </li>
             </div>
