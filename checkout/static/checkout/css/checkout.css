@@ -145,6 +145,14 @@ select#id_country.custom-stripe-input.lazyselect.form-control {
     margin-bottom: 5rem;
 }
 
+.container-center a {
+    text-decoration: none;
+}
+
+.container-center a:hover {
+    text-decoration: underline;
+}
+
 #shop-more-img {
     text-align: center;
 }
@@ -170,7 +178,7 @@ select#id_country.custom-stripe-input.lazyselect.form-control {
     color: #6D6155;
 }
 
-.bk-to-store-link a  {
+.bk-to-store-link a {
     text-decoration: none;
 }
 

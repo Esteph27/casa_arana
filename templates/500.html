@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid" id="header-404-505">
+    <div class="row">
+        <div class="col-12">
+            <h5>Looks Like Something Went Wrong!</h5>
+            <br>
+            <h5>Try Again Later</h5>
+        </div>
+        <div class="col-12">
+            <hr>
+        </div>
+        <div class="col-12 mt-2">
+            <a href="{% url 'home' %}" class="btn">Back Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
