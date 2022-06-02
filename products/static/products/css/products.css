@@ -29,6 +29,17 @@ a {
     color: #6D6155;
 }
 
+
+#all-product-header  a {
+    text-decoration: none;
+    padding-left: 0;
+}
+
+#all-product-header  a:hover {
+    text-decoration: underline;
+    color:#6D6155;
+}
+
 /* search bar container */
 .form-control {
     background-color: transparent;

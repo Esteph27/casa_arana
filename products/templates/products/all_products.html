@@ -28,10 +28,16 @@
     </div>
     <div class="row">
         <div class="col-12 mt-2 text-left">
-            <!--add change event so that when the user clicks on a category the category name will appear -->
-            <p>{{ products|length }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</p> 
+            {% if products|length == 0 %}
+                <p>{{ products|length }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong> {% endif %} 
+                    | <a href="{% url 'products' %}">Back To All Products</a>
+                </p>
+                {% else %}
+                <p>{{ products|length }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong> {% endif %}</p> 
+            {% endif %}
         </div>
-        <div class="col-12 sort-by-price-container mt-2 text-left">
+        {% if products|length > 0 %}
+        <div class="col-12 sort-by-price-container mt-2 ml-3 text-left">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By <i class="fa-solid fa-angle-down"></i></a>
                 <div class="dropdown-menu">
@@ -40,6 +46,7 @@
                 </div>
             </li>
         </div>
+        {% endif %}
     </div>
 </div>
 

@@ -13,7 +13,7 @@ from .forms import ProductForm, ReviewsForm
 
 def all_products(request):
     """
-    Returns all products page, includes search queries and filtering
+    Returns all products, includes search queries and filtering
     """
 
     products = Product.objects.all()
