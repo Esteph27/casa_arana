@@ -8,74 +8,86 @@ This project has been built on GitHub workspaces and deployed on Heroku. This pr
 
 The live site can be found [here](https://casa-arana.herokuapp.com/)
 
+*** 
+
 ## Table of Contents
 
-1. UX
-    - Strategy 
-    - User Stories
-    - Scope 
-    - Structure 
-2. Marketing 
-3. Features 
-4. Technologies Used 
-5. Testing 
-6. Bugs
-7. Deployment 
-8. Credits 
+1. [UX](#ux)
+    - [Strategy](#strategy)
+    - [User Stories](#user-stories)
+    - [Scope](#scope)
+    - [Structure](#structure)
+2. [Marketing](#marketing)
+3. [Features](#features)
+4. [Technologies Used](#technologies-used)
+5. [Testing](#testing)
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Acknowledgements](#acknowledgements)
+
+***
 
 ## UX
 
 Following UX core principles, the development of Casa Arana had to take into account; strategy, design thinking, the site owners business goals and the target audience’s needs, all whilst allowing for intuitive and responsive navigation to create a pleasurable experience for the user - with the ultimate goal for the user to return again. In order to achieve the current UX, the planning of this project was outlined in the following stages.
 
-To help me keep track all of the development steps involved I created a GitHub project board. You an view it the project board [here](https://github.com/Esteph27/casa_arana/projects/2)
+To help me keep track all of the development steps involved I created a GitHub project board. You can view it the project board [here](https://github.com/Esteph27/casa_arana/projects/2)
 
+***
 
 ### Strategy
 
-For the strategy it was important to understand who were the intended target audience, what their needs are and what the site owner’s business goals are in order to determine what features to include and influence the design. These are outlined below:
+For the strategy it was important to understand who were the intended target audience, what their needs are and what the site owner’s business goals are in order to determine what features to include. These are outlined below:
 
 The target audience CA intends to target are;
 - People from 29 years old and up
 - Most likely shop at places such as Harrods, Made and Sweetpea & Willow for their home wear and decor items 
 - Interested in interior design and decor, have an understanding of style and trends and have sufficient level of disposable income
-- People who are conscious buyers and have an appreciation for hand-made goods. 
+- People who are conscious buyers and have an appreciation for hand-made goods
 - People who prefer to support smaller and boutique business rather than large business chains
 - People who enjoy travel
 
-This users will be looking for:
+This user will be looking for:
 - An informative website with information about a particular product, including information about where and how it was made
 - Have the ability to view and leave product reviews
 - Make a secure and easy online payment 
 - Browse a selection of products with the ability to filter by price and category
 - Create a user account where they can view their online history, as well as update any personal contact or delivery information 
-- The ability to log in and out of their account as needed, as well as with the option to delete their account.
-- The ability to connect with the business via connecting through their social channels, contacting them via email, signing up to their email subscription
+- The ability to login and out of their account as needed
+- The abilitity to add items to wishlist so they can store their favourite items in one place
+- The ability to connect with the business via connecting through social channels,  email, signing up to their email subscription
 
 The site owner’s goals would be to promote and sell their products online, all whilst building a community to support their makers (the one’s who make the products). 
 
 The site owner would be looking for:
 - A responsive and intuitive website to promote their products in an elegant and elevated way 
-- Encourage users to buy from their site by implementing promotions such as free delivery over a certain amount and discount offer
+- Provide the users with the right and important inforamtion to help them make a purchase and encourage sales
+- Encourage users to buy from their site by implementing promotions such as free delivery over a certain amount, promotion through a facebook account and newsletter sign ups
 - Build a sense of trust, transparency and rapport by proving information about the maker of the products and how the user can support the makers further
 - Build a community via social channels, email subscriptions and marketing strategy 
 - Provide a secure payment system where the users can safely make payment online with no hassle
 
-This website will offer all of these things whilst also allowing for intuitive navigation and comfortability of use.
+This website will offer all of these things whilst also allowing for intuitive navigation and ease of use.
 
 Due to the age group of the users, it is assumed that there will be an even split between users viewing the website on their mobiles phone and laptops. Therefore creating something responsive is integral to the design, I have used Bootstrap grids and elements & custom CSS to allow for this.
 
+***
+
 ### User Stories
 
-This website has two main users; the site owner and the end user. Please find all of my defined user stories and acceptance [here](https://docs.google.com/spreadsheets/d/1XdgCMRVrfw2YlieImYsSJ_6mn5kbYvmL0O8vrmCCRKM/edit?usp=sharing)
+This website has two main users; the Site owner (admin) and the end User (shopper). Please find all of my defined user stories and acceptance [here](https://docs.google.com/spreadsheets/d/1XdgCMRVrfw2YlieImYsSJ_6mn5kbYvmL0O8vrmCCRKM/edit?usp=sharing)
 
 My users stories were obtained by personal research. I explored a range of e-commerce websites including made.com and liberty.com (who are considered to be fictional competitors) to gain inspiration for UX and navigation design as well as potential features to include to include.
+
+***
 
 ### Scope 
 
 When planning the initial design for this project, I had to outline which features were absolutely essential to include in this current release, and other features that would become part of the scalability plan to include in future releases. Below I have outlined the scope for this current release:
 
 Version 1:
-- A project that meets all the user stories;
+A project that meets all the user stories;
 - Home/Landing page with a short introduction and call-to-action links
 - About page with information about the company 
 - Responsive navigation bar allowing the user to navigate throughout the site
@@ -92,6 +104,8 @@ Version 1:
 
 For future release, please see the Scaleability section below outlining the features Casa Arana would hope to include. 
 
+***
+
 ## Structure
 
 ### Databases
@@ -100,15 +114,18 @@ During development I worked with a local sqlite3 database supplied by Django, fo
 
 Link to models - [drawsql](https://drawsql.app/esteph/diagrams/casa-arana-db)
 
-**Home App**
+### Home App
+
 A simple app to store and display the Home and About pages.
 
-**User Profile App**
+### User Profile App
+
 This app enables authenticated users to save their information so that when they are logged in the order form is pre-filled, creating an improved user experience. The UserProfile model has a one-to-one field that is linked to the Django AllAuth user account, upon logging in the model method create_or_update_user_profile creates the profile if it doesn’t already exist in the model.
 
 The second and third models are the WishList and WishListItem. These are used to manage the user’s wishlist; the WishList models stores a User’s Wishlist and the WishListItem model enables to get a specific item from a User’s Wishlist. The add_to_wish_list and remove_from_wishlist views handle updating the Wishlist as required by the user. Also, to allow for better user experience, the add_to_wishlist view also allows for existing products not to be added in the Wishlist if they already exist to avoid having the same item twice.
 
-**Product App**
+### Product App
+
 This app controls the business’s products for sale. There are 4 models to handle the relative data needed for this e-commerce business; Products, Category, Artisan and Reviews.
 
 The Product model enables individual products to be added to the database either via the Django admin interface or via the front end where only Admin users can add, edit or delete items all of which are handled by their respective views. This model has a FK relationship with the Category and Artisan models.
@@ -119,7 +136,8 @@ The Artisan model holds information about the artisan (the person who made the p
 
 The Review model handles, stores and display product reviews. The product_review view and ReviewsForm allows logged in users to leave a product review for a selected product and display them in the product information page. The model also allows a User to leave a product rating by selecting a score from 1-5 which is good for user experience. 
 
-**Checkout App**
+### Checkout App
+
 The checkout app is used solely for the user to make purchases via the online shop; this app contains two models Order and OrderLineItem.
 
 OrderLineItem contains all of the information regarding the products that have been purchased as part of a specific order. It has a foreign key to both the Order and Product models, it also contains the quantity purchased of that product and then the item total. This information is used to calculate the total cost for the order. 
@@ -128,15 +146,19 @@ Order contains all of the relevant address information for billing/shipping, a f
 
 There are a few methods used, the update_grand_total calculates the overall total depending on the order items linked to the order, ensuring the value is always correct.
 
-**Stripe**
+### Stripe
 Payments are accepted via Stripe’s test card details. For further information on which card number you should use, please refer to Stripe's official documentation - [Stripe Test Integration](https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details)
+
+***
 
 ## Surface
 
-### Design 
+### Design
+
 Keeping the target audience in mind it very much helped to determine the overall aesthetic and design of the website. Considering the target audience might be shopping at places like Harrods and perhaps enjoy the finer things in life, the design had to be elegant and modern with a touch of luxury. The following have been considered in order to achieve this:
 
 ### Color scheme 
+
 With luxury design in mind, I opted for a soft and neutral palette consisting of warm beige and yellow hues and a dark grey/orange as the main contrasting colour. The below colours were selected for my main colour palette;
 
 ![colour palette](/assets/images/colour-palette.png)
@@ -153,11 +175,13 @@ With luxury design in mind, I opted for a soft and neutral palette consisting of
 
 
 ### Typography
+
 The ‘Libre Caslon Display’ font is the main font used throughout the whole website with Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Although its primary use is for web headlines, I have used ’Libre Caslon Display’ for both text and headlines as I feel it’s an elegant and clean font which is both attractive and appropriate for the design of Casa Arana.  
  
 Read more about it [here](https://fonts.google.com/specimen/Libre+Caslon+Display#glyphs) 
 
 ### Images 
+
 As the main business goal for any commerce website is to sell products, imagery is a very important component to the design. The images had to be not only be of high quality, but also aesthetically pleasing in order to promote the products and entice a sale. The images are displayed in a large format mostly taking up 100vw width on mobile screens and 50% on larger screens, (apart from in the shopping bag) in order to display the products in a clean and impactful way. The users can also open the product images in a new tab allowing them to view the image on a larger scale to improve their user experience.
 
 On the Lading page, a large background hero image is designed to be striking and catch the user's attention whilst representing what the business us about. The About page also features impactful and colourful images which are not only aesthetically pleasing, but also denote the intentions of the business and their values. 
@@ -165,12 +189,16 @@ On the Lading page, a large background hero image is designed to be striking and
 All images are not of real products and are not for sale. All images have been taken from Unsplash.com
 
 ### Wireframes 
+
 Development/Initial wireframes - view(link)
 
 Final wireframes - view(link)
 
 ### Accessibility and Responsiveness:
+
 The website is deigned to be responsive and accessible across a range of devices using a combination of Bootstrap grip system and classes with custom css to achieve this.
+
+***
 
 ## Marketing
 
@@ -185,92 +213,167 @@ https://www.facebook.com/casaaranaofficial/
 
 
 ### SEO 
+
 I conducted SEO research to help me determine which Key word would be most relevant and most important to my web application to reach potential customers. I wrote a list of words based on the business goals and user stories of Casa Arana and typed them into Google search engine to see what websites and other key phrases would be returned back. Here are the results 
 
-(Screenshots below)
+![keywordsearch](/assets/images/keywordsearch1.png)
+
+![keywordsearch](/assets/images/keywordsearch4.png)
+
+![keywordsearch](/assets/images/keywordsearch8.png)
+
+*** 
 
 ## Existing Features
 
 ### Navigation menu
-For the nav bar I have used Bootswatch Lux Theme nav bar and have customised it to better suit the design of the website.The responsiveness of this nav bar is great across all screen sizes. 
+
+For the nav bar I have used Bootswatch Lux Theme nav bar and have customised it to better suite the design of the website. I chose this because the responsiveness of this nav bar is great across all screen sizes.
 
 On mobile and medium screens it collapses to a hamburger menu and laptop and desktop screens in spans across the width of the device and split into two sections. The left side displays the company’s Logo name (which when clicked, takes the user back to the home page) and links to the store and about page, and on the left of the nav bar is the profile icon with dropdown links to view user profile, admin management (is site owner), wish list and login/log out. The left also contains the shopping bag icon which displays the number of items inside the user’s shopping bag to inform to improve their online shopping experience. 
+
+![nav bar full width](/assets/images/navbar-fullwidth.png)
+
+![nav bar hamburger](/assets/images/navbar-collapse.png)
  
 The nav bar is fixed at the top of the screen at all times, allowing the user to easily navigate through the website
 
 The nav bar links also change colour on hover to a darker colour to improve accessibility and allow the user to easily see what they are clicking. 
 
 ### Footer
-I wanted to keep the footer clean and decluttered in order to keep with the luxury theme. To achieve this I used a soft beige tone colour to provide contrast as well as keep the information nicely centred across all screen widths. The footer contains the social media links, contact information and company information which are easily accessible to the user at anytime throughout the site.
+
+I wanted to keep the footer clean and decluttered in order to keep with the luxury theme. To achieve this I used a soft beige tone colour to provide contrast as well as keep the information nicely centred across all screen widths. The footer contains the company's contact details and social media links which are most likely sort after by the User so keeping them avaible in the footer at all times allows the user to eaisly find them.
+
+![footer](/assets/images/footer.png)
 
 ### Mailchimp news letter sign up 
-This is an important marketing feature so I wanted to make it accessible across the site and responsive across all screen devices. I have used a  soft block colour for the background to make it standout from surrounding features whilst also complimenting the surrounding features. 
 
-The block layout of both this feature and the footer along with the entered texts provide a nice modern touch to the website. 
+This is an important marketing feature so I wanted to make it accessible across the entire site and responsive across all screen devices. I have used a soft block colour for the background to make it standout whilst also complimenting the surrounding features. 
+
+![MailChimp signup form](/assets/images/mailchimp-signup.png)
 
 ### Home Page
+
 With the name Casa in mind (casa is home in Spanish) I wanted the Landing page to echo the meaning of the word home as well as provide the user with the information needed to explore the site easily. To do this the home page is made up of four main sections; the hero Image, short introduction, Links to the store and links to the About page:
 
-I have used an impactful hero image with a H1 header that take up the width of the screen in order to draw the User in and give a sense of what this site is about. To accompany this, below is a brief introduction of the business so that first time visitors can quickly understand what the site is about.
+I have used an impactful hero image that takes up the full width of the screen in order to provide visual impact and excitment for the User. Ontop of the hearo image I have placed a h1 tag saying 'Welcom Home' to provide a nice welcome to the User to engage them to come in and take a look. 
 
-Then there is the product section which provides links to either view all the products, or view products per category. These links are displayed over respective product images to create impact as well as aesthetically pleasing design. These images are responsive across all mobile screens, they stack on top of each other on mobile screens and display horizontally across larger screens. This section makes it clear to the User what is for sale in this website and what sort of things they can expect to find. 
+![hero image](/assets/images/hero-image.png)
+
+To accompany this, below the hero image is a brief introduction to the business so that first time visitors can quickly understand what the site is about and what they can expect to find withouth trolling through the website. This section also includes a call-to-action link promting the user to view the website's products as soon as they land on this page.
+
+![intro section](/assets/images/intro.png)
+
+Then there is the product section which provides links to view the products sold via their category, this acts as a sort of filter making easier for the customer narrow down what they're looking for. These links are displayed over a respective product images to create impact whilst promoting the propduct itself. These images are responsive across all mobile screens, they stack on top of each other on mobile screens and display horizontally across larger screens. This section makes it clear to the User what is for sale in this website and what sort of things they can expect to find. 
+
+![category images](/assets/images/category-images.png)
 
 The last section is a section introducing the company values and a link to the About page. This is to gain a connection with the user as the intended target audience are most likely to be interested in company values and ethos as they are conscious buyers. 
 
+![values](/assets/images/values-section.png)
+
 ### About Page 
-The about page provide information about the company, company ethos and how they work as well as a section on charity with the aim to build rapport with the customer and build a supportive community. It also has a link taking the user back to the store in order to increase the chance of sales.
+
+The about page provides information about the company including how they are, how they work and who they work with. The aim of this page is to not only provide useful informaiton for the user but also hopefully gain rapport and confidence with the business to reassure them they are buying for a legit website.
+
+![about page](/assets/images/aboutpage.png)
+
+A feature of this page is the 'Support More' where the company's extends their support by providing link to external Charitires. This type of iformation is not only important for the business oener but will most likely be of interest to the inteded target audience. All the external links open in new tabs for better user experience. 
+
+At the bottom of the page is also a section where it prompts the User to 'join them' and create an account if they havn't done so already. This is to encourage the user to sign up and encourage sales. If the user is already loggin in then this section will not display as the user already has an account. 
+
+![create account](/assets/images/create-account.png)
+
 
 ### All Products 
+
 This page display all of the products sold by the company. The images are displayed in a Bootstrap cards where each card contains the product image, category tag, name and price. The images are links that take the user to view the selected products information and the category tag is also a link which takes the user to view a list of products under that category. I have done this in order to make the site more intuitive for the user.
 
 Each card stacks on stop of each other on mobile screens and are paginated by 2 on larger screens in order to keep the images displayed in a nice and impactful way. 
 
-The search bar allows the User to filter by key words which are found in the product name and description. If no products are found then a message will appear in the header and a link that takes them back to view all the products
+![all products page](/assets/images/all-products-page.png)
 
-The User can also search products by category by selected the nabber dropdown menu. The header will notify the user how may items have been found within each category
+The search bar allows the User to filter by key words which are found in the product name and description. If no products are found then a message will appear in the header to notfy them 0 items have been found with a link that takes them back to view all the products.
 
-The Sort By features allows Users to sort products by price from highest to lowest and vice versa. However please note that the user can only perform this function on All products, they are not able to sort categories by price. Please see features left to include below for further information. 
+![search bar 0 products](/assets/images/searchbar.png)
+
+The User can also search products by category by selected the navbar dropdown menu. The header will notify the user how may items have been found within each category
+
+![category links in navbar](/assets/images/navbar-category-links.png) ![number of items found](/assets/images/items-in-catefory.png)
+
+The 'Sort By' features allows Users to sort products by price from highest to lowest and vice versa. However please note that the user can only perform this function on All products, they are not able to sort categories by price. Please see features left to include below for further information. 
+
+![srot by filter](/assets/images/shopby-filter.png)
 
 ### Product page
-This page displays the product information relating to that product as well as;
 
-‘Add to Wish List ’ and ‘Remove from Wish List’ links with enables the user to add or delete the product to their Wishlist which improves their overall shopping experience. Only logged in users have access to this feature. 
+This page displays the product information relating a to a specific product. The information included is;
 
-‘Edit’ and Delete’ links where it takes admin users to either the ‘edit_product’ page where they can edit the product’s information, or delete the product from the website. Only Store admin users have access to this functionality 
+- The product details such as colour, description, composition, dimenstions and any special features (such as washing instructions)
 
-Quantity increase and descrease buttons enabling the users to either increase or decrease the quantity selected of the produce with a corresponding Add to Bag button. A toast message will appear after clicking the ‘add to bag’ button which allows for better UX 
+- Quantity increase and descrease buttons enabling the users to select the quantity they would like to purchase.
 
-The product information such as colour, description, composition and digestions and any special features such as wash instructions. 
+- A 'Add to Bag' button that adds the selected item and quantity to their shopping baseket. Upon submission a toast message will appear confirming to the user that the item was added successfully to their shopping bag.  
 
-Made By feature shows the Artisan who made the products. This section shows the Artisan name, bio, image as we as a link to view their profile. The intended target audience are mostly conscious buyers so having information about the person who made the product will hopefully make for a good and informative experience.
+- ‘Add to Wish List ’ and ‘Remove from Wish List’ links with enables the user to add or delete the product to their Wishlist which improves their overall shopping experience. Only logged in users have access to this feature. 
 
-The last section on this page is the Product Reviews section. If a product has a review then it will be displayed with the user’s name, date posted and comment as the main features. If an item has no reviews, then the User is encouraged to  post one by the call-to-action button. Only login in users can leave a review, if they are not logging in then they are encouraged to sign up. This section here is to provide more information to the user to hopefully encourage them to buy the product. 
+![procut info](/assets/images/product-info.png)
+
+- 'Made By' feature shows the Artisan who made the product. This section shows the Artisan name, bio, image as we as a link to view their profile. The intended target audience are mostly conscious buyers so having information about the person who made the product will hopefully make for a good and informative experience.
+
+![artisan section](/assets/images/artisan-section.png)
+
+- The last section on this page is the Product Reviews section. If a product has a review then it will be displayed with the user’s name, date posted and comment as the main features. If an item has no reviews, then the User is encouraged to leave a Rewview by the call-to-action button. Only login in users are able to leave a review, if they are not logging in then they are encouraged to sign up. This review are here in order to help the customer make an informed decision. 
+
+![reviews](/assets/images/product-reviews.png)
 
 ### Shopping bag
-This page provides an overview of what the User currently has in their basket. It displayed the product image, name, unit price, quantity, delivery cost and order total. The User can easily amend the quantity of each item and also remove any item from the bag. The order total is outlined clearly and neatly at the bottom of the product list along with a ‘checkout’ button to make the ux more intuitive and easy. 
+
+This page provides an overview of what the User currently has in their basket. It displays the product image, name, unit price, quantity, delivery cost and order total. The User can easily amend the quantity of each item and also remove any item from the bag. The order total is outlined clearly and neatly at the bottom of the product list along with a ‘checkout’ button to make the UX more intuitive and easy. 
+
+![shopping bag](/assets/images/shopping-bag-desktop.png)
+
+To accompany this, the Shopping bag icon in the nav bar tells the user how many itmes they currently have in their shopping bag so that this information is always visible. 
+
+![shopping bag icon](/assets/images/shopping-bag-icon.png)
+
 
 ### Checkout
+
 This page is where the user can complete their purchase. It’s split into two columns, billing & card details on one side and their basket overview on the other. On mobile screen this layout collapses so that each column is stacked on top of each order allowing for good responsive design.
 
-The forms are simple, with placeholders explaining what each input is for. For logged in Users there is a checkbox the User can tick to save their devilry information for their next order. This information is saved to their User Profile page.
+![checkout page](/assets/images/checkoutpage.png)
+
+The forms are simple, with placeholders explaining what each input is for. For logged in Users there is a checkbox the User can tick to save their delivery information for their next order. This information is saved to their User Profile page.
+
+![chec box](/assets/images/save-info-checkbox.png)
 
 At the bottom of the checkout order is an ‘Order Summary’ where the user can review their order and adjust it if they need to before making a payment. 
 
-The card element feature has been built using Stripe, to make test payments I have used the card details found in Stripe docs (link here). Upon submission of the payment form information is passed to stripe and then back, if successful the user is taken to the 'checkout success' page, which displays the order and delivery details.
+![checkout order summary](/assets/images/checkout-order-summary.png)
+
+The card element feature has been built using Stripe, to make test payments I have used the card details found in [Stripe Testing documentation](https://stripe.com/docs/testing). Upon submission of the payment form, information is passed to stripe and then back, if successful the user is taken to the 'checkout success' page, which displays the order and delivery details.
+
+![chekcout success page](/assets/images/checkput-success-page.png)
 
 If the payment is not successful, the form does not submit, an inline error message is displayed and the user is able to rectify the issues.
 
+![invalid card details](/assets/images/invalid%20-card-number.png)
+
 ### User profile 
+
 A logged in User can access this link via the ‘View Account’ link in the profile icon dropdown menu found in the nav bar. This is where a User can view their order history and update their default delivery information. These are displayed in an accordion where the user can toggle between the two making each section easy to access.
 
 The Order History shows the order number and date of a User’s previous order, by clicking on the order number the user is taken to that order’s checkout out success page where they can view the full  order details. On this page, a handy link brings the user back to their account. If the User has no order history a shop the latest collection link is shown in order to encourage the User to make a purchase. 
 
 ### Wish List
+
 A logged in User can access this link via the ‘View Wish List’ link in the profile icon dropdown menu found in the nav bar. This page displays all of the items a User has saved to their wish list. The items are displayed in Boostrap Cards containing the product image, name, price, a link to view the full product details, and a link to remove the item from the wish list.
 
 If the user has no items saved to their wish list a message is displayed informing the User including a link to take them to the store.
 
 ### Artisan profile
+
 This page displays information about a selected Artisan. It includes their profile image, biography, location as well as images of all the products that Artisan has made. 
 
 The product images again are displayed in Bootstrap card containing product name, price and a link to view the full product details and Add to wish list link. 
@@ -281,6 +384,10 @@ This page is promote the Artisans and the products they make.
 The admin section of this website allows site owners (superusers) to update, add or delete product from the store on the front end via the Product Management link found in the profile icon dropdown link. 
 
 Add Product - products can be added using the form provided and on submission, they are notified this product is added via a toast message. 
+
+- ‘Edit’ and Delete’ links where it takes admin users to either the ‘edit_product’ page where they can edit the product’s information, or delete the product from the website. Only Store admin users have access to this functionality. If the user is either unauthorised or not signed in this feature won't be aviable.
+
+![edit / delete buttons](/assets/images/edit-delete-links.png)
 
 Edit Product - this link is found in the product information page. Product information can be edited using the form provided. On submission of the form, the user is updated on the changes via toast message. 
 
@@ -298,6 +405,8 @@ Allows the user to go back to the previous page
 ### Back to Account
 Allows logged in users to easily navigate back to their account
 
+*** 
+
 ## Features Left To Implement 
 
 ### Rating stars in review section
@@ -309,6 +418,8 @@ Due to time constraints this was added.
 
 ### Sort Category by Price 
 At the moment the user can sort ALL products by price, however the user is un able to sort category by price which is not good UX. Due to time constraints this functionality was not added. 
+
+*** 
 
 ## Technologies Used 
 I have used several technologies that have enabled this design to work:
@@ -359,6 +470,8 @@ I have used several technologies that have enabled this design to work:
     - I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
 - AWS
     - I used Amazon AWS S3 to store all of my media files.
+
+***
 
 ## Testing 
 
@@ -416,11 +529,15 @@ All contrast test passed
 
 (Screenshot here)
 
+***
+
 ## Fixed Bugs 
 
 I encountered a few bugs whilst developing Casa Arana, some of them were typo errors which have been noted in the project board (link here), below are some of the more complex errors I faced and the steps I took to resolve them.
 
 ## Existing Bugs 
+
+***
 
 ## Deployment 
 
@@ -498,6 +615,7 @@ Heroku CLI deployment Whilst building this project there was a security breach o
 3. Connect to the Heroku git remote using the heroku git:remote -a YOURAPPNAME
 4. Push to the Heroku git remote using git push heroku main.
 
+***
 
 ## Credits 
 
@@ -522,6 +640,8 @@ DrawSQL - for database schema design
 Figma - for firebase designs 
 
 XML Sitemaps 
+
+***
 
 ## Acknowledgements
 I’d like to take this chance to thank my course mentor Jack for his guidance and support throughout the development of this project. My colleague Harry Dhillon for their support and feedback and the Tutors at Code Institute for their help with debugging and overall support. 
