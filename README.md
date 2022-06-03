@@ -1,6 +1,6 @@
 ![Device Screen images](/assets/images/multiple_screen_devices.png)
 
-# Welcome to Casa Arana.
+# Welcome to Casa Arana
 
 This is a Full-Stack Framework project built using Django, Python, HTML, CSS, BootStrap and JavaScript. The purpose of this project was to build an an e-commerce website based on business logic used to control a centrally-owned dataset. The website includes an authentication mechanism provided by Django and allows users to purchase products online.
 
@@ -203,7 +203,7 @@ Development/Initial wireframes - [view](https://www.figma.com/file/YmrARKKuzy2qc
 
 Final/Selected wireframes - [view](https://www.figma.com/file/cckm50R2MyiuVjI28Pg412/Casa-Arana-Final-Wireframes)
 
-### Accessibility and Responsiveness:
+### Accessibility and Responsiveness
 
 The website is deigned to be responsive and accessible across a range of devices using a combination of Bootstrap grip system and classes with custom css to achieve this.
 
@@ -627,7 +627,7 @@ I got the error above when testing a purchase of £10,000 (x2 of the 'Royal Pisa
 On further investigation, my terminal traced back an error within my utils.py:
 File "/workspace/.pip-modules/lib/python3.8/site-packages/django/db/backends/utils.py", line 235, in format_number
 
-This error only occuerd when buying two this item, gowever due to limited time I was not able to resolve this error before release.
+This error only occuerd when buying two this item, however due to limited time I was not able to resolve this error before release.
 
 ![decimal invalid error message](/assets/images/decimal-invalid.png)
 
@@ -733,14 +733,13 @@ Throughout the process of building Casa Arana I used a mixture of online resourc
 
 Code Institute’s Boutique Ado project walk through videos - for Django logic code and structure
 
-W3schools - for html, javascript and css suppoort 
+[W3schools](https://www.w3schools.com/) - for html, javascript and css suppoort 
 
-DrawSQL - for database schema design
+[DrawSQL](https://drawsql.app/home) - for database schema design
 
-Figma - for firebase designs 
+[Figma](https://www.figma.com/) - for firebase designs 
 
-XML Sitemaps - to generate sitemape.xml file 
-
+[XML Sitemaps](https://www.xml-sitemaps.com/) - to generate sitemape.xml file 
 
 
 ***
