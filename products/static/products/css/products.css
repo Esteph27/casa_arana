@@ -384,6 +384,12 @@ li.nav-item.dropdown {
 }
 
 /* product form */
+
+.add_product_form select {
+    padding: 0;
+    padding-left: 1rem;
+}
+
 .btn-file {
     position: relative;
     overflow: hidden;
