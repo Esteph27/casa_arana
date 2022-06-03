@@ -191,9 +191,11 @@ All images are not of real products and are not for sale. All images have been t
 
 ### Wireframes 
 
-Development/Initial wireframes - view(link)
+Please visit the links below to view my develpment wireframes and the final wireframes selected to use for this porject. You can find both mobile and deskptop designs in each link:
 
-Final wireframes - view(link)
+Development/Initial wireframes - [view](https://www.figma.com/file/YmrARKKuzy2qczYZPiDab7/Casa-Arana-Development-Wireframes)
+
+Final/Selected wireframes - [view](https://www.figma.com/file/cckm50R2MyiuVjI28Pg412/Casa-Arana-Final-Wireframes)
 
 ### Accessibility and Responsiveness:
 
@@ -204,9 +206,8 @@ The website is deigned to be responsive and accessible across a range of devices
 ## Marketing
 
 ### Plan
-Casa Arana is a business to customer e-commerce platform, built and designed to sell products to the User and provide customers with information about who made the products and where they come from. Whilst working on this project I wrote a marketing plan to guide me during the development process and keep the commerce goals in mind. 
 
-(Link to marketing plan)
+Casa Arana is a business to customer e-commerce platform, built and designed to sell products to the User and provide customers with information about who made the products and where they come from. Whilst working on this project I wrote a marketing plan to guide me during the development process and keep the commerce goals in mind. Please visit the link to view my marketing plan - [view](https://www.figma.com/file/rSw69WmjUrYHaqxgIdDmVR/Casa-Arana-Marketing-Plan?node-id=0%3A1)
 
 To further enhance sales and promote the business, there is also a Casa Arana FaceBook page (this is also linked in the site’s footer):
 
