@@ -230,15 +230,15 @@ I conducted SEO research to help me determine which Key word would be most relev
 
 For the nav bar I have used Bootswatch Lux Theme nav bar and have customised it to better suite the design of the website. I chose this because the responsiveness of this nav bar is great across all screen sizes.
 
-On mobile and medium screens it collapses to a hamburger menu and laptop and desktop screens in spans across the width of the device and split into two sections. The left side displays the company’s Logo name (which when clicked, takes the user back to the home page) and links to the store and about page, and on the left of the nav bar is the profile icon with dropdown links to view user profile, admin management (is site owner), wish list and login/log out. The left also contains the shopping bag icon which displays the number of items inside the user’s shopping bag to inform to improve their online shopping experience. 
+- On mobile and medium screens it collapses to a hamburger menu and laptop and desktop screens in spans across the width of the device and split into two sections. The left side displays the company’s Logo name (which when clicked, takes the user back to the home page) and links to the store and about page, and on the left of the nav bar is the profile icon with dropdown links to view user profile, admin management (is site owner), wish list and login/log out. The left also contains the shopping bag icon which displays the number of items inside the user’s shopping bag to inform to improve their online shopping experience. 
 
 ![nav bar full width](/assets/images/navbar-fullwidth.png)
 
 ![nav bar hamburger](/assets/images/navbar-collapse.png)
  
-The nav bar is fixed at the top of the screen at all times, allowing the user to easily navigate through the website
+- The nav bar is fixed at the top of the screen at all times, allowing the user to easily navigate through the website
 
-The nav bar links also change colour on hover to a darker colour to improve accessibility and allow the user to easily see what they are clicking. 
+- The nav bar links also change colour on hover to a darker colour to improve accessibility and allow the user to easily see what they are clicking. 
 
 ### Footer
 
@@ -256,19 +256,19 @@ This is an important marketing feature so I wanted to make it accessible across 
 
 With the name Casa in mind (casa is home in Spanish) I wanted the Landing page to echo the meaning of the word home as well as provide the user with the information needed to explore the site easily. To do this the home page is made up of four main sections; the hero Image, short introduction, Links to the store and links to the About page:
 
-I have used an impactful hero image that takes up the full width of the screen in order to provide visual impact and excitment for the User. Ontop of the hearo image I have placed a h1 tag saying 'Welcom Home' to provide a nice welcome to the User to engage them to come in and take a look. 
+- I have used an impactful hero image that takes up the full width of the screen in order to provide visual impact and excitment for the User. Ontop of the hearo image I have placed a h1 tag saying 'Welcom Home' to provide a nice welcome to the User to engage them to come in and take a look. 
 
 ![hero image](/assets/images/hero-image.png)
 
-To accompany this, below the hero image is a brief introduction to the business so that first time visitors can quickly understand what the site is about and what they can expect to find withouth trolling through the website. This section also includes a call-to-action link promting the user to view the website's products as soon as they land on this page.
+- To accompany this, below the hero image is a brief introduction to the business so that first time visitors can quickly understand what the site is about and what they can expect to find withouth trolling through the website. This section also includes a call-to-action link promting the user to view the website's products as soon as they land on this page.
 
 ![intro section](/assets/images/intro.png)
 
-Then there is the product section which provides links to view the products sold via their category, this acts as a sort of filter making easier for the customer narrow down what they're looking for. These links are displayed over a respective product images to create impact whilst promoting the propduct itself. These images are responsive across all mobile screens, they stack on top of each other on mobile screens and display horizontally across larger screens. This section makes it clear to the User what is for sale in this website and what sort of things they can expect to find. 
+- Then there is the product section which provides links to view the products sold via their category, this acts as a sort of filter making easier for the customer narrow down what they're looking for. These links are displayed over a respective product images to create impact whilst promoting the propduct itself. These images are responsive across all mobile screens, they stack on top of each other on mobile screens and display horizontally across larger screens. This section makes it clear to the User what is for sale in this website and what sort of things they can expect to find. 
 
 ![category images](/assets/images/category-images.png)
 
-The last section is a section introducing the company values and a link to the About page. This is to gain a connection with the user as the intended target audience are most likely to be interested in company values and ethos as they are conscious buyers. 
+- The last section is a section introducing the company values and a link to the About page. This is to gain a connection with the user as the intended target audience are most likely to be interested in company values and ethos as they are conscious buyers. 
 
 ![values](/assets/images/values-section.png)
 
@@ -278,9 +278,9 @@ The about page provides information about the company including how they are, ho
 
 ![about page](/assets/images/aboutpage.png)
 
-A feature of this page is the 'Support More' where the company's extends their support by providing link to external Charitires. This type of iformation is not only important for the business oener but will most likely be of interest to the inteded target audience. All the external links open in new tabs for better user experience. 
+- A feature of this page is the 'Support More' where the company's extends their support by providing link to external Charitires. This type of iformation is not only important for the business oener but will most likely be of interest to the inteded target audience. All the external links open in new tabs for better user experience. 
 
-At the bottom of the page is also a section where it prompts the User to 'join them' and create an account if they havn't done so already. This is to encourage the user to sign up and encourage sales. If the user is already loggin in then this section will not display as the user already has an account. 
+- At the bottom of the page is also a section where it prompts the User to 'join them' and create an account if they havn't done so already. This is to encourage the user to sign up and encourage sales. If the user is already loggin in then this section will not display as the user already has an account. 
 
 ![create account](/assets/images/create-account.png)
 
@@ -289,19 +289,19 @@ At the bottom of the page is also a section where it prompts the User to 'join t
 
 This page display all of the products sold by the company. The images are displayed in a Bootstrap cards where each card contains the product image, category tag, name and price. The images are links that take the user to view the selected products information and the category tag is also a link which takes the user to view a list of products under that category. I have done this in order to make the site more intuitive for the user.
 
-Each card stacks on stop of each other on mobile screens and are paginated by 2 on larger screens in order to keep the images displayed in a nice and impactful way. 
+- Each card stacks on stop of each other on mobile screens and are paginated by 2 on larger screens in order to keep the images displayed in a nice and impactful way. 
 
 ![all products page](/assets/images/all-products-page.png)
 
-The search bar allows the User to filter by key words which are found in the product name and description. If no products are found then a message will appear in the header to notfy them 0 items have been found with a link that takes them back to view all the products.
+- The search bar allows the User to filter by key words which are found in the product name and description. If no products are found then a message will appear in the header to notfy them 0 items have been found with a link that takes them back to view all the products.
 
 ![search bar 0 products](/assets/images/searchbar.png)
 
-The User can also search products by category by selected the navbar dropdown menu. The header will notify the user how may items have been found within each category
+- The User can also search products by category by selected the navbar dropdown menu. The header will notify the user how may items have been found within each category
 
 ![category links in navbar](/assets/images/navbar-category-links.png) ![number of items found](/assets/images/items-in-catefory.png)
 
-The 'Sort By' features allows Users to sort products by price from highest to lowest and vice versa. However please note that the user can only perform this function on All products, they are not able to sort categories by price. Please see features left to include below for further information. 
+- The 'Sort By' features allows Users to sort products by price from highest to lowest and vice versa. However please note that the user can only perform this function on All products, they are not able to sort categories by price. Please see features left to include below for further information. 
 
 ![srot by filter](/assets/images/shopby-filter.png)
 
@@ -333,7 +333,7 @@ This page provides an overview of what the User currently has in their basket. I
 
 ![shopping bag](/assets/images/shopping-bag-desktop.png)
 
-To accompany this, the Shopping bag icon in the nav bar tells the user how many itmes they currently have in their shopping bag so that this information is always visible. 
+- To accompany this, the Shopping bag icon in the nav bar tells the user how many itmes they currently have in their shopping bag so that this information is always visible. 
 
 ![shopping bag icon](/assets/images/shopping-bag-icon.png)
 
@@ -344,19 +344,19 @@ This page is where the user can complete their purchase. It’s split into two c
 
 ![checkout page](/assets/images/checkoutpage.png)
 
-The forms are simple, with placeholders explaining what each input is for. For logged in Users there is a checkbox the User can tick to save their delivery information for their next order. This information is saved to their User Profile page.
+- The forms are simple, with placeholders explaining what each input is for. For logged in Users there is a checkbox the User can tick to save their delivery information for their next order. This information is saved to their User Profile page.
 
 ![chec box](/assets/images/save-info-checkbox.png)
 
-At the bottom of the checkout order is an ‘Order Summary’ where the user can review their order and adjust it if they need to before making a payment. 
+- At the bottom of the checkout order is an ‘Order Summary’ where the user can review their order and adjust it if they need to before making a payment. 
 
 ![checkout order summary](/assets/images/checkout-order-summary.png)
 
-The card element feature has been built using Stripe, to make test payments I have used the card details found in [Stripe Testing documentation](https://stripe.com/docs/testing). Upon submission of the payment form, information is passed to stripe and then back, if successful the user is taken to the 'checkout success' page, which displays the order and delivery details.
+- The card element feature has been built using Stripe, to make test payments I have used the card details found in [Stripe Testing documentation](https://stripe.com/docs/testing). Upon submission of the payment form, information is passed to stripe and then back, if successful the user is taken to the 'checkout success' page, which displays the order and delivery details.
 
 ![chekcout success page](/assets/images/checkput-success-page.png)
 
-If the payment is not successful, the form does not submit, an inline error message is displayed and the user is able to rectify the issues.
+- If the payment is not successful, the form does not submit, an inline error message is displayed and the user is able to rectify the issues.
 
 ![invalid card details](/assets/images/invalid%20-card-number.png)
 
@@ -364,21 +364,43 @@ If the payment is not successful, the form does not submit, an inline error mess
 
 A logged in User can access this link via the ‘View Account’ link in the profile icon dropdown menu found in the nav bar. This is where a User can view their order history and update their default delivery information. These are displayed in an accordion where the user can toggle between the two making each section easy to access.
 
-The Order History shows the order number and date of a User’s previous order, by clicking on the order number the user is taken to that order’s checkout out success page where they can view the full  order details. On this page, a handy link brings the user back to their account. If the User has no order history a shop the latest collection link is shown in order to encourage the User to make a purchase. 
+![accordion](/assets/images/user-profile.png)
+
+![order history list](/assets/images/order-history-list.png)
+
+- The Order History shows the past orders placed by the User so that they can easily access this information whenever they need to. The user can click on the Order number and the User will be redirected to that order’s checkout out success page where they can view the full order details. An alert message appears on the screen to confirm the User that they are viewing a past order. A handy link also brings the user back to their account for easy navigation.
+
+![order history toast](/assets/images/order-history-toast.png)
+
+- For Users who have no order hisgory yet, then a message will be displayed to encourgae the user to browse the products to help encourage a sale.
+
+![no order history](/assets/images/order-history.png)
+
 
 ### Wish List
 
-A logged in User can access this link via the ‘View Wish List’ link in the profile icon dropdown menu found in the nav bar. This page displays all of the items a User has saved to their wish list. The items are displayed in Boostrap Cards containing the product image, name, price, a link to view the full product details, and a link to remove the item from the wish list.
+- A logged in User can access their Wishlist via the ‘View Wish List’ link in the profile icon dropdown menu found in the nav bar. This page displays all of the items a User has saved to their wish list. The items are displayed in Boostrap Cards containing the product image, name, price, a link to view the full product details, and a link to remove the item from the wish list.
 
-If the user has no items saved to their wish list a message is displayed informing the User including a link to take them to the store.
+![wishlist](/assets/images/wishlist-item.png)
+
+- If the user has no items saved to their wish list a message is displayed informing the User including a link to take them to the store.
+
+![wishlist empty](/assets/images/wishlist-empty.png)
+
+- A user can add an item to their wishlsit by clicking on the 'add to wishlist' link featured in the prodcut information page. This feature is only aviable to loged in users. 
+
 
 ### Artisan profile
 
-This page displays information about a selected Artisan. It includes their profile image, biography, location as well as images of all the products that Artisan has made. 
+This page displays information about a selected Artisan. It includes their profile image, biography, location as well as images of all the products that Artisan has made.
 
-The product images again are displayed in Bootstrap card containing product name, price and a link to view the full product details and Add to wish list link. 
+![artisan profile](/assets/images/artisan-profile.png)
 
-This page is promote the Artisans and the products they make. 
+- The product images are displayed in Bootstrap cards containing product name, price and a link to view the full product details and Add to wish list link. 
+
+![artisan products](/assets/images/artisan-products.png)
+
+- This page is promote the Artisans and the products they make. 
 
 ### Admin 
 The admin section of this website allows site owners (superusers) to update, add or delete product from the store on the front end via the Product Management link found in the profile icon dropdown link. 
