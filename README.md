@@ -632,7 +632,7 @@ The master branch of this repository has been used for the deployed version of t
 
 ### Using Github & Gitpod
 
-To deploy my Django application, I had to use the Code Institute Python Essentials Template.
+To deploy my Django application, I had to use the [Code Institute Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template):
 
 - Click the Use This Template button.
 - Add a repository name and brief description.
@@ -663,16 +663,22 @@ Cloning your repository will allow you to download a local version of the reposi
 6. Press enter and your local clone will be created.
 
 ### Gmail SMTP
-I have used Gmail SMTP to send confirmation emails and all AllAuth related emails when the deployed version is used. I used the following documentation to set it up and add these settings to my settings.py file:
+I have used Gmail SMTP to send confirmation emails and all AllAuth related emails when the deployed version is used. I used the following [documentation](https://kb.synology.com/en-global/SRM/tutorial/How_to_use_Gmail_SMTP_server_to_send_emails_for_SRM) to set it up and add these settings to my settings.py file:
+
+![gmail SMTP code](/assets/images/gmailSMTP.png)
 
 ### Stripe
-In order to take payments for the online store, I implemented Stripe; you first must create an account with them and then using the documentation add the relevant HTML, python & JS code suitable for your needs
+In order to take payments for the online store, I implemented Stripe:
+- you first must create an account with them and then using the [documentation](https://stripe.com/docs/payments/quickstart) add the relevant HTML, python & JS code suitable for your needs
 
 ### AWS static and media storage
-All static and media files are stored in the cloud using Amazon AWS S3; i have created a bucket, user group and user that can access this site and the relevant files. In order for the files to be correctly served the following settings have to be added to your main settings.py file:
+All static and media files are stored in the cloud using Amazon AWS S3:
+- I have created a bucket, user group and user that can access this site and the relevant files. In order for the files to be correctly served the following settings have to be added to your main settings.py file:
+
+![aws code in setting.py](/assets/images/aws-code.png)
 
 ## Creating an Application with Heroku
-I followed the below steps using the Code Institute tutorial and Django Blog cheatsheat
+I followed the below steps using the [Code Institute tutorial and Django Blog cheatsheat](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf):
 
 - The following command in the Gitpod CLI will create the relevant files needed for Heroku to install your project dependencies pip3 freeze --local > requirements.txt. Please note this file should be added to a .gitignore file to prevent the file from being committed. A Procfile is also required that specifies the commands that are executed by the app on startup.
 
@@ -685,15 +691,19 @@ I followed the below steps using the Code Institute tutorial and Django Blog che
 
 - In the Settings tab, click on Reveal Config Vars and set the following variables:
 
+![heroku config vars](/assets/images/heroku-config-var.png)
+
 In the resources tab you must install 'Heroku Postgres'
 
 ***Heroku Deployment using website In the Deploy tab:***
 1. Connect your Heroku account to your Github Repository following these steps:
     - Click on the Deploy tab and choose Github-Connect to Github.
     - Enter the GitHub repository name and click on Search.
-    - Choose the correct repository for your application and click on Connec
+    - Choose the correct repository for your application and click on Connect
 2. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the Deploy Branch button whenever you want a change made.
 3. Once you have chosen your deployment method and have clicked Deploy Branch your application will be built and you should see the below View button, click this to open your application:
+
+![heroku deploy button](/assets/images/heroku-deploy-btn.png)
 
 Heroku CLI deployment Whilst building this project there was a security breach on Heroku which caused issues with deployment via their website. Due to this, I had to add a runtime.txt file specifying which version of Python to build the app with and used the following commands to push the code to Heroku:
 
