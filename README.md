@@ -137,6 +137,12 @@ The Artisan model holds information about the artisan (the person who made the p
 
 The Review model handles, stores and display product reviews. The product_review view and ReviewsForm allows logged in users to leave a product review for a selected product and display them in the product information page. The model also allows a User to leave a product rating by selecting a score from 1-5 which is good for user experience. 
 
+### Shopping Bag App
+
+This app stores and handels the shopping bag functionality for this project. The views hadle the item quantity allowing for adjusting item quantities, adding and or removing items from a User's shopping bag. 
+
+The contexts.py and bag_tools.py files handle the delivery threshold and order grand total to be updated accordingly throughout the site whevenever the shopping bag is updated.  
+
 ### Checkout App
 
 The checkout app is used solely for the user to make purchases via the online shop; this app contains two models Order and OrderLineItem.
