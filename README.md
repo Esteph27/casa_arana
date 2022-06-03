@@ -25,6 +25,7 @@ The live site can be found [here](https://casa-arana.herokuapp.com/)
 7. [Deployment](#deployment)
 8. [Credits](#credits)
 9. [Acknowledgements](#acknowledgements)
+10. [Scalability](#scalability)
 
 ***
 
@@ -729,3 +730,20 @@ XML Sitemaps - to generate sitemape.xml file
 
 ## Acknowledgements
 I’d like to take this chance to thank my course mentor Jack for his guidance and support throughout the development of this project. My colleague Harry Dhillon for their support and feedback and the Tutors at Code Institute for their help with debugging and overall support. 
+
+**** 
+
+## Scalability
+
+The features that I had thought about before designing this project were not achievable due to the deadline. I was able to ascertain which features would be more important to include in this initial deployment, however below I have outlined the features I would wish to include in future resales:
+
+#### Inventory tracking.
+To become a fully functioning website it would need to include inventory tracking functionality in order to help the site owner keep track of product levels, but also to inform the customer when items are running low in stock or out of stock 
+
+
+#### Extend the Admin Management  feature
+- Currently, the site owner are able to add / edit and delete existing products via the front end. As the Artisans as a big part of the business structure, it would be good for the site owner to also add /edit / delete Artisans via the front end 
+- Another way I would improve this feature is by adding a confirmation modal when the Site owner clicks on the the ‘delete’ product link. Currently when this link is pressed it deletes the item automatically, if the site owner clicked on this by mistake then they would have lost important information. To avoid this I would add validation in order to get user confirmation before proceeding to delete items off the database. 
+
+#### Recommendations Feature
+In addition to the Wishksit feature, I would like to add a Recommendations feature where once the User is about to place their order, a list of items would appear that would be similar to the products the customer is buying. This would be to encourage sales and gain higher unit per transaction. 
