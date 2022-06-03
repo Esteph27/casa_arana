@@ -403,134 +403,145 @@ This page displays information about a selected Artisan. It includes their profi
 - This page is promote the Artisans and the products they make. 
 
 ### Admin 
-The admin section of this website allows site owners (superusers) to update, add or delete product from the store on the front end via the Product Management link found in the profile icon dropdown link. 
 
-Add Product - products can be added using the form provided and on submission, they are notified this product is added via a toast message. 
+The admin section of this website allows site owners (superusers) to update, add or delete existing products from the store on the front end via the Product Management link found in the profile icon dropdown link. 
 
-- ‘Edit’ and Delete’ links where it takes admin users to either the ‘edit_product’ page where they can edit the product’s information, or delete the product from the website. Only Store admin users have access to this functionality. If the user is either unauthorised or not signed in this feature won't be aviable.
+![product management link](/assets/images/product-management-link.png)
 
-![edit / delete buttons](/assets/images/edit-delete-links.png)
+- Once the user clicks on the Product Management link they are redirected to the 'Add Product' page which allows the Admin to easily a add a new product by filling out the form provided. On submission the Admin user is notified that that the product has been added via a toast message. 
 
 Edit Product - this link is found in the product information page. Product information can be edited using the form provided. On submission of the form, the user is updated on the changes via toast message. 
 
-Delete Product - his link is found in the product information page. Once clicked the product is instantly deleted without any warning so the site admin would have to extra careful. See scalability section to read up on improving this feature.
+Delete Product - this link is also found in the product information page. Once clicked the product is instantly deleted without any warning so the site admin would have to be extra careful. See scalability section to read up on improving this feature.
 
-### 404 and 500 pages 
-I have designed custom 404 and 500 pages to easily allow users to navigate back to the home page should they encounter any errors. 
+![edit / delete buttons](/assets/images/edit-delete-links.png)
+
+### 404 and 500 pages
+
+- I have designed custom 404 and 500 pages to easily allow users to navigate back to the home page should they encounter any errors. 
 
 ### Back to top scroll 
-Allows users to scroll back to the top of the page when scrolling pst 20px. This is to improve their experience. 
+
+- Allows users to scroll back to the top of the page when scrolling pst 20px. This is to improve their experience. 
+
+![back to top scroll](/assets/images/backtotop-arrow.png) ![back to top scroll on hover](/assets/images/backtotop-arrow-on-hover.png)
 
 ### Back to previous page link
-Allows the user to go back to the previous page 
+
+- Allows the user to go back to the previous page 
 
 ### Back to Account
-Allows logged in users to easily navigate back to their account
+
+- Allows logged in users to easily navigate back to their account
 
 *** 
 
 ## Features Left To Implement 
 
 ### Rating stars in review section
-As part of the product review section, it would have been a better user experience to display star ratings. Due to time constraints this part of the feature was not developed for this release. 
+- As part of the product review section, it would have been a better user experience to display star ratings which are commonly found in product reviews. Due to time constraints this part of the feature was not developed for this release. 
 
 ### WishList heart icon
-Instead of wordy links, it would have been a lot cleaner and more appreciate to user heart icons to indicated the Add to Wish List Features. This heart icon would have been empty to signify that the product has not been added to the Wishlist, or the heart would be a solid colour in order to signify that this product has already been added to the wish list. 
-Due to time constraints this was added. 
+- Instead of wordy links, it would have been a lot cleaner and more approproate to user heart icons to indicated the 'Add to Wish List' features. This heart icon would have been empty to signify that the product has not been added to the Wishlist, or the heart would be a solid colour in order to signify that this product has already been added to the wish list. 
+- Due to time constraints this was added. 
 
 ### Sort Category by Price 
-At the moment the user can sort ALL products by price, however the user is un able to sort category by price which is not good UX. Due to time constraints this functionality was not added. 
+- At the moment the user can sort ALL products by price, however the user is unable to sort category by price which is not good UX. Due to time constraints this functionality was not added. 
 
 *** 
 
 ## Technologies Used 
+
 I have used several technologies that have enabled this design to work:
 
-- Django
-    - Django is the framework that has been used to build the over project and its apps.
-- Python
-    - Python is the core programming language used to write all of the code in this application to make it fully functional.
-- Bootstrap
-    - Used for creating responsive design.
-- Google Fonts
-    - Used to obtain the fonts linked in the header, fonts used were Raleway and Lobster
-- Font Awesome
-    - Used to obtain the icons used on the high scores and rules pages.
-- Google Developer Tools
-    - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
-- GitHub
-    - Used to store code for the project after being pushed.
-- Git
-    - Used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
-- Gitpod
-    - Used as the development environment.
-- Heroku
-    - Used to deploy my application.
-- Lucid
-    - Used to create the ERD for the project.
-- ImageResizer
-    - Used to resize images to reduce loading time.
-- Flake8
-    - Used to test my code for any issues or errors.
-- Unicorn Revealer
-    - Used to detect overflow of elements, which allowed me to quickly debug any issues.
-- Favicon.io
-    - Used to create favicon for my website
-- Color Contrast Accessibility Validator
-    - Allowed me to test the colour contrast of my webpage.
-- W3C Markup Validation Service
-    - Used to validate all HTML code written and used in this webpage.
-- W3C CSS Validation Service
-    - Used to validate all CSS code written and used in this webpage.
-- JSHint
-    - Used to validate JS code
-- AmIResponsive
-    - Used to generate responsive image used in README file.
-- SQLite
-    - I have SQLite to run my database tests locally.
-- PostgreSQL
-    - I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
-- AWS
-    - I used Amazon AWS S3 to store all of my media files.
+- Django - Django is the framework that has been used to build this project and its apps.
+
+- Django Alauth - for user account and authenticartion mechanism 
+
+- Crispy Forms - to help manage and custom Django Forms
+
+- Python - Python is the core programming language used to write all of the code in this application to make it fully functional.
+
+- Bootstrap - Used for creating responsive design.
+
+- Google Fonts - Used to obtain the fonts linked in the header, fonts used were Raleway and Lobster
+
+- Font Awesome - Used to obtain the icons used on the high scores and rules pages.
+
+- Google Developer Tools - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
+
+- GitHub - Used to store code for the project after being pushed.
+
+- Git - Used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+
+- Gitpod - Used as the development environment.
+
+- Heroku - Used to deploy my application.
+
+- Flake8 - Used to test my code for any issues or errors.
+
+- Unicorn Revealer - Used to detect overflow of elements, which allowed me to quickly debug any issues.
+
+- Favicon.io - Used to create favicon for my website
+
+- Color Contrast Accessibility Validator - Allowed me to test the colour contrast of my webpage.
+
+- W3C Markup Validation Service - Used to validate all HTML code written and used in this webpage.
+
+- W3C CSS Validation Service - Used to validate all CSS code written and used in this webpage.
+
+- JSHint - Used to validate JS code
+
+- AmIResponsive - Used to generate responsive image used in README file.
+
+- SQLite - I have SQLite to run my database tests locally.
+
+- Heroku PostgreSQL - I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
+
+- AWS - I used Amazon AWS S3 to store all of my media and static files.
 
 ***
 
 ## Testing 
 
-### Manual Testing  - (link to separate document)
+### Manual Testing  
+
+Please click [here](/assets/docs/MANUAL_TESTING.md) for the manutal testing report. 
+
+### Unit Testing 
+
+Due to time contraints, no unit tests were performed for this release. 
 
 ### Code Validation
 
 All of my code has been validated using online validators specific to the language, results are below:
 
-[W3C Markup Validation Service](https://validator.w3.org/)
-- Used to validate HTML code written and used in this webpage. 
-Passed with zero errors 
+- [W3C Markup Validation Service](https://validator.w3.org/)
+    - Used to validate HTML code written and used in this webpage. 
+    - Passed with zero errors 
 
-(Screenshot here) 
+![html validation](/assets/images/html-checker.png)
 
-[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) 
-- Used to validate CSS code written and used in this webpage.
-- Code passed with 1 error and 1470 warnings, but these are coming from the vendor extensions and so not sure to my part.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+    - Used to validate CSS code written and used in this webpage.
+    - Code passed with 1 error and 1470 warnings, but these are coming from the vendor extensions and so not sure to my part.
 
-(Screenshot here)
+![css validation](/assets/images/css-checker.png)
 
 [JSHint](https://jshint.com/) 
-- Used to validate JavaScript code 
-- Code passed with no errors 
+    - Used to validate JavaScript code 
+    - Code passed with no errors 
 
-(Screenshot here)
+[Flake8](https://flake8.pycqa.org/en/latest/)
+    - Used to test Python code for any issues or errors
+    - No errors however there were warnings which were mainly due to lines being too long most of which were in migration files or Django files so have left them as they are. 
 
-Flake8
-- Used to test Python code for any issues or errors
-- No errors however there were warnings which were mainly due to lines being too long most of which were in migration files or Django files so have left them as they are. 
-
-(Screenshot here)
+![flake8](/assets/images/flake8.png)
 
 [Google Dev Tools Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - Used to test performance and accessibility of the website 
 
-(Screenshot here) 
+![accessibility](/assets/images/accessibility.png)
 
 **Performance scored 64;**
 - This is mainly due to the download time being slowed down by the image sizes. Due to the nature of my website, it relies on high quality images so I was reluctant to compress the image files. 
@@ -549,15 +560,68 @@ Flake8
 Used to test colour contrast of the webpage
 All contrast test passed
 
-(Screenshot here)
+![colour contrast validator](/assets/images/color-contrast-validator.png)
 
 ***
 
 ## Fixed Bugs 
 
-I encountered a few bugs whilst developing Casa Arana, some of them were typo errors which have been noted in the project board (link here), below are some of the more complex errors I faced and the steps I took to resolve them.
+I encountered a few bugs whilst developing Casa Arana, some of them were typo errors which have been noted in the project board [here](https://casa-arana.herokuapp.com/). The project board has all of the bugs encountered in this porject howber below are some of the more complex errors I faced and the steps I took to resolve them.
+
+### Migration Error - ValidationError
+I encountered the below error when updating my Product Model fields. I originally had ‘dimensions and compositions’ as one filed but then decided it was better to separate them into two different fileds as they are two separate values(decimal fields for dimensions and char field for composition):
+
+    - django.core.exceptions.ValidationError: ['“composition” value must be a decimal number.’]
+
+I was hoping to get away with just altering the migration file that first introduced the DecimalField, but this did not work. After further investigation the best call to action at that stage was reset my database which resovled the issue. These are the steps I took:
+
+- run: python3 manage.py dumpdata products > products.json
+- Delete all the migrations files ( excluding the __init__.py) for every app
+- Once all the migrations are deleted, delete the sqlite database
+- run the usual migration commands:
+    - python3 manage.py makemigrations
+    - python3 manage.py migrate
+
+- After those migrations went through successfully, I uploaded the json file I created in the previous steps by running the below command in the terminal:   
+    - python3 manage.py loaddata products.json
+
+- Run migrations
+
+### Migration Error - ValueError
+I recieved the below error in my terminal when I was updating the date field in my Product Review model from DateTimeFiled to DateFiled:
+
+    - ValueError: invalid literal for int() with base 10: b'27 16:35:06.943062’
+    ![invalid int](/assets/images/invalid-int.png)
+
+The issue turned out to be that the format for how/what to store from the dateTimeField wasn't set and so Django calculated the current time down to miliseconds. The following steps fixed the issue:
+
+- rename my local database from db.sqlite3 file to > db.sqlite3.old
+- run python3 manage.py migrate
+- run python3 manage.py createsuperuser
+- run python3 manage.py loaddata products.json
+- Rename db.sqlite3 > db.sqlite3.temp
+- Rename db.sqlite3.old > db.sqlite3
+- run Python3 manage.py dumpdata products.Artisan > artisans.json
+- Then rename db.sqlite3 > db.sqlite3.old
+- Then rename db.sqlite3.temp > db.sqlite3
+
+### New webhook error - payment intent not successful
+After the 25th May my webhooks failed to deliver, however in my terminal I was receiving HTTP 200 code and a HTTP 302 code which indicated that there was a problem with my url endpoint. It looked like Gitpod had updated my url from eu45 to eu46, I assume this was most likely due to maintenance work. I updated my endpoint with the new url and hard freshed my browser to delete any caching. After refreshing my webhook messages and waiting a few moment the payment intent was successful.
+
+The below resource from Google helped to understand this error better.:
+"The HyperText Transfer Protocol (HTTP) 302 Found redirect status response code indicates that the resource requested has been temporarily moved to the URL given by the Location header."
 
 ## Existing Bugs 
+
+### InvalidOperation at /checkout/ 
+I got the error above when testing a purchase of £10,000 (x2 of the 'Royal Pisac Rug', the most expensive products on the site), this figure went above the max digit length of the Product price field which was set to 6, I updated this to 8 however it still has not resolved the issue.
+
+On further investigation, my terminal traced back an error within my utils.py:
+File "/workspace/.pip-modules/lib/python3.8/site-packages/django/db/backends/utils.py", line 235, in format_number
+
+This error only occuerd when buying two this item, gowever due to limited time I was not able to resolve this error before release.
+
+![decimal invalid error message](/assets/images/decimal-invalid.png)
 
 ***
 
@@ -641,7 +705,7 @@ Heroku CLI deployment Whilst building this project there was a security breach o
 
 ## Credits 
 
-Throughout the process of building Casa Arana I used a mixture of online resources to help me with a range of different things from fixing bugs, build functionality and design features. Below are the resources I used :
+Throughout the process of building Casa Arana I used a mixture of online resources to help me with a range of different things from fixing bugs, build functionality and design features. Below are the resources I used:
 
 [Unsplash](https://unsplash.com/) - For all imagery 
 
@@ -651,17 +715,15 @@ Throughout the process of building Casa Arana I used a mixture of online resourc
 
 Code Institute’s Boutique Ado project walk through videos - for Django logic code and structure
 
-W3schools - for code 
-
-Crispy Forms 
-
-Django Alauth 
+W3schools - for html, javascript and css suppoort 
 
 DrawSQL - for database schema design
 
 Figma - for firebase designs 
 
-XML Sitemaps 
+XML Sitemaps - to generate sitemape.xml file 
+
+
 
 ***
 
